@@ -5,6 +5,15 @@
 This repository is a template for building and publishing widgets. Widgets are defined in `widgets/<widget_name>/` with
 `widget.json` and an entry file at `dist/content.html`. The service pulls only the directory at `source.path` (e.g. `dist/`). The registry is generated into `widget_registry.json`.
 
+## Official Documentation
+
+**IMPORTANT**: For anything beyond basic widget scaffolding (`widget.json` + `dist/content.html`), always fetch and consult the official documentation first. It covers widget setup, connectors, secrets, SDK, security, caching, publishing workflows, and recipes.
+
+- **Human-readable docs**: https://widget-service.insided.com/docs
+- **LLM-optimized full text**: https://widget-service.insided.com/docs/llms-full.txt
+
+Use the WebFetch tool with the LLM-optimized URL to retrieve documentation. The official docs contain authoritative, up-to-date information that supersedes this file.
+
 ## Setup commands
 
 - Install dependency (required): `jq`
@@ -65,14 +74,17 @@ This repository is a template for building and publishing widgets. Widgets are d
 
 When helping users create widgets:
 
-1. **Understand the widget type needed** (simple HTML, configurable, or React/modern framework)
-2. **Create widget structure** in `widgets/<widget_name>/` with `widget.json` and `dist/content.html`
-3. **Follow the workflow** in section "AI Agent Guidelines for Widget Creation" below
-4. **Build and validate** using `./bin/build-registry.sh --dry-run` before final build
+1. **Check if you need official docs** - If the task goes beyond basic widget scaffolding, fetch the official documentation first (see "Official Documentation" above)
+2. **Understand the widget type needed** (simple HTML, configurable, or React/modern framework)
+3. **Create widget structure** in `widgets/<widget_name>/` with `widget.json` and `dist/content.html`
+4. **Follow the workflow** in section "AI Agent Guidelines for Widget Creation" below
+5. **Build and validate** using `./bin/build-registry.sh --dry-run` before final build
 
 ## AI Agent Guidelines for Widget Creation
 
 When helping users create widgets, follow these guidelines:
+
+**CRITICAL**: For tasks beyond basic widget creation, **always fetch and consult the official documentation** (see "Official Documentation" section above) before proceeding.
 
 ### 1. Widget Creation Workflow
 
@@ -200,17 +212,9 @@ If widget needs to call external APIs:
 - Use `fetch()` directly in widget JavaScript
 - No special setup needed
 
-**Option B: Private APIs (requires auth)**
-- Use Widget Service Connectors (server-side proxy)
-- Create secrets for API keys/tokens in the Community Control Panel
-- Create connectors that reference secrets in the Community Control Panel
-- Visit the connectors/secrets page in the Community Control Panel to learn how to create and use them
-- Widget calls connector endpoint: `/widget-service/connectors/{permalink}/execute`
-
-**Example connector pattern:**
-1. Create a secret with the API key
-2. Create a connector with URL and auth config using `{{ get_secret('secret_name') }}`
-3. Widget JavaScript calls the connector endpoint
+**Option B: Private APIs (requires auth) - Use Connectors**
+- Use Widget Service Connectors (server-side proxy) and Secrets for secure API access
+- For connector setup, SDK usage, and complete integration examples, consult the official documentation (see "Official Documentation" above)
 
 ### 5. Build Tool Configuration
 
@@ -438,3 +442,4 @@ jq . widgets/<widget_name>/widget.json
 - **React widget**: `widgets/react_hello_world/` - Build tool integration with Vite
 
 For detailed documentation, see `widgets/WIDGET_SETUP.md`.
+
