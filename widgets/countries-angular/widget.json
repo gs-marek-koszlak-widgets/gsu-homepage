@@ -8,6 +8,10 @@
     "path": "dist",
     "entry": "index.html"
   },
+  "settings": {
+    "shared": false,
+    "movable": false
+  },
   "configuration": {
     "properties": [
       {
