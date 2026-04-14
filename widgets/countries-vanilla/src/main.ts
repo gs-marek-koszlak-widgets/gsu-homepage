@@ -76,7 +76,7 @@ export async function init(sdk: WidgetSDK) {
 
   const header = document.createElement("p");
   header.className = "widget-framework-header";
-  header.textContent = (sdk.getProps() as WidgetProps).title ?? "";
+  header.textContent = sdk.getProps().title ?? "";
 
   const contentDiv = document.createElement("div");
   section.appendChild(header);

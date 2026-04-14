@@ -1,10 +1,10 @@
-import type { CountryCardProps } from "./types";
+import type { Country } from "./types";
 
 const onFlagError = (e: React.SyntheticEvent<HTMLImageElement>) => {
   e.currentTarget.style.opacity = "0";
 };
 
-export const CountryCard = ({ country }: CountryCardProps) => (
+export const CountryCard = ({ country }: { country: Country }) => (
   <li className="country-item">
     <img
       className="country-flag"

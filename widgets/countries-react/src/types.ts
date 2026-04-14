@@ -29,10 +29,6 @@ export interface Country {
   region: string;
 }
 
-export interface CountryCardProps {
-  country: Country;
-}
-
 declare global {
   interface Window {
     WidgetServiceSDK: new () => {
