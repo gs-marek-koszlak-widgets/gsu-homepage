@@ -17,7 +17,7 @@ set -e
 
 DEFAULT_CONTAINERS='["Full width"]'
 DEFAULT_WIDGETS_LIBRARY="true"
-DEFAULT_SETTINGS='{"configurable":true,"editable":true,"removable":true,"shared":false,"movable":false}'
+DEFAULT_SETTINGS='{"configurable":true,"editable":true,"removable":true,"shared":true,"movable":true}'
 
 CONTENT_DEFAULT_METHOD="GET"
 CONTENT_DEFAULT_REQUIRES_AUTH="false"
