@@ -1,0 +1,53 @@
+{
+  "version": "1.0.0",
+  "title": "Hero",
+  "description": "Full-width hero section with gradient background, large gradient title, and a supporting paragraph. Used as the main page header.",
+  "category": "Gainsight University",
+  "imageName": "banner",
+  "source": {
+    "path": "dist",
+    "entry": "content.html"
+  },
+  "configuration": {
+    "properties": [
+      {
+        "name": "title_text",
+        "type": "text",
+        "label": "Title",
+        "defaultValue": "Gainsight University",
+        "rules": { "required": true }
+      },
+      {
+        "name": "subtitle_text",
+        "type": "text",
+        "label": "Subtitle",
+        "defaultValue": "Welcome to Gainsight University. You'll find content to support all of the Gainsight products. Explore free online training, register for premium virtual instructor-led courses, or earn professional certifications."
+      },
+      {
+        "name": "background_start",
+        "type": "color",
+        "label": "Background Gradient Start",
+        "defaultValue": "#153D5E"
+      },
+      {
+        "name": "background_end",
+        "type": "color",
+        "label": "Background Gradient End",
+        "defaultValue": "#0E2F49"
+      },
+      {
+        "name": "decoration_image_url",
+        "type": "text",
+        "label": "Decoration Image URL (bottom-right overlay)",
+        "defaultValue": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775623016%2FCurved+Lines+GSU+Homepage.1775623016634.png"
+      }
+    ]
+  },
+  "defaultConfig": {
+    "title_text": "Gainsight University",
+    "subtitle_text": "Welcome to Gainsight University. You'll find content to support all of the Gainsight products. Explore free online training, register for premium virtual instructor-led courses, or earn professional certifications.",
+    "background_start": "#153D5E",
+    "background_end": "#0E2F49",
+    "decoration_image_url": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775623016%2FCurved+Lines+GSU+Homepage.1775623016634.png"
+  }
+}

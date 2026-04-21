@@ -1,0 +1,60 @@
+{
+  "version": "1.0.0",
+  "title": "Info Bar",
+  "description": "Slim horizontal info bar with icon, message, and pill button. Used for persistent status or informational messages.",
+  "category": "Gainsight University",
+  "imageName": "banner",
+  "source": {
+    "path": "dist",
+    "entry": "content.html"
+  },
+  "configuration": {
+    "properties": [
+      {
+        "name": "background_color",
+        "type": "color",
+        "label": "Background Color",
+        "defaultValue": "#22649F"
+      },
+      {
+        "name": "text_color",
+        "type": "color",
+        "label": "Text Color",
+        "defaultValue": "#FFFFFF"
+      },
+      {
+        "name": "message_text",
+        "type": "text",
+        "label": "Message",
+        "defaultValue": "Gainsight University welcomes Skilljar users! Same content, new home.",
+        "rules": { "required": true }
+      },
+      {
+        "name": "icon_url",
+        "type": "text",
+        "label": "Icon URL (left of message)",
+        "defaultValue": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775666432%2FAnnouncement+Icon.1775666432180.png"
+      },
+      {
+        "name": "button_text",
+        "type": "text",
+        "label": "Button Label",
+        "defaultValue": "Click here"
+      },
+      {
+        "name": "button_url",
+        "type": "text",
+        "label": "Button URL",
+        "defaultValue": "#"
+      }
+    ]
+  },
+  "defaultConfig": {
+    "background_color": "#22649F",
+    "text_color": "#FFFFFF",
+    "message_text": "Gainsight University welcomes Skilljar users! Same content, new home.",
+    "icon_url": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775666432%2FAnnouncement+Icon.1775666432180.png",
+    "button_text": "Click here",
+    "button_url": "#"
+  }
+}

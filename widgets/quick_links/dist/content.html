@@ -1,0 +1,88 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
+<style>
+  .gsu-ql {
+    font-family: 'Montserrat', sans-serif;
+    background: {{ background_color }};
+    width: 100%; padding: 40px 20px;
+    border-top: 2px solid #E0E8EF;
+  }
+  .gsu-ql * { box-sizing: border-box; }
+  .gsu-ql__header { text-align: center; margin-bottom: 28px; }
+  .gsu-ql__title { font-weight: 600; font-size: 32px; line-height: 1.3; color: #0e0e0e; }
+  .gsu-ql__row {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;
+    max-width: 900px; margin: 0 auto;
+  }
+  .gsu-ql__card {
+    display: flex; flex-direction: column;
+    width: 426px; border: 2px solid {{ border_color }}; border-radius: 20px;
+    background: #FFFFFF; padding: 24px 28px; text-decoration: none; color: inherit;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .gsu-ql__card:hover { transform: translateY(-4px); box-shadow: 0px 12px 32px rgba(21, 61, 94, 0.12); }
+  .gsu-ql__icon { width: 28px; height: 28px; object-fit: contain; border: 0; display: block; margin-bottom: 12px; }
+  .gsu-ql__card-title {
+    font-weight: 600; font-size: 22px; line-height: 140%;
+    color: {{ card_title_color }}; margin-bottom: 10px;
+  }
+  .gsu-ql__card-desc {
+    flex-grow: 1; font-weight: 500; font-size: 15px; line-height: 24px;
+    color: #0e0e0e; margin-bottom: 16px;
+  }
+  .gsu-ql__footer { display: flex; align-items: center; justify-content: space-between; }
+  .gsu-ql__link { font-weight: 500; font-size: 14px; color: {{ link_color }}; }
+  .gsu-ql__badges { display: flex; align-items: center; gap: 6px; }
+  .gsu-ql__badge { width: 28px; height: 28px; object-fit: contain; border: 0; display: block; }
+  .gsu-ql__badge[data-hidden="true"] { display: none; }
+  @media screen and (max-width: 768px) {
+    .gsu-ql__card { width: 100%; max-width: 426px; }
+  }
+  @media screen and (max-width: 560px) {
+    .gsu-ql__card { padding: 20px 22px; }
+  }
+</style>
+<section class="gsu-ql">
+  <div class="gsu-ql__header">
+    <div class="gsu-ql__title">{{ section_title }}</div>
+  </div>
+  <div class="gsu-ql__row" id="gsu-ql-row">
+    <a class="gsu-ql__card" href="{{ card1_link_url }}">
+      <img class="gsu-ql__icon" src="{{ card1_icon }}" alt="" />
+      <div class="gsu-ql__card-title">{{ card1_title }}</div>
+      <div class="gsu-ql__card-desc">{{ card1_desc }}</div>
+      <div class="gsu-ql__footer">
+        <span class="gsu-ql__link">{{ card1_link_text }} &rarr;</span>
+        <div class="gsu-ql__badges">
+          <img class="gsu-ql__badge" src="{{ card1_badge1 }}" alt="" data-src="{{ card1_badge1 }}" />
+          <img class="gsu-ql__badge" src="{{ card1_badge2 }}" alt="" data-src="{{ card1_badge2 }}" />
+          <img class="gsu-ql__badge" src="{{ card1_badge3 }}" alt="" data-src="{{ card1_badge3 }}" />
+        </div>
+      </div>
+    </a>
+    <a class="gsu-ql__card" href="{{ card2_link_url }}">
+      <img class="gsu-ql__icon" src="{{ card2_icon }}" alt="" />
+      <div class="gsu-ql__card-title">{{ card2_title }}</div>
+      <div class="gsu-ql__card-desc">{{ card2_desc }}</div>
+      <div class="gsu-ql__footer">
+        <span class="gsu-ql__link">{{ card2_link_text }} &rarr;</span>
+        <div class="gsu-ql__badges">
+          <img class="gsu-ql__badge" src="{{ card2_badge1 }}" alt="" data-src="{{ card2_badge1 }}" />
+          <img class="gsu-ql__badge" src="{{ card2_badge2 }}" alt="" data-src="{{ card2_badge2 }}" />
+          <img class="gsu-ql__badge" src="{{ card2_badge3 }}" alt="" data-src="{{ card2_badge3 }}" />
+        </div>
+      </div>
+    </a>
+  </div>
+</section>
+<script>
+(function () {
+  var script = document.currentScript;
+  var root = (script && script.getRootNode) ? script.getRootNode() : document;
+  var row = root.getElementById ? root.getElementById('gsu-ql-row') : document.getElementById('gsu-ql-row');
+  if (!row) return;
+  row.querySelectorAll('.gsu-ql__badge').forEach(function (b) {
+    var src = (b.getAttribute('data-src') || '').trim();
+    if (!src) b.setAttribute('data-hidden', 'true');
+  });
+})();
+</script>

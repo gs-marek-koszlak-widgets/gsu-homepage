@@ -1,0 +1,100 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
+<style>
+  .gsu-pg {
+    font-family: 'Montserrat', sans-serif;
+    background: {{ background_color }};
+    width: 100%; padding: 60px 20px;
+    border-top: 2px solid #E0E8EF;
+    position: relative; overflow: hidden;
+  }
+  .gsu-pg * { box-sizing: border-box; }
+  .gsu-pg__wrap { max-width: 1100px; margin: 0 auto; position: relative; z-index: 1; }
+  .gsu-pg__header { text-align: center; margin-bottom: 40px; }
+  .gsu-pg__title {
+    font-weight: 600; font-size: 32px; line-height: 1.3;
+    color: #0e0e0e; margin-bottom: 12px;
+  }
+  .gsu-pg__subtitle {
+    font-weight: 500; font-size: 16px; line-height: 26px; color: #4a4a4a;
+  }
+  .gsu-pg__grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;
+  }
+  .gsu-pg__tile {
+    display: flex; align-items: center; gap: 14px;
+    background: #FFFFFF; border-radius: 16px; padding: 20px;
+    min-height: 80px; box-shadow: 0 4px 14px rgba(26,27,61,0.06);
+    text-decoration: none; color: inherit;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .gsu-pg__tile:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(26,27,61,0.12);
+  }
+  .gsu-pg__tile[data-hidden="true"] { display: none; }
+  .gsu-pg__icon-wrap {
+    width: 36px; height: 36px; min-width: 36px; border-radius: 50%;
+    background: rgba(56,162,255,0.1);
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .gsu-pg__icon { width: 28px; height: 28px; object-fit: contain; border: 0; display: block; }
+  .gsu-pg__tile-title {
+    font-weight: 600; font-size: 14px; line-height: 1.4;
+    color: {{ tile_title_color }};
+  }
+  @media screen and (max-width: 1200px) {
+    .gsu-pg__grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media screen and (max-width: 768px) {
+    .gsu-pg__grid { grid-template-columns: 1fr; }
+  }
+</style>
+<section class="gsu-pg">
+  <div class="gsu-pg__wrap">
+    <div class="gsu-pg__header">
+      <div class="gsu-pg__title">{{ section_title }}</div>
+      <div class="gsu-pg__subtitle">{{ section_subtitle }}</div>
+    </div>
+    <div class="gsu-pg__grid" id="gsu-pg-grid">
+      <a class="gsu-pg__tile" href="{{ tile1_link }}"  data-title="{{ tile1_title }}"  data-icon="{{ tile1_icon }}"><div class="gsu-pg__icon-wrap"><img class="gsu-pg__icon" alt="" /></div><span class="gsu-pg__tile-title">{{ tile1_title }}</span></a>
+      <a class="gsu-pg__tile" href="{{ tile2_link }}"  data-title="{{ tile2_title }}"  data-icon="{{ tile2_icon }}"><div class="gsu-pg__icon-wrap"><img class="gsu-pg__icon" alt="" /></div><span class="gsu-pg__tile-title">{{ tile2_title }}</span></a>
+      <a class="gsu-pg__tile" href="{{ tile3_link }}"  data-title="{{ tile3_title }}"  data-icon="{{ tile3_icon }}"><div class="gsu-pg__icon-wrap"><img class="gsu-pg__icon" alt="" /></div><span class="gsu-pg__tile-title">{{ tile3_title }}</span></a>
+      <a class="gsu-pg__tile" href="{{ tile4_link }}"  data-title="{{ tile4_title }}"  data-icon="{{ tile4_icon }}"><div class="gsu-pg__icon-wrap"><img class="gsu-pg__icon" alt="" /></div><span class="gsu-pg__tile-title">{{ tile4_title }}</span></a>
+      <a class="gsu-pg__tile" href="{{ tile5_link }}"  data-title="{{ tile5_title }}"  data-icon="{{ tile5_icon }}"><div class="gsu-pg__icon-wrap"><img class="gsu-pg__icon" alt="" /></div><span class="gsu-pg__tile-title">{{ tile5_title }}</span></a>
+      <a class="gsu-pg__tile" href="{{ tile6_link }}"  data-title="{{ tile6_title }}"  data-icon="{{ tile6_icon }}"><div class="gsu-pg__icon-wrap"><img class="gsu-pg__icon" alt="" /></div><span class="gsu-pg__tile-title">{{ tile6_title }}</span></a>
+      <a class="gsu-pg__tile" href="{{ tile7_link }}"  data-title="{{ tile7_title }}"  data-icon="{{ tile7_icon }}"><div class="gsu-pg__icon-wrap"><img class="gsu-pg__icon" alt="" /></div><span class="gsu-pg__tile-title">{{ tile7_title }}</span></a>
+      <a class="gsu-pg__tile" href="{{ tile8_link }}"  data-title="{{ tile8_title }}"  data-icon="{{ tile8_icon }}"><div class="gsu-pg__icon-wrap"><img class="gsu-pg__icon" alt="" /></div><span class="gsu-pg__tile-title">{{ tile8_title }}</span></a>
+      <a class="gsu-pg__tile" href="{{ tile9_link }}"  data-title="{{ tile9_title }}"  data-icon="{{ tile9_icon }}"><div class="gsu-pg__icon-wrap"><img class="gsu-pg__icon" alt="" /></div><span class="gsu-pg__tile-title">{{ tile9_title }}</span></a>
+      <a class="gsu-pg__tile" href="{{ tile10_link }}" data-title="{{ tile10_title }}" data-icon="{{ tile10_icon }}"><div class="gsu-pg__icon-wrap"><img class="gsu-pg__icon" alt="" /></div><span class="gsu-pg__tile-title">{{ tile10_title }}</span></a>
+      <a class="gsu-pg__tile" href="{{ tile11_link }}" data-title="{{ tile11_title }}" data-icon="{{ tile11_icon }}"><div class="gsu-pg__icon-wrap"><img class="gsu-pg__icon" alt="" /></div><span class="gsu-pg__tile-title">{{ tile11_title }}</span></a>
+      <a class="gsu-pg__tile" href="{{ tile12_link }}" data-title="{{ tile12_title }}" data-icon="{{ tile12_icon }}"><div class="gsu-pg__icon-wrap"><img class="gsu-pg__icon" alt="" /></div><span class="gsu-pg__tile-title">{{ tile12_title }}</span></a>
+      <a class="gsu-pg__tile" href="{{ tile13_link }}" data-title="{{ tile13_title }}" data-icon="{{ tile13_icon }}"><div class="gsu-pg__icon-wrap"><img class="gsu-pg__icon" alt="" /></div><span class="gsu-pg__tile-title">{{ tile13_title }}</span></a>
+      <a class="gsu-pg__tile" href="{{ tile14_link }}" data-title="{{ tile14_title }}" data-icon="{{ tile14_icon }}"><div class="gsu-pg__icon-wrap"><img class="gsu-pg__icon" alt="" /></div><span class="gsu-pg__tile-title">{{ tile14_title }}</span></a>
+      <a class="gsu-pg__tile" href="{{ tile15_link }}" data-title="{{ tile15_title }}" data-icon="{{ tile15_icon }}"><div class="gsu-pg__icon-wrap"><img class="gsu-pg__icon" alt="" /></div><span class="gsu-pg__tile-title">{{ tile15_title }}</span></a>
+    </div>
+  </div>
+</section>
+<script>
+(function () {
+  var iconMap = {
+    cs: "{{ cs_icon }}",
+    cc: "{{ cc_icon }}",
+    px: "{{ px_icon }}",
+    sj: "{{ sj_icon }}",
+    st: "{{ st_icon }}",
+    ce: "{{ ce_icon }}"
+  };
+  var script = document.currentScript;
+  var root = (script && script.getRootNode) ? script.getRootNode() : document;
+  var grid = (root.getElementById ? root.getElementById('gsu-pg-grid') : document.getElementById('gsu-pg-grid'));
+  if (!grid) return;
+  var tiles = grid.querySelectorAll('.gsu-pg__tile');
+  tiles.forEach(function (tile) {
+    var title = (tile.getAttribute('data-title') || '').trim();
+    if (!title) { tile.setAttribute('data-hidden', 'true'); return; }
+    var iconKey = tile.getAttribute('data-icon');
+    var img = tile.querySelector('.gsu-pg__icon');
+    if (img && iconMap[iconKey]) img.src = iconMap[iconKey];
+  });
+})();
+</script>

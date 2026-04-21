@@ -1,0 +1,60 @@
+{
+  "version": "1.0.0",
+  "title": "Announcement Bar",
+  "description": "Dismissible-looking colored bar with icon, title, subtitle, and CTA button. Used for time-sensitive announcements at the top of the page.",
+  "category": "Gainsight University",
+  "imageName": "banner",
+  "source": {
+    "path": "dist",
+    "entry": "content.html"
+  },
+  "configuration": {
+    "properties": [
+      {
+        "name": "background_color",
+        "type": "color",
+        "label": "Background Color",
+        "defaultValue": "#F1E4E6"
+      },
+      {
+        "name": "accent_color",
+        "type": "color",
+        "label": "Accent Color (icon + title + button)",
+        "defaultValue": "#EB5757"
+      },
+      {
+        "name": "title_text",
+        "type": "text",
+        "label": "Title",
+        "defaultValue": "Security Advisory Restoration",
+        "rules": { "required": true }
+      },
+      {
+        "name": "subtitle_text",
+        "type": "text",
+        "label": "Subtitle",
+        "defaultValue": "Step-by-step guidance to restore your Gainsight integrations."
+      },
+      {
+        "name": "button_text",
+        "type": "text",
+        "label": "Button Label",
+        "defaultValue": "Self-Guided Training"
+      },
+      {
+        "name": "button_url",
+        "type": "text",
+        "label": "Button URL",
+        "defaultValue": "#"
+      }
+    ]
+  },
+  "defaultConfig": {
+    "background_color": "#F1E4E6",
+    "accent_color": "#EB5757",
+    "title_text": "Security Advisory Restoration",
+    "subtitle_text": "Step-by-step guidance to restore your Gainsight integrations.",
+    "button_text": "Self-Guided Training",
+    "button_url": "#"
+  }
+}

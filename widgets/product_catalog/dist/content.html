@@ -1,0 +1,102 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
+<style>
+  .gsu-pc {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(90deg, {{ background_start }} 0%, {{ background_end }} 100%);
+    width: 100%; padding: 60px 20px;
+  }
+  .gsu-pc * { box-sizing: border-box; }
+  .gsu-pc__wrap { text-align: center; max-width: 1100px; margin: 0 auto; }
+  .gsu-pc__title {
+    font-weight: 600; font-size: 32px; line-height: 1.3;
+    color: #0e0e0e; margin-bottom: 12px;
+  }
+  .gsu-pc__subtitle {
+    font-weight: 500; font-size: 16px; line-height: 26px;
+    color: #4a4a4a; margin-bottom: 40px;
+  }
+  .gsu-pc__grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr; gap: 20px;
+    max-width: 1100px; margin: 0 auto;
+  }
+  .gsu-pc__card {
+    display: flex; flex-direction: column; background: #FFFFFF;
+    border-radius: 20px; padding: 28px 24px; text-decoration: none;
+    box-shadow: 0px 8.82px 17.64px rgba(26, 27, 61, 0.1);
+    text-align: left; color: inherit;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .gsu-pc__card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 14px 28px rgba(26, 27, 61, 0.16);
+  }
+  .gsu-pc__card-head {
+    display: flex; align-items: center; gap: 10px; margin-bottom: 12px;
+  }
+  .gsu-pc__card-icon { width: 32px; height: 32px; object-fit: contain; border: 0; display: block; }
+  .gsu-pc__card-title {
+    font-weight: 600; font-size: 18px;
+    color: {{ card_title_color }};
+  }
+  .gsu-pc__card-desc {
+    flex-grow: 1; font-weight: 500; font-size: 14px; line-height: 22px;
+    color: #0e0e0e;
+  }
+  @media screen and (max-width: 1200px) {
+    .gsu-pc__grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media screen and (max-width: 560px) {
+    .gsu-pc__grid { grid-template-columns: 1fr; max-width: 400px; }
+  }
+</style>
+<section class="gsu-pc">
+  <div class="gsu-pc__wrap">
+    <div class="gsu-pc__title">{{ section_title }}</div>
+    <div class="gsu-pc__subtitle">{{ section_subtitle }}</div>
+    <div class="gsu-pc__grid">
+      <a class="gsu-pc__card" href="{{ card1_link }}">
+        <div class="gsu-pc__card-head">
+          <img class="gsu-pc__card-icon" src="{{ card1_icon }}" alt="" />
+          <span class="gsu-pc__card-title">{{ card1_title }}</span>
+        </div>
+        <div class="gsu-pc__card-desc">{{ card1_desc }}</div>
+      </a>
+      <a class="gsu-pc__card" href="{{ card2_link }}">
+        <div class="gsu-pc__card-head">
+          <img class="gsu-pc__card-icon" src="{{ card2_icon }}" alt="" />
+          <span class="gsu-pc__card-title">{{ card2_title }}</span>
+        </div>
+        <div class="gsu-pc__card-desc">{{ card2_desc }}</div>
+      </a>
+      <a class="gsu-pc__card" href="{{ card3_link }}">
+        <div class="gsu-pc__card-head">
+          <img class="gsu-pc__card-icon" src="{{ card3_icon }}" alt="" />
+          <span class="gsu-pc__card-title">{{ card3_title }}</span>
+        </div>
+        <div class="gsu-pc__card-desc">{{ card3_desc }}</div>
+      </a>
+      <a class="gsu-pc__card" href="{{ card4_link }}">
+        <div class="gsu-pc__card-head">
+          <img class="gsu-pc__card-icon" src="{{ card4_icon }}" alt="" />
+          <span class="gsu-pc__card-title">{{ card4_title }}</span>
+        </div>
+        <div class="gsu-pc__card-desc">{{ card4_desc }}</div>
+      </a>
+      <a class="gsu-pc__card" href="{{ card5_link }}">
+        <div class="gsu-pc__card-head">
+          <img class="gsu-pc__card-icon" src="{{ card5_icon }}" alt="" />
+          <span class="gsu-pc__card-title">{{ card5_title }}</span>
+        </div>
+        <div class="gsu-pc__card-desc">{{ card5_desc }}</div>
+      </a>
+      <a class="gsu-pc__card" href="{{ card6_link }}">
+        <div class="gsu-pc__card-head">
+          <img class="gsu-pc__card-icon" src="{{ card6_icon }}" alt="" />
+          <span class="gsu-pc__card-title">{{ card6_title }}</span>
+        </div>
+        <div class="gsu-pc__card-desc">{{ card6_desc }}</div>
+      </a>
+    </div>
+  </div>
+</section>

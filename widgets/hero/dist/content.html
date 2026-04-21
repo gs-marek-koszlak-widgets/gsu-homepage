@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
+<style>
+  .gsu-hero {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(180deg, {{ background_start }} 0%, {{ background_end }} 100%);
+    padding: 80px 20px 70px 20px; text-align: center;
+    position: relative; overflow: hidden; min-height: 340px;
+  }
+  .gsu-hero * { box-sizing: border-box; }
+  .gsu-hero__decoration {
+    position: absolute; pointer-events: none; bottom: 0; right: 0;
+    width: 85%; max-height: 70%; height: auto;
+    object-fit: contain; object-position: bottom right; z-index: 1;
+    border: 0; display: block;
+  }
+  .gsu-hero__title {
+    position: relative; z-index: 3;
+    font-weight: 600; font-size: 60px; line-height: 1.1; letter-spacing: 0;
+    margin: 0 auto 20px auto; max-width: 800px;
+    background: linear-gradient(90deg, #D4E7FA 0%, #A5D2FC 50%, #38A2FF 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .gsu-hero__subtitle {
+    position: relative; z-index: 3;
+    font-weight: 500; font-size: 19px; line-height: 29px;
+    color: rgba(255, 255, 255, 0.85); margin: 0 auto; max-width: 640px;
+  }
+  @media screen and (max-width: 1200px) {
+    .gsu-hero__decoration { display: none; }
+  }
+  @media screen and (max-width: 768px) {
+    .gsu-hero__title { font-size: 36px; line-height: 1.2; }
+    .gsu-hero__subtitle { font-size: 16px; line-height: 24px; }
+  }
+  @media screen and (max-width: 380px) {
+    .gsu-hero__title { font-size: 28px; }
+  }
+</style>
+<section class="gsu-hero">
+  <img class="gsu-hero__decoration" src="{{ decoration_image_url }}" alt="" />
+  <h1 class="gsu-hero__title">{{ title_text }}</h1>
+  <p class="gsu-hero__subtitle">{{ subtitle_text }}</p>
+</section>

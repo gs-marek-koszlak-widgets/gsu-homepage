@@ -1,0 +1,61 @@
+{
+  "version": "1.0.0",
+  "title": "Quick Links",
+  "description": "Section with two large bordered cards, each with icon, title, description, and link. Intended for 'More Ways to Learn'.",
+  "category": "Gainsight University",
+  "imageName": "banner",
+  "source": {
+    "path": "dist",
+    "entry": "content.html"
+  },
+  "configuration": {
+    "properties": [
+      { "name": "section_title",    "type": "text",  "label": "Section Title",    "defaultValue": "More Ways to Learn" },
+      { "name": "background_color", "type": "color", "label": "Background Color", "defaultValue": "#FFFFFF" },
+      { "name": "border_color",     "type": "color", "label": "Card Border",      "defaultValue": "#38A2FF" },
+      { "name": "card_title_color", "type": "color", "label": "Card Title Color", "defaultValue": "#153D5E" },
+      { "name": "link_color",       "type": "color", "label": "Link Color",       "defaultValue": "#38A2FF" },
+
+      { "name": "card1_title",    "type": "text", "label": "Card 1 - Title",       "defaultValue": "Instructor Led Training" },
+      { "name": "card1_desc",     "type": "text", "label": "Card 1 - Description", "defaultValue": "Customers can register for live interactive training and go deeper into technical topics." },
+      { "name": "card1_link_text","type": "text", "label": "Card 1 - Link Text",   "defaultValue": "Explore live training" },
+      { "name": "card1_link_url", "type": "text", "label": "Card 1 - Link URL",    "defaultValue": "#" },
+      { "name": "card1_icon",     "type": "text", "label": "Card 1 - Top Icon URL","defaultValue": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775671619%2Fuser-large-solid+1.1775671618825.png" },
+      { "name": "card1_badge1",   "type": "text", "label": "Card 1 - Badge 1 URL", "defaultValue": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620821%2FCS_Icon_Full-Color+%281%29.1775620821507.png" },
+      { "name": "card1_badge2",   "type": "text", "label": "Card 1 - Badge 2 URL", "defaultValue": "" },
+      { "name": "card1_badge3",   "type": "text", "label": "Card 1 - Badge 3 URL", "defaultValue": "" },
+
+      { "name": "card2_title",    "type": "text", "label": "Card 2 - Title",       "defaultValue": "Certifications" },
+      { "name": "card2_desc",     "type": "text", "label": "Card 2 - Description", "defaultValue": "Complete levels of certification for Admins and CSMs to enhance your career." },
+      { "name": "card2_link_text","type": "text", "label": "Card 2 - Link Text",   "defaultValue": "View certifications" },
+      { "name": "card2_link_url", "type": "text", "label": "Card 2 - Link URL",    "defaultValue": "#" },
+      { "name": "card2_icon",     "type": "text", "label": "Card 2 - Top Icon URL","defaultValue": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775671644%2FVector.1775671644818.png" },
+      { "name": "card2_badge1",   "type": "text", "label": "Card 2 - Badge 1 URL", "defaultValue": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620821%2FCS_Icon_Full-Color+%281%29.1775620821507.png" },
+      { "name": "card2_badge2",   "type": "text", "label": "Card 2 - Badge 2 URL", "defaultValue": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620858%2FPX_Icon_Full-Color+%281%29.1775620857757.png" },
+      { "name": "card2_badge3",   "type": "text", "label": "Card 2 - Badge 3 URL", "defaultValue": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620889%2FSkilljar_Icon_Full-Color+%282%29.1775620889626.png" }
+    ]
+  },
+  "defaultConfig": {
+    "section_title": "More Ways to Learn",
+    "background_color": "#FFFFFF",
+    "border_color": "#38A2FF",
+    "card_title_color": "#153D5E",
+    "link_color": "#38A2FF",
+    "card1_title": "Instructor Led Training",
+    "card1_desc": "Customers can register for live interactive training and go deeper into technical topics.",
+    "card1_link_text": "Explore live training",
+    "card1_link_url": "#",
+    "card1_icon": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775671619%2Fuser-large-solid+1.1775671618825.png",
+    "card1_badge1": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620821%2FCS_Icon_Full-Color+%281%29.1775620821507.png",
+    "card1_badge2": "",
+    "card1_badge3": "",
+    "card2_title": "Certifications",
+    "card2_desc": "Complete levels of certification for Admins and CSMs to enhance your career.",
+    "card2_link_text": "View certifications",
+    "card2_link_url": "#",
+    "card2_icon": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775671644%2FVector.1775671644818.png",
+    "card2_badge1": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620821%2FCS_Icon_Full-Color+%281%29.1775620821507.png",
+    "card2_badge2": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620858%2FPX_Icon_Full-Color+%281%29.1775620857757.png",
+    "card2_badge3": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620889%2FSkilljar_Icon_Full-Color+%282%29.1775620889626.png"
+  }
+}

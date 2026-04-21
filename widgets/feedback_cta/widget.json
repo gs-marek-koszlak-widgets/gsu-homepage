@@ -1,0 +1,35 @@
+{
+  "version": "1.0.0",
+  "title": "Feedback CTA",
+  "description": "Full-width dark CTA banner with title, subtitle, button, and decorative circles in the background. Intended for 'Questions or Feedback?'",
+  "category": "Gainsight University",
+  "imageName": "banner",
+  "source": {
+    "path": "dist",
+    "entry": "content.html"
+  },
+  "configuration": {
+    "properties": [
+      { "name": "background_color", "type": "color", "label": "Background Color", "defaultValue": "#153D5E" },
+      { "name": "text_color",       "type": "color", "label": "Text Color",       "defaultValue": "#E9F4FF" },
+      { "name": "button_color",     "type": "color", "label": "Button Color",     "defaultValue": "#38A2FF" },
+      { "name": "button_text_color","type": "color", "label": "Button Text Color","defaultValue": "#FFFFFF" },
+      { "name": "title_text",    "type": "text", "label": "Title",    "defaultValue": "Questions or Feedback?", "rules": { "required": true } },
+      { "name": "subtitle_text", "type": "text", "label": "Subtitle", "defaultValue": "We'd love to hear from you." },
+      { "name": "button_text",   "type": "text", "label": "Button Label", "defaultValue": "Let Us Know" },
+      { "name": "button_url",    "type": "text", "label": "Button URL",   "defaultValue": "#" },
+      { "name": "decoration_image_url", "type": "text", "label": "Decoration Image URL (circles)", "defaultValue": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1776482067%2FCircle.1776482066967.png" }
+    ]
+  },
+  "defaultConfig": {
+    "background_color": "#153D5E",
+    "text_color": "#E9F4FF",
+    "button_color": "#38A2FF",
+    "button_text_color": "#FFFFFF",
+    "title_text": "Questions or Feedback?",
+    "subtitle_text": "We'd love to hear from you.",
+    "button_text": "Let Us Know",
+    "button_url": "#",
+    "decoration_image_url": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1776482067%2FCircle.1776482066967.png"
+  }
+}

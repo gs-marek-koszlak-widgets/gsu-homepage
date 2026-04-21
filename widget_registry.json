@@ -1,207 +1,1782 @@
 {
   "widgets": [
     {
-      "title": "Countries Angular",
-      "description": "A widget built with Angular and the Widget SDK.",
-      "category": "Demo",
-      "imageSrc": "widgets/countries-angular/thumbnail.png",
+      "version": "1.0.0",
+      "title": "Announcement Bar",
+      "description": "Dismissible-looking colored bar with icon, title, subtitle, and CTA button. Used for time-sensitive announcements at the top of the page.",
+      "category": "Gainsight University",
+      "imageName": "banner",
       "source": {
-        "path": "widgets/countries-angular/dist",
-        "entry": "index.html"
-      },
-      "configuration": {
-        "properties": [
-          {
-            "name": "title",
-            "type": "text",
-            "label": "Title",
-            "defaultValue": "Countries Angular",
-            "rules": {
-              "required": true
-            }
-          },
-          {
-            "name": "description",
-            "type": "text",
-            "label": "Description",
-            "defaultValue": "A widget built with Angular and the Widget SDK."
-          }
-        ]
-      },
-      "defaultConfig": {
-        "title": "Countries Angular",
-        "description": "A widget built with Angular and the Widget SDK."
-      },
-      "type": "countries-angular"
-    },
-    {
-      "title": "Countries Html",
-      "description": "A widget built with HTML and the Widget SDK.",
-      "category": "Demo",
-      "imageSrc": "widgets/countries-html/thumbnail.png",
-      "source": {
-        "path": "widgets/countries-html/dist",
+        "path": "widgets/announcement_bar/dist",
         "entry": "content.html"
       },
       "configuration": {
         "properties": [
           {
-            "name": "title",
+            "name": "background_color",
+            "type": "color",
+            "label": "Background Color",
+            "defaultValue": "#F1E4E6"
+          },
+          {
+            "name": "accent_color",
+            "type": "color",
+            "label": "Accent Color (icon + title + button)",
+            "defaultValue": "#EB5757"
+          },
+          {
+            "name": "title_text",
             "type": "text",
             "label": "Title",
-            "defaultValue": "Countries Html",
+            "defaultValue": "Security Advisory Restoration",
             "rules": {
               "required": true
             }
           },
           {
-            "name": "description",
+            "name": "subtitle_text",
             "type": "text",
-            "label": "Description",
-            "defaultValue": "A widget built with HTML and the Widget SDK."
+            "label": "Subtitle",
+            "defaultValue": "Step-by-step guidance to restore your Gainsight integrations."
+          },
+          {
+            "name": "button_text",
+            "type": "text",
+            "label": "Button Label",
+            "defaultValue": "Self-Guided Training"
+          },
+          {
+            "name": "button_url",
+            "type": "text",
+            "label": "Button URL",
+            "defaultValue": "#"
           }
         ]
       },
       "defaultConfig": {
-        "title": "Countries Html",
-        "description": "A widget built with HTML and the Widget SDK."
+        "background_color": "#F1E4E6",
+        "accent_color": "#EB5757",
+        "title_text": "Security Advisory Restoration",
+        "subtitle_text": "Step-by-step guidance to restore your Gainsight integrations.",
+        "button_text": "Self-Guided Training",
+        "button_url": "#"
       },
-      "type": "countries-html"
+      "type": "announcement_bar"
     },
     {
-      "title": "Countries React",
-      "description": "A widget built with React and the Widget SDK.",
-      "category": "Demo",
-      "imageSrc": "widgets/countries-react/thumbnail.png",
+      "version": "1.0.0",
+      "title": "Feedback CTA",
+      "description": "Full-width dark CTA banner with title, subtitle, button, and decorative circles in the background. Intended for 'Questions or Feedback?'",
+      "category": "Gainsight University",
+      "imageName": "banner",
       "source": {
-        "path": "widgets/countries-react/dist",
-        "entry": "index.html"
+        "path": "widgets/feedback_cta/dist",
+        "entry": "content.html"
       },
       "configuration": {
         "properties": [
           {
-            "name": "title",
+            "name": "background_color",
+            "type": "color",
+            "label": "Background Color",
+            "defaultValue": "#153D5E"
+          },
+          {
+            "name": "text_color",
+            "type": "color",
+            "label": "Text Color",
+            "defaultValue": "#E9F4FF"
+          },
+          {
+            "name": "button_color",
+            "type": "color",
+            "label": "Button Color",
+            "defaultValue": "#38A2FF"
+          },
+          {
+            "name": "button_text_color",
+            "type": "color",
+            "label": "Button Text Color",
+            "defaultValue": "#FFFFFF"
+          },
+          {
+            "name": "title_text",
             "type": "text",
             "label": "Title",
-            "defaultValue": "Countries React",
+            "defaultValue": "Questions or Feedback?",
             "rules": {
               "required": true
             }
           },
           {
-            "name": "description",
+            "name": "subtitle_text",
             "type": "text",
-            "label": "Description",
-            "defaultValue": "A widget built with React and the Widget SDK."
+            "label": "Subtitle",
+            "defaultValue": "We'd love to hear from you."
+          },
+          {
+            "name": "button_text",
+            "type": "text",
+            "label": "Button Label",
+            "defaultValue": "Let Us Know"
+          },
+          {
+            "name": "button_url",
+            "type": "text",
+            "label": "Button URL",
+            "defaultValue": "#"
+          },
+          {
+            "name": "decoration_image_url",
+            "type": "text",
+            "label": "Decoration Image URL (circles)",
+            "defaultValue": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1776482067%2FCircle.1776482066967.png"
           }
         ]
       },
       "defaultConfig": {
-        "title": "Countries React",
-        "description": "A widget built with React and the Widget SDK."
+        "background_color": "#153D5E",
+        "text_color": "#E9F4FF",
+        "button_color": "#38A2FF",
+        "button_text_color": "#FFFFFF",
+        "title_text": "Questions or Feedback?",
+        "subtitle_text": "We'd love to hear from you.",
+        "button_text": "Let Us Know",
+        "button_url": "#",
+        "decoration_image_url": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1776482067%2FCircle.1776482066967.png"
       },
-      "type": "countries-react"
+      "type": "feedback_cta"
     },
     {
-      "title": "Countries Vanilla",
-      "description": "A widget built with Vanilla JS and the Widget SDK.",
-      "category": "Demo",
-      "imageSrc": "widgets/countries-vanilla/thumbnail.png",
+      "version": "1.0.0",
+      "title": "Hero",
+      "description": "Full-width hero section with gradient background, large gradient title, and a supporting paragraph. Used as the main page header.",
+      "category": "Gainsight University",
+      "imageName": "banner",
       "source": {
-        "path": "widgets/countries-vanilla/dist",
-        "entry": "index.html"
+        "path": "widgets/hero/dist",
+        "entry": "content.html"
       },
       "configuration": {
         "properties": [
           {
-            "name": "title",
+            "name": "title_text",
             "type": "text",
             "label": "Title",
-            "defaultValue": "Countries Vanilla",
+            "defaultValue": "Gainsight University",
             "rules": {
               "required": true
             }
           },
           {
-            "name": "description",
+            "name": "subtitle_text",
             "type": "text",
-            "label": "Description",
-            "defaultValue": "A widget built with Vanilla JS and the Widget SDK."
+            "label": "Subtitle",
+            "defaultValue": "Welcome to Gainsight University. You'll find content to support all of the Gainsight products. Explore free online training, register for premium virtual instructor-led courses, or earn professional certifications."
+          },
+          {
+            "name": "background_start",
+            "type": "color",
+            "label": "Background Gradient Start",
+            "defaultValue": "#153D5E"
+          },
+          {
+            "name": "background_end",
+            "type": "color",
+            "label": "Background Gradient End",
+            "defaultValue": "#0E2F49"
+          },
+          {
+            "name": "decoration_image_url",
+            "type": "text",
+            "label": "Decoration Image URL (bottom-right overlay)",
+            "defaultValue": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775623016%2FCurved+Lines+GSU+Homepage.1775623016634.png"
           }
         ]
       },
       "defaultConfig": {
-        "title": "Countries Vanilla",
-        "description": "A widget built with Vanilla JS and the Widget SDK."
+        "title_text": "Gainsight University",
+        "subtitle_text": "Welcome to Gainsight University. You'll find content to support all of the Gainsight products. Explore free online training, register for premium virtual instructor-led courses, or earn professional certifications.",
+        "background_start": "#153D5E",
+        "background_end": "#0E2F49",
+        "decoration_image_url": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775623016%2FCurved+Lines+GSU+Homepage.1775623016634.png"
       },
-      "type": "countries-vanilla"
+      "type": "hero"
     },
     {
-      "title": "Countries Vue",
-      "description": "A widget built with Vue and the Widget SDK.",
-      "category": "Demo",
-      "imageSrc": "widgets/countries-vue/thumbnail.png",
+      "version": "1.0.0",
+      "title": "Info Bar",
+      "description": "Slim horizontal info bar with icon, message, and pill button. Used for persistent status or informational messages.",
+      "category": "Gainsight University",
+      "imageName": "banner",
       "source": {
-        "path": "widgets/countries-vue/dist",
-        "entry": "index.html"
+        "path": "widgets/info_bar/dist",
+        "entry": "content.html"
       },
       "configuration": {
         "properties": [
           {
-            "name": "title",
+            "name": "background_color",
+            "type": "color",
+            "label": "Background Color",
+            "defaultValue": "#22649F"
+          },
+          {
+            "name": "text_color",
+            "type": "color",
+            "label": "Text Color",
+            "defaultValue": "#FFFFFF"
+          },
+          {
+            "name": "message_text",
             "type": "text",
-            "label": "Title",
-            "defaultValue": "Countries Vue",
+            "label": "Message",
+            "defaultValue": "Gainsight University welcomes Skilljar users! Same content, new home.",
             "rules": {
               "required": true
             }
           },
           {
-            "name": "description",
+            "name": "icon_url",
             "type": "text",
-            "label": "Description",
-            "defaultValue": "A widget built with Vue and the Widget SDK."
+            "label": "Icon URL (left of message)",
+            "defaultValue": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775666432%2FAnnouncement+Icon.1775666432180.png"
+          },
+          {
+            "name": "button_text",
+            "type": "text",
+            "label": "Button Label",
+            "defaultValue": "Click here"
+          },
+          {
+            "name": "button_url",
+            "type": "text",
+            "label": "Button URL",
+            "defaultValue": "#"
           }
         ]
       },
       "defaultConfig": {
-        "title": "Countries Vue",
-        "description": "A widget built with Vue and the Widget SDK."
+        "background_color": "#22649F",
+        "text_color": "#FFFFFF",
+        "message_text": "Gainsight University welcomes Skilljar users! Same content, new home.",
+        "icon_url": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775666432%2FAnnouncement+Icon.1775666432180.png",
+        "button_text": "Click here",
+        "button_url": "#"
       },
-      "type": "countries-vue"
-    }
-  ],
-  "stylesheets": [
+      "type": "info_bar"
+    },
     {
-      "rules": [
-        {
-          "field": "pageType",
-          "operator": "in",
-          "value": [
-            "global"
-          ]
-        }
-      ],
-      "name": "theme",
-      "description": "Shared design tokens and component styles",
-      "path": "./stylesheets/theme/style.css"
-    }
-  ],
-  "scripts": [
+      "version": "1.0.0",
+      "title": "Persona Grid",
+      "description": "Section header + 3-column grid of persona tiles (up to 15). Each tile has an icon, title, and link. Intended for 'Find Training for Your Role'. Leave a tile's title blank to hide it.",
+      "category": "Gainsight University",
+      "imageName": "banner",
+      "source": {
+        "path": "widgets/persona_grid/dist",
+        "entry": "content.html"
+      },
+      "configuration": {
+        "properties": [
+          {
+            "name": "section_title",
+            "type": "text",
+            "label": "Section Title",
+            "defaultValue": "Find Training for Your Role"
+          },
+          {
+            "name": "section_subtitle",
+            "type": "text",
+            "label": "Section Subtitle",
+            "defaultValue": "Jump straight to the content specifically built for your role."
+          },
+          {
+            "name": "background_color",
+            "type": "color",
+            "label": "Background Color",
+            "defaultValue": "#FFFFFF"
+          },
+          {
+            "name": "tile_title_color",
+            "type": "color",
+            "label": "Tile Title Color",
+            "defaultValue": "#153D5E"
+          },
+          {
+            "name": "cs_icon",
+            "type": "text",
+            "label": "CS Icon URL",
+            "defaultValue": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620821%2FCS_Icon_Full-Color+%281%29.1775620821507.png"
+          },
+          {
+            "name": "cc_icon",
+            "type": "text",
+            "label": "CC Icon URL",
+            "defaultValue": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620839%2FCC_Icon_Full-Color+%281%29.1775620839241.png"
+          },
+          {
+            "name": "px_icon",
+            "type": "text",
+            "label": "PX Icon URL",
+            "defaultValue": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620858%2FPX_Icon_Full-Color+%281%29.1775620857757.png"
+          },
+          {
+            "name": "sj_icon",
+            "type": "text",
+            "label": "SJ Icon URL",
+            "defaultValue": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620889%2FSkilljar_Icon_Full-Color+%282%29.1775620889626.png"
+          },
+          {
+            "name": "st_icon",
+            "type": "text",
+            "label": "ST Icon URL",
+            "defaultValue": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620908%2FStaircase_Icon_Full-Color+%281%29.1775620908583.png"
+          },
+          {
+            "name": "ce_icon",
+            "type": "text",
+            "label": "CE Icon URL",
+            "defaultValue": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620875%2FCE_Icon_Full-Color+%281%29.1775620875494.png"
+          },
+          {
+            "name": "tile1_title",
+            "type": "text",
+            "label": "Tile 1 - Title",
+            "defaultValue": "CS Gainsight Administrator"
+          },
+          {
+            "name": "tile1_link",
+            "type": "text",
+            "label": "Tile 1 - Link",
+            "defaultValue": "#"
+          },
+          {
+            "name": "tile1_icon",
+            "type": "select",
+            "label": "Tile 1 - Icon",
+            "defaultValue": "cs",
+            "options": [
+              {
+                "value": "cs",
+                "label": "Customer Success"
+              },
+              {
+                "value": "cc",
+                "label": "Customer Communities"
+              },
+              {
+                "value": "px",
+                "label": "Product Experience"
+              },
+              {
+                "value": "sj",
+                "label": "Skilljar"
+              },
+              {
+                "value": "st",
+                "label": "Staircase AI"
+              },
+              {
+                "value": "ce",
+                "label": "Customer Education"
+              }
+            ]
+          },
+          {
+            "name": "tile2_title",
+            "type": "text",
+            "label": "Tile 2 - Title",
+            "defaultValue": "CS End User (aka, CSM)"
+          },
+          {
+            "name": "tile2_link",
+            "type": "text",
+            "label": "Tile 2 - Link",
+            "defaultValue": "#"
+          },
+          {
+            "name": "tile2_icon",
+            "type": "select",
+            "label": "Tile 2 - Icon",
+            "defaultValue": "cs",
+            "options": [
+              {
+                "value": "cs",
+                "label": "Customer Success"
+              },
+              {
+                "value": "cc",
+                "label": "Customer Communities"
+              },
+              {
+                "value": "px",
+                "label": "Product Experience"
+              },
+              {
+                "value": "sj",
+                "label": "Skilljar"
+              },
+              {
+                "value": "st",
+                "label": "Staircase AI"
+              },
+              {
+                "value": "ce",
+                "label": "Customer Education"
+              }
+            ]
+          },
+          {
+            "name": "tile3_title",
+            "type": "text",
+            "label": "Tile 3 - Title",
+            "defaultValue": "CS Adoption Champion or Team Manager"
+          },
+          {
+            "name": "tile3_link",
+            "type": "text",
+            "label": "Tile 3 - Link",
+            "defaultValue": "#"
+          },
+          {
+            "name": "tile3_icon",
+            "type": "select",
+            "label": "Tile 3 - Icon",
+            "defaultValue": "cs",
+            "options": [
+              {
+                "value": "cs",
+                "label": "Customer Success"
+              },
+              {
+                "value": "cc",
+                "label": "Customer Communities"
+              },
+              {
+                "value": "px",
+                "label": "Product Experience"
+              },
+              {
+                "value": "sj",
+                "label": "Skilljar"
+              },
+              {
+                "value": "st",
+                "label": "Staircase AI"
+              },
+              {
+                "value": "ce",
+                "label": "Customer Education"
+              }
+            ]
+          },
+          {
+            "name": "tile4_title",
+            "type": "text",
+            "label": "Tile 4 - Title",
+            "defaultValue": "CC Community Manager"
+          },
+          {
+            "name": "tile4_link",
+            "type": "text",
+            "label": "Tile 4 - Link",
+            "defaultValue": "#"
+          },
+          {
+            "name": "tile4_icon",
+            "type": "select",
+            "label": "Tile 4 - Icon",
+            "defaultValue": "cc",
+            "options": [
+              {
+                "value": "cs",
+                "label": "Customer Success"
+              },
+              {
+                "value": "cc",
+                "label": "Customer Communities"
+              },
+              {
+                "value": "px",
+                "label": "Product Experience"
+              },
+              {
+                "value": "sj",
+                "label": "Skilljar"
+              },
+              {
+                "value": "st",
+                "label": "Staircase AI"
+              },
+              {
+                "value": "ce",
+                "label": "Customer Education"
+              }
+            ]
+          },
+          {
+            "name": "tile5_title",
+            "type": "text",
+            "label": "Tile 5 - Title",
+            "defaultValue": "CC Content Moderator"
+          },
+          {
+            "name": "tile5_link",
+            "type": "text",
+            "label": "Tile 5 - Link",
+            "defaultValue": "#"
+          },
+          {
+            "name": "tile5_icon",
+            "type": "select",
+            "label": "Tile 5 - Icon",
+            "defaultValue": "cc",
+            "options": [
+              {
+                "value": "cs",
+                "label": "Customer Success"
+              },
+              {
+                "value": "cc",
+                "label": "Customer Communities"
+              },
+              {
+                "value": "px",
+                "label": "Product Experience"
+              },
+              {
+                "value": "sj",
+                "label": "Skilljar"
+              },
+              {
+                "value": "st",
+                "label": "Staircase AI"
+              },
+              {
+                "value": "ce",
+                "label": "Customer Education"
+              }
+            ]
+          },
+          {
+            "name": "tile6_title",
+            "type": "text",
+            "label": "Tile 6 - Title",
+            "defaultValue": "PX In-app Content Creator"
+          },
+          {
+            "name": "tile6_link",
+            "type": "text",
+            "label": "Tile 6 - Link",
+            "defaultValue": "#"
+          },
+          {
+            "name": "tile6_icon",
+            "type": "select",
+            "label": "Tile 6 - Icon",
+            "defaultValue": "px",
+            "options": [
+              {
+                "value": "cs",
+                "label": "Customer Success"
+              },
+              {
+                "value": "cc",
+                "label": "Customer Communities"
+              },
+              {
+                "value": "px",
+                "label": "Product Experience"
+              },
+              {
+                "value": "sj",
+                "label": "Skilljar"
+              },
+              {
+                "value": "st",
+                "label": "Staircase AI"
+              },
+              {
+                "value": "ce",
+                "label": "Customer Education"
+              }
+            ]
+          },
+          {
+            "name": "tile7_title",
+            "type": "text",
+            "label": "Tile 7 - Title",
+            "defaultValue": "PX Product Manager: Analytics"
+          },
+          {
+            "name": "tile7_link",
+            "type": "text",
+            "label": "Tile 7 - Link",
+            "defaultValue": "#"
+          },
+          {
+            "name": "tile7_icon",
+            "type": "select",
+            "label": "Tile 7 - Icon",
+            "defaultValue": "px",
+            "options": [
+              {
+                "value": "cs",
+                "label": "Customer Success"
+              },
+              {
+                "value": "cc",
+                "label": "Customer Communities"
+              },
+              {
+                "value": "px",
+                "label": "Product Experience"
+              },
+              {
+                "value": "sj",
+                "label": "Skilljar"
+              },
+              {
+                "value": "st",
+                "label": "Staircase AI"
+              },
+              {
+                "value": "ce",
+                "label": "Customer Education"
+              }
+            ]
+          },
+          {
+            "name": "tile8_title",
+            "type": "text",
+            "label": "Tile 8 - Title",
+            "defaultValue": "SJ LMS Administrator"
+          },
+          {
+            "name": "tile8_link",
+            "type": "text",
+            "label": "Tile 8 - Link",
+            "defaultValue": "#"
+          },
+          {
+            "name": "tile8_icon",
+            "type": "select",
+            "label": "Tile 8 - Icon",
+            "defaultValue": "sj",
+            "options": [
+              {
+                "value": "cs",
+                "label": "Customer Success"
+              },
+              {
+                "value": "cc",
+                "label": "Customer Communities"
+              },
+              {
+                "value": "px",
+                "label": "Product Experience"
+              },
+              {
+                "value": "sj",
+                "label": "Skilljar"
+              },
+              {
+                "value": "st",
+                "label": "Staircase AI"
+              },
+              {
+                "value": "ce",
+                "label": "Customer Education"
+              }
+            ]
+          },
+          {
+            "name": "tile9_title",
+            "type": "text",
+            "label": "Tile 9 - Title",
+            "defaultValue": "SJ Education Program Owner"
+          },
+          {
+            "name": "tile9_link",
+            "type": "text",
+            "label": "Tile 9 - Link",
+            "defaultValue": "#"
+          },
+          {
+            "name": "tile9_icon",
+            "type": "select",
+            "label": "Tile 9 - Icon",
+            "defaultValue": "sj",
+            "options": [
+              {
+                "value": "cs",
+                "label": "Customer Success"
+              },
+              {
+                "value": "cc",
+                "label": "Customer Communities"
+              },
+              {
+                "value": "px",
+                "label": "Product Experience"
+              },
+              {
+                "value": "sj",
+                "label": "Skilljar"
+              },
+              {
+                "value": "st",
+                "label": "Staircase AI"
+              },
+              {
+                "value": "ce",
+                "label": "Customer Education"
+              }
+            ]
+          },
+          {
+            "name": "tile10_title",
+            "type": "text",
+            "label": "Tile 10 - Title",
+            "defaultValue": "SJ Course Builder"
+          },
+          {
+            "name": "tile10_link",
+            "type": "text",
+            "label": "Tile 10 - Link",
+            "defaultValue": "#"
+          },
+          {
+            "name": "tile10_icon",
+            "type": "select",
+            "label": "Tile 10 - Icon",
+            "defaultValue": "sj",
+            "options": [
+              {
+                "value": "cs",
+                "label": "Customer Success"
+              },
+              {
+                "value": "cc",
+                "label": "Customer Communities"
+              },
+              {
+                "value": "px",
+                "label": "Product Experience"
+              },
+              {
+                "value": "sj",
+                "label": "Skilljar"
+              },
+              {
+                "value": "st",
+                "label": "Staircase AI"
+              },
+              {
+                "value": "ce",
+                "label": "Customer Education"
+              }
+            ]
+          },
+          {
+            "name": "tile11_title",
+            "type": "text",
+            "label": "Tile 11 - Title",
+            "defaultValue": "ST Placeholder 1"
+          },
+          {
+            "name": "tile11_link",
+            "type": "text",
+            "label": "Tile 11 - Link",
+            "defaultValue": "#"
+          },
+          {
+            "name": "tile11_icon",
+            "type": "select",
+            "label": "Tile 11 - Icon",
+            "defaultValue": "st",
+            "options": [
+              {
+                "value": "cs",
+                "label": "Customer Success"
+              },
+              {
+                "value": "cc",
+                "label": "Customer Communities"
+              },
+              {
+                "value": "px",
+                "label": "Product Experience"
+              },
+              {
+                "value": "sj",
+                "label": "Skilljar"
+              },
+              {
+                "value": "st",
+                "label": "Staircase AI"
+              },
+              {
+                "value": "ce",
+                "label": "Customer Education"
+              }
+            ]
+          },
+          {
+            "name": "tile12_title",
+            "type": "text",
+            "label": "Tile 12 - Title",
+            "defaultValue": "ST Placeholder 2"
+          },
+          {
+            "name": "tile12_link",
+            "type": "text",
+            "label": "Tile 12 - Link",
+            "defaultValue": "#"
+          },
+          {
+            "name": "tile12_icon",
+            "type": "select",
+            "label": "Tile 12 - Icon",
+            "defaultValue": "st",
+            "options": [
+              {
+                "value": "cs",
+                "label": "Customer Success"
+              },
+              {
+                "value": "cc",
+                "label": "Customer Communities"
+              },
+              {
+                "value": "px",
+                "label": "Product Experience"
+              },
+              {
+                "value": "sj",
+                "label": "Skilljar"
+              },
+              {
+                "value": "st",
+                "label": "Staircase AI"
+              },
+              {
+                "value": "ce",
+                "label": "Customer Education"
+              }
+            ]
+          },
+          {
+            "name": "tile13_title",
+            "type": "text",
+            "label": "Tile 13 - Title",
+            "defaultValue": "ST Placeholder 3"
+          },
+          {
+            "name": "tile13_link",
+            "type": "text",
+            "label": "Tile 13 - Link",
+            "defaultValue": "#"
+          },
+          {
+            "name": "tile13_icon",
+            "type": "select",
+            "label": "Tile 13 - Icon",
+            "defaultValue": "st",
+            "options": [
+              {
+                "value": "cs",
+                "label": "Customer Success"
+              },
+              {
+                "value": "cc",
+                "label": "Customer Communities"
+              },
+              {
+                "value": "px",
+                "label": "Product Experience"
+              },
+              {
+                "value": "sj",
+                "label": "Skilljar"
+              },
+              {
+                "value": "st",
+                "label": "Staircase AI"
+              },
+              {
+                "value": "ce",
+                "label": "Customer Education"
+              }
+            ]
+          },
+          {
+            "name": "tile14_title",
+            "type": "text",
+            "label": "Tile 14 - Title",
+            "defaultValue": "CE LMS Administrator"
+          },
+          {
+            "name": "tile14_link",
+            "type": "text",
+            "label": "Tile 14 - Link",
+            "defaultValue": "#"
+          },
+          {
+            "name": "tile14_icon",
+            "type": "select",
+            "label": "Tile 14 - Icon",
+            "defaultValue": "ce",
+            "options": [
+              {
+                "value": "cs",
+                "label": "Customer Success"
+              },
+              {
+                "value": "cc",
+                "label": "Customer Communities"
+              },
+              {
+                "value": "px",
+                "label": "Product Experience"
+              },
+              {
+                "value": "sj",
+                "label": "Skilljar"
+              },
+              {
+                "value": "st",
+                "label": "Staircase AI"
+              },
+              {
+                "value": "ce",
+                "label": "Customer Education"
+              }
+            ]
+          },
+          {
+            "name": "tile15_title",
+            "type": "text",
+            "label": "Tile 15 - Title",
+            "defaultValue": "CE Course Builder"
+          },
+          {
+            "name": "tile15_link",
+            "type": "text",
+            "label": "Tile 15 - Link",
+            "defaultValue": "#"
+          },
+          {
+            "name": "tile15_icon",
+            "type": "select",
+            "label": "Tile 15 - Icon",
+            "defaultValue": "ce",
+            "options": [
+              {
+                "value": "cs",
+                "label": "Customer Success"
+              },
+              {
+                "value": "cc",
+                "label": "Customer Communities"
+              },
+              {
+                "value": "px",
+                "label": "Product Experience"
+              },
+              {
+                "value": "sj",
+                "label": "Skilljar"
+              },
+              {
+                "value": "st",
+                "label": "Staircase AI"
+              },
+              {
+                "value": "ce",
+                "label": "Customer Education"
+              }
+            ]
+          }
+        ]
+      },
+      "defaultConfig": {
+        "section_title": "Find Training for Your Role",
+        "section_subtitle": "Jump straight to the content specifically built for your role.",
+        "background_color": "#FFFFFF",
+        "tile_title_color": "#153D5E",
+        "cs_icon": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620821%2FCS_Icon_Full-Color+%281%29.1775620821507.png",
+        "cc_icon": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620839%2FCC_Icon_Full-Color+%281%29.1775620839241.png",
+        "px_icon": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620858%2FPX_Icon_Full-Color+%281%29.1775620857757.png",
+        "sj_icon": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620889%2FSkilljar_Icon_Full-Color+%282%29.1775620889626.png",
+        "st_icon": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620908%2FStaircase_Icon_Full-Color+%281%29.1775620908583.png",
+        "ce_icon": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620875%2FCE_Icon_Full-Color+%281%29.1775620875494.png",
+        "tile1_title": "CS Gainsight Administrator",
+        "tile1_link": "#",
+        "tile1_icon": "cs",
+        "tile2_title": "CS End User (aka, CSM)",
+        "tile2_link": "#",
+        "tile2_icon": "cs",
+        "tile3_title": "CS Adoption Champion or Team Manager",
+        "tile3_link": "#",
+        "tile3_icon": "cs",
+        "tile4_title": "CC Community Manager",
+        "tile4_link": "#",
+        "tile4_icon": "cc",
+        "tile5_title": "CC Content Moderator",
+        "tile5_link": "#",
+        "tile5_icon": "cc",
+        "tile6_title": "PX In-app Content Creator",
+        "tile6_link": "#",
+        "tile6_icon": "px",
+        "tile7_title": "PX Product Manager: Analytics",
+        "tile7_link": "#",
+        "tile7_icon": "px",
+        "tile8_title": "SJ LMS Administrator",
+        "tile8_link": "#",
+        "tile8_icon": "sj",
+        "tile9_title": "SJ Education Program Owner",
+        "tile9_link": "#",
+        "tile9_icon": "sj",
+        "tile10_title": "SJ Course Builder",
+        "tile10_link": "#",
+        "tile10_icon": "sj",
+        "tile11_title": "ST Placeholder 1",
+        "tile11_link": "#",
+        "tile11_icon": "st",
+        "tile12_title": "ST Placeholder 2",
+        "tile12_link": "#",
+        "tile12_icon": "st",
+        "tile13_title": "ST Placeholder 3",
+        "tile13_link": "#",
+        "tile13_icon": "st",
+        "tile14_title": "CE LMS Administrator",
+        "tile14_link": "#",
+        "tile14_icon": "ce",
+        "tile15_title": "CE Course Builder",
+        "tile15_link": "#",
+        "tile15_icon": "ce"
+      },
+      "type": "persona_grid"
+    },
     {
-      "rules": [
-        {
-          "field": "pageType",
-          "operator": "in",
-          "value": [
-            "global"
-          ]
-        }
-      ],
-      "placement": "head",
-      "name": "analytics",
-      "description": "Tracks widget impressions and interactions",
-      "path": "./scripts/analytics/script.js"
+      "version": "1.0.0",
+      "title": "Product Catalog Grid",
+      "description": "Section header + 3-column grid of product cards (up to 6). Each card has an icon, title, description, and link. Intended for 'Explore Courses by Product'.",
+      "category": "Gainsight University",
+      "imageName": "banner",
+      "source": {
+        "path": "widgets/product_catalog/dist",
+        "entry": "content.html"
+      },
+      "configuration": {
+        "properties": [
+          {
+            "name": "section_title",
+            "type": "text",
+            "label": "Section Title",
+            "defaultValue": "Explore Courses by Product"
+          },
+          {
+            "name": "section_subtitle",
+            "type": "text",
+            "label": "Section Subtitle",
+            "defaultValue": "Dive into self-paced training organized by the Gainsight product you use every day."
+          },
+          {
+            "name": "background_start",
+            "type": "color",
+            "label": "Background Start",
+            "defaultValue": "#FFFFFF"
+          },
+          {
+            "name": "background_end",
+            "type": "color",
+            "label": "Background End",
+            "defaultValue": "#D4E7FA"
+          },
+          {
+            "name": "card_title_color",
+            "type": "color",
+            "label": "Card Title Color",
+            "defaultValue": "#153D5E"
+          },
+          {
+            "name": "card1_title",
+            "type": "text",
+            "label": "Card 1 - Title",
+            "defaultValue": "Customer Success"
+          },
+          {
+            "name": "card1_desc",
+            "type": "text",
+            "label": "Card 1 - Description",
+            "defaultValue": "From onboarding to advanced administration, these courses cover everything you need to succeed with Gainsight CS."
+          },
+          {
+            "name": "card1_icon",
+            "type": "text",
+            "label": "Card 1 - Icon URL",
+            "defaultValue": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620821%2FCS_Icon_Full-Color+%281%29.1775620821507.png"
+          },
+          {
+            "name": "card1_link",
+            "type": "text",
+            "label": "Card 1 - Link URL",
+            "defaultValue": "#"
+          },
+          {
+            "name": "card2_title",
+            "type": "text",
+            "label": "Card 2 - Title",
+            "defaultValue": "Customer Communities"
+          },
+          {
+            "name": "card2_desc",
+            "type": "text",
+            "label": "Card 2 - Description",
+            "defaultValue": "Explore courses designed to help you launch, manage, and grow a thriving community."
+          },
+          {
+            "name": "card2_icon",
+            "type": "text",
+            "label": "Card 2 - Icon URL",
+            "defaultValue": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620839%2FCC_Icon_Full-Color+%281%29.1775620839241.png"
+          },
+          {
+            "name": "card2_link",
+            "type": "text",
+            "label": "Card 2 - Link URL",
+            "defaultValue": "#"
+          },
+          {
+            "name": "card3_title",
+            "type": "text",
+            "label": "Card 3 - Title",
+            "defaultValue": "Product Experience"
+          },
+          {
+            "name": "card3_desc",
+            "type": "text",
+            "label": "Card 3 - Description",
+            "defaultValue": "From first setup to advanced analytics, these courses help you get the most out of the platform."
+          },
+          {
+            "name": "card3_icon",
+            "type": "text",
+            "label": "Card 3 - Icon URL",
+            "defaultValue": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620858%2FPX_Icon_Full-Color+%281%29.1775620857757.png"
+          },
+          {
+            "name": "card3_link",
+            "type": "text",
+            "label": "Card 3 - Link URL",
+            "defaultValue": "#"
+          },
+          {
+            "name": "card4_title",
+            "type": "text",
+            "label": "Card 4 - Title",
+            "defaultValue": "Skilljar"
+          },
+          {
+            "name": "card4_desc",
+            "type": "text",
+            "label": "Card 4 - Description",
+            "defaultValue": "Whether you're setting up your first course or optimizing an established program, you'll find the resources you need here."
+          },
+          {
+            "name": "card4_icon",
+            "type": "text",
+            "label": "Card 4 - Icon URL",
+            "defaultValue": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620889%2FSkilljar_Icon_Full-Color+%282%29.1775620889626.png"
+          },
+          {
+            "name": "card4_link",
+            "type": "text",
+            "label": "Card 4 - Link URL",
+            "defaultValue": "#"
+          },
+          {
+            "name": "card5_title",
+            "type": "text",
+            "label": "Card 5 - Title",
+            "defaultValue": "Staircase AI"
+          },
+          {
+            "name": "card5_desc",
+            "type": "text",
+            "label": "Card 5 - Description",
+            "defaultValue": "Get up to speed quickly with courses built around the core features and workflows in Staircase AI."
+          },
+          {
+            "name": "card5_icon",
+            "type": "text",
+            "label": "Card 5 - Icon URL",
+            "defaultValue": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620908%2FStaircase_Icon_Full-Color+%281%29.1775620908583.png"
+          },
+          {
+            "name": "card5_link",
+            "type": "text",
+            "label": "Card 5 - Link URL",
+            "defaultValue": "#"
+          },
+          {
+            "name": "card6_title",
+            "type": "text",
+            "label": "Card 6 - Title",
+            "defaultValue": "Customer Education"
+          },
+          {
+            "name": "card6_desc",
+            "type": "text",
+            "label": "Card 6 - Description",
+            "defaultValue": "Learn how to build, launch, and manage a best-in-class customer education program with Gainsight CE."
+          },
+          {
+            "name": "card6_icon",
+            "type": "text",
+            "label": "Card 6 - Icon URL",
+            "defaultValue": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620875%2FCE_Icon_Full-Color+%281%29.1775620875494.png"
+          },
+          {
+            "name": "card6_link",
+            "type": "text",
+            "label": "Card 6 - Link URL",
+            "defaultValue": "#"
+          }
+        ]
+      },
+      "defaultConfig": {
+        "section_title": "Explore Courses by Product",
+        "section_subtitle": "Dive into self-paced training organized by the Gainsight product you use every day.",
+        "background_start": "#FFFFFF",
+        "background_end": "#D4E7FA",
+        "card_title_color": "#153D5E",
+        "card1_title": "Customer Success",
+        "card1_desc": "From onboarding to advanced administration, these courses cover everything you need to succeed with Gainsight CS.",
+        "card1_icon": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620821%2FCS_Icon_Full-Color+%281%29.1775620821507.png",
+        "card1_link": "#",
+        "card2_title": "Customer Communities",
+        "card2_desc": "Explore courses designed to help you launch, manage, and grow a thriving community.",
+        "card2_icon": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620839%2FCC_Icon_Full-Color+%281%29.1775620839241.png",
+        "card2_link": "#",
+        "card3_title": "Product Experience",
+        "card3_desc": "From first setup to advanced analytics, these courses help you get the most out of the platform.",
+        "card3_icon": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620858%2FPX_Icon_Full-Color+%281%29.1775620857757.png",
+        "card3_link": "#",
+        "card4_title": "Skilljar",
+        "card4_desc": "Whether you're setting up your first course or optimizing an established program, you'll find the resources you need here.",
+        "card4_icon": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620889%2FSkilljar_Icon_Full-Color+%282%29.1775620889626.png",
+        "card4_link": "#",
+        "card5_title": "Staircase AI",
+        "card5_desc": "Get up to speed quickly with courses built around the core features and workflows in Staircase AI.",
+        "card5_icon": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620908%2FStaircase_Icon_Full-Color+%281%29.1775620908583.png",
+        "card5_link": "#",
+        "card6_title": "Customer Education",
+        "card6_desc": "Learn how to build, launch, and manage a best-in-class customer education program with Gainsight CE.",
+        "card6_icon": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620875%2FCE_Icon_Full-Color+%281%29.1775620875494.png",
+        "card6_link": "#"
+      },
+      "type": "product_catalog"
+    },
+    {
+      "version": "1.0.0",
+      "title": "Quick Links",
+      "description": "Section with two large bordered cards, each with icon, title, description, and link. Intended for 'More Ways to Learn'.",
+      "category": "Gainsight University",
+      "imageName": "banner",
+      "source": {
+        "path": "widgets/quick_links/dist",
+        "entry": "content.html"
+      },
+      "configuration": {
+        "properties": [
+          {
+            "name": "section_title",
+            "type": "text",
+            "label": "Section Title",
+            "defaultValue": "More Ways to Learn"
+          },
+          {
+            "name": "background_color",
+            "type": "color",
+            "label": "Background Color",
+            "defaultValue": "#FFFFFF"
+          },
+          {
+            "name": "border_color",
+            "type": "color",
+            "label": "Card Border",
+            "defaultValue": "#38A2FF"
+          },
+          {
+            "name": "card_title_color",
+            "type": "color",
+            "label": "Card Title Color",
+            "defaultValue": "#153D5E"
+          },
+          {
+            "name": "link_color",
+            "type": "color",
+            "label": "Link Color",
+            "defaultValue": "#38A2FF"
+          },
+          {
+            "name": "card1_title",
+            "type": "text",
+            "label": "Card 1 - Title",
+            "defaultValue": "Instructor Led Training"
+          },
+          {
+            "name": "card1_desc",
+            "type": "text",
+            "label": "Card 1 - Description",
+            "defaultValue": "Customers can register for live interactive training and go deeper into technical topics."
+          },
+          {
+            "name": "card1_link_text",
+            "type": "text",
+            "label": "Card 1 - Link Text",
+            "defaultValue": "Explore live training"
+          },
+          {
+            "name": "card1_link_url",
+            "type": "text",
+            "label": "Card 1 - Link URL",
+            "defaultValue": "#"
+          },
+          {
+            "name": "card1_icon",
+            "type": "text",
+            "label": "Card 1 - Top Icon URL",
+            "defaultValue": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775671619%2Fuser-large-solid+1.1775671618825.png"
+          },
+          {
+            "name": "card1_badge1",
+            "type": "text",
+            "label": "Card 1 - Badge 1 URL",
+            "defaultValue": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620821%2FCS_Icon_Full-Color+%281%29.1775620821507.png"
+          },
+          {
+            "name": "card1_badge2",
+            "type": "text",
+            "label": "Card 1 - Badge 2 URL",
+            "defaultValue": ""
+          },
+          {
+            "name": "card1_badge3",
+            "type": "text",
+            "label": "Card 1 - Badge 3 URL",
+            "defaultValue": ""
+          },
+          {
+            "name": "card2_title",
+            "type": "text",
+            "label": "Card 2 - Title",
+            "defaultValue": "Certifications"
+          },
+          {
+            "name": "card2_desc",
+            "type": "text",
+            "label": "Card 2 - Description",
+            "defaultValue": "Complete levels of certification for Admins and CSMs to enhance your career."
+          },
+          {
+            "name": "card2_link_text",
+            "type": "text",
+            "label": "Card 2 - Link Text",
+            "defaultValue": "View certifications"
+          },
+          {
+            "name": "card2_link_url",
+            "type": "text",
+            "label": "Card 2 - Link URL",
+            "defaultValue": "#"
+          },
+          {
+            "name": "card2_icon",
+            "type": "text",
+            "label": "Card 2 - Top Icon URL",
+            "defaultValue": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775671644%2FVector.1775671644818.png"
+          },
+          {
+            "name": "card2_badge1",
+            "type": "text",
+            "label": "Card 2 - Badge 1 URL",
+            "defaultValue": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620821%2FCS_Icon_Full-Color+%281%29.1775620821507.png"
+          },
+          {
+            "name": "card2_badge2",
+            "type": "text",
+            "label": "Card 2 - Badge 2 URL",
+            "defaultValue": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620858%2FPX_Icon_Full-Color+%281%29.1775620857757.png"
+          },
+          {
+            "name": "card2_badge3",
+            "type": "text",
+            "label": "Card 2 - Badge 3 URL",
+            "defaultValue": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620889%2FSkilljar_Icon_Full-Color+%282%29.1775620889626.png"
+          }
+        ]
+      },
+      "defaultConfig": {
+        "section_title": "More Ways to Learn",
+        "background_color": "#FFFFFF",
+        "border_color": "#38A2FF",
+        "card_title_color": "#153D5E",
+        "link_color": "#38A2FF",
+        "card1_title": "Instructor Led Training",
+        "card1_desc": "Customers can register for live interactive training and go deeper into technical topics.",
+        "card1_link_text": "Explore live training",
+        "card1_link_url": "#",
+        "card1_icon": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775671619%2Fuser-large-solid+1.1775671618825.png",
+        "card1_badge1": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620821%2FCS_Icon_Full-Color+%281%29.1775620821507.png",
+        "card1_badge2": "",
+        "card1_badge3": "",
+        "card2_title": "Certifications",
+        "card2_desc": "Complete levels of certification for Admins and CSMs to enhance your career.",
+        "card2_link_text": "View certifications",
+        "card2_link_url": "#",
+        "card2_icon": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775671644%2FVector.1775671644818.png",
+        "card2_badge1": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620821%2FCS_Icon_Full-Color+%281%29.1775620821507.png",
+        "card2_badge2": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620858%2FPX_Icon_Full-Color+%281%29.1775620857757.png",
+        "card2_badge3": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620889%2FSkilljar_Icon_Full-Color+%282%29.1775620889626.png"
+      },
+      "type": "quick_links"
+    },
+    {
+      "version": "1.0.0",
+      "title": "What's New Carousel",
+      "description": "Section header + horizontal scrolling carousel of course cards with arrow navigation. Up to 8 cards. Leave a card's title blank to hide it.",
+      "category": "Gainsight University",
+      "imageName": "banner",
+      "source": {
+        "path": "widgets/whats_new/dist",
+        "entry": "content.html"
+      },
+      "configuration": {
+        "properties": [
+          {
+            "name": "section_title",
+            "type": "text",
+            "label": "Section Title",
+            "defaultValue": "What's New"
+          },
+          {
+            "name": "section_subtitle",
+            "type": "text",
+            "label": "Section Subtitle",
+            "defaultValue": "The latest courses and learning paths added to Gainsight University."
+          },
+          {
+            "name": "background_start",
+            "type": "color",
+            "label": "Background Start",
+            "defaultValue": "#FFFFFF"
+          },
+          {
+            "name": "background_end",
+            "type": "color",
+            "label": "Background End",
+            "defaultValue": "#D4E7FA"
+          },
+          {
+            "name": "accent_color",
+            "type": "color",
+            "label": "Arrow Accent",
+            "defaultValue": "#38A2FF"
+          },
+          {
+            "name": "card1_title",
+            "type": "text",
+            "label": "Card 1 - Title",
+            "defaultValue": "Course 1: Introduction"
+          },
+          {
+            "name": "card1_desc",
+            "type": "text",
+            "label": "Card 1 - Description",
+            "defaultValue": "Get a tour of the essentials. Understand goals, key concepts, and how the learning path works so you can start with confidence."
+          },
+          {
+            "name": "card1_image",
+            "type": "text",
+            "label": "Card 1 - Image URL",
+            "defaultValue": "https://cc.sj-cdn.net/instructor/1p771tm57lxit-cutler-skilljar/courses/2mepzpvoz45a5/promo-image.1755555675.png"
+          },
+          {
+            "name": "card1_link",
+            "type": "text",
+            "label": "Card 1 - Link URL",
+            "defaultValue": "#"
+          },
+          {
+            "name": "card1_duration",
+            "type": "text",
+            "label": "Card 1 - Duration",
+            "defaultValue": "15 min"
+          },
+          {
+            "name": "card2_title",
+            "type": "text",
+            "label": "Card 2 - Title",
+            "defaultValue": "Course 2: Setup"
+          },
+          {
+            "name": "card2_desc",
+            "type": "text",
+            "label": "Card 2 - Description",
+            "defaultValue": "Prepare your account and environment. Configure core settings, connect integrations, and follow best practices to avoid common pitfalls."
+          },
+          {
+            "name": "card2_image",
+            "type": "text",
+            "label": "Card 2 - Image URL",
+            "defaultValue": "https://cc.sj-cdn.net/instructor/1p771tm57lxit-cutler-skilljar/courses/1uj5mud0w1kl/promo-image.1755555975.png"
+          },
+          {
+            "name": "card2_link",
+            "type": "text",
+            "label": "Card 2 - Link URL",
+            "defaultValue": "#"
+          },
+          {
+            "name": "card2_duration",
+            "type": "text",
+            "label": "Card 2 - Duration",
+            "defaultValue": "10 min"
+          },
+          {
+            "name": "card3_title",
+            "type": "text",
+            "label": "Card 3 - Title",
+            "defaultValue": "Course 3: Creation"
+          },
+          {
+            "name": "card3_desc",
+            "type": "text",
+            "label": "Card 3 - Description",
+            "defaultValue": "Build your first project step by step. Structure content, apply templates, and use time-saving tips to deliver a polished result."
+          },
+          {
+            "name": "card3_image",
+            "type": "text",
+            "label": "Card 3 - Image URL",
+            "defaultValue": "https://cc.sj-cdn.net/instructor/1p771tm57lxit-cutler-skilljar/courses/wrkprljlekpq/promo-image.1755555941.png"
+          },
+          {
+            "name": "card3_link",
+            "type": "text",
+            "label": "Card 3 - Link URL",
+            "defaultValue": "#"
+          },
+          {
+            "name": "card3_duration",
+            "type": "text",
+            "label": "Card 3 - Duration",
+            "defaultValue": "12 min"
+          },
+          {
+            "name": "card4_title",
+            "type": "text",
+            "label": "Card 4 - Title",
+            "defaultValue": "Course 4: Promotion"
+          },
+          {
+            "name": "card4_desc",
+            "type": "text",
+            "label": "Card 4 - Description",
+            "defaultValue": "Launch with impact. Learn channels, messaging, and timing to reach your audience and drive engagement from day one."
+          },
+          {
+            "name": "card4_image",
+            "type": "text",
+            "label": "Card 4 - Image URL",
+            "defaultValue": "https://cc.sj-cdn.net/instructor/1p771tm57lxit-cutler-skilljar/courses/1gpbgw3mwgxwf/promo-image.1755556001.png"
+          },
+          {
+            "name": "card4_link",
+            "type": "text",
+            "label": "Card 4 - Link URL",
+            "defaultValue": "#"
+          },
+          {
+            "name": "card4_duration",
+            "type": "text",
+            "label": "Card 4 - Duration",
+            "defaultValue": "15 min"
+          },
+          {
+            "name": "card5_title",
+            "type": "text",
+            "label": "Card 5 - Title",
+            "defaultValue": "Course 5: Analytics"
+          },
+          {
+            "name": "card5_desc",
+            "type": "text",
+            "label": "Card 5 - Description",
+            "defaultValue": "Track what matters. Read dashboards, interpret metrics, and turn insights into actions that improve outcomes."
+          },
+          {
+            "name": "card5_image",
+            "type": "text",
+            "label": "Card 5 - Image URL",
+            "defaultValue": "https://cc.sj-cdn.net/instructor/1p771tm57lxit-cutler-skilljar/courses/dohsnuxko3fl/promo-image.1755556033.png"
+          },
+          {
+            "name": "card5_link",
+            "type": "text",
+            "label": "Card 5 - Link URL",
+            "defaultValue": "#"
+          },
+          {
+            "name": "card5_duration",
+            "type": "text",
+            "label": "Card 5 - Duration",
+            "defaultValue": "15 min"
+          },
+          {
+            "name": "card6_title",
+            "type": "text",
+            "label": "Card 6 - Title",
+            "defaultValue": ""
+          },
+          {
+            "name": "card6_desc",
+            "type": "text",
+            "label": "Card 6 - Description",
+            "defaultValue": ""
+          },
+          {
+            "name": "card6_image",
+            "type": "text",
+            "label": "Card 6 - Image URL",
+            "defaultValue": ""
+          },
+          {
+            "name": "card6_link",
+            "type": "text",
+            "label": "Card 6 - Link URL",
+            "defaultValue": "#"
+          },
+          {
+            "name": "card6_duration",
+            "type": "text",
+            "label": "Card 6 - Duration",
+            "defaultValue": ""
+          },
+          {
+            "name": "card7_title",
+            "type": "text",
+            "label": "Card 7 - Title",
+            "defaultValue": ""
+          },
+          {
+            "name": "card7_desc",
+            "type": "text",
+            "label": "Card 7 - Description",
+            "defaultValue": ""
+          },
+          {
+            "name": "card7_image",
+            "type": "text",
+            "label": "Card 7 - Image URL",
+            "defaultValue": ""
+          },
+          {
+            "name": "card7_link",
+            "type": "text",
+            "label": "Card 7 - Link URL",
+            "defaultValue": "#"
+          },
+          {
+            "name": "card7_duration",
+            "type": "text",
+            "label": "Card 7 - Duration",
+            "defaultValue": ""
+          },
+          {
+            "name": "card8_title",
+            "type": "text",
+            "label": "Card 8 - Title",
+            "defaultValue": ""
+          },
+          {
+            "name": "card8_desc",
+            "type": "text",
+            "label": "Card 8 - Description",
+            "defaultValue": ""
+          },
+          {
+            "name": "card8_image",
+            "type": "text",
+            "label": "Card 8 - Image URL",
+            "defaultValue": ""
+          },
+          {
+            "name": "card8_link",
+            "type": "text",
+            "label": "Card 8 - Link URL",
+            "defaultValue": "#"
+          },
+          {
+            "name": "card8_duration",
+            "type": "text",
+            "label": "Card 8 - Duration",
+            "defaultValue": ""
+          }
+        ]
+      },
+      "defaultConfig": {
+        "section_title": "What's New",
+        "section_subtitle": "The latest courses and learning paths added to Gainsight University.",
+        "background_start": "#FFFFFF",
+        "background_end": "#D4E7FA",
+        "accent_color": "#38A2FF",
+        "card1_title": "Course 1: Introduction",
+        "card1_desc": "Get a tour of the essentials. Understand goals, key concepts, and how the learning path works so you can start with confidence.",
+        "card1_image": "https://cc.sj-cdn.net/instructor/1p771tm57lxit-cutler-skilljar/courses/2mepzpvoz45a5/promo-image.1755555675.png",
+        "card1_link": "#",
+        "card1_duration": "15 min",
+        "card2_title": "Course 2: Setup",
+        "card2_desc": "Prepare your account and environment. Configure core settings, connect integrations, and follow best practices to avoid common pitfalls.",
+        "card2_image": "https://cc.sj-cdn.net/instructor/1p771tm57lxit-cutler-skilljar/courses/1uj5mud0w1kl/promo-image.1755555975.png",
+        "card2_link": "#",
+        "card2_duration": "10 min",
+        "card3_title": "Course 3: Creation",
+        "card3_desc": "Build your first project step by step. Structure content, apply templates, and use time-saving tips to deliver a polished result.",
+        "card3_image": "https://cc.sj-cdn.net/instructor/1p771tm57lxit-cutler-skilljar/courses/wrkprljlekpq/promo-image.1755555941.png",
+        "card3_link": "#",
+        "card3_duration": "12 min",
+        "card4_title": "Course 4: Promotion",
+        "card4_desc": "Launch with impact. Learn channels, messaging, and timing to reach your audience and drive engagement from day one.",
+        "card4_image": "https://cc.sj-cdn.net/instructor/1p771tm57lxit-cutler-skilljar/courses/1gpbgw3mwgxwf/promo-image.1755556001.png",
+        "card4_link": "#",
+        "card4_duration": "15 min",
+        "card5_title": "Course 5: Analytics",
+        "card5_desc": "Track what matters. Read dashboards, interpret metrics, and turn insights into actions that improve outcomes.",
+        "card5_image": "https://cc.sj-cdn.net/instructor/1p771tm57lxit-cutler-skilljar/courses/dohsnuxko3fl/promo-image.1755556033.png",
+        "card5_link": "#",
+        "card5_duration": "15 min",
+        "card6_title": "",
+        "card6_desc": "",
+        "card6_image": "",
+        "card6_link": "#",
+        "card6_duration": "",
+        "card7_title": "",
+        "card7_desc": "",
+        "card7_image": "",
+        "card7_link": "#",
+        "card7_duration": "",
+        "card8_title": "",
+        "card8_desc": "",
+        "card8_image": "",
+        "card8_link": "#",
+        "card8_duration": ""
+      },
+      "type": "whats_new"
     }
   ]
 }

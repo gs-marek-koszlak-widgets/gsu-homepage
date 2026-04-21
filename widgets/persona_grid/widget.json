@@ -1,0 +1,217 @@
+{
+  "version": "1.0.0",
+  "title": "Persona Grid",
+  "description": "Section header + 3-column grid of persona tiles (up to 15). Each tile has an icon, title, and link. Intended for 'Find Training for Your Role'. Leave a tile's title blank to hide it.",
+  "category": "Gainsight University",
+  "imageName": "banner",
+  "source": {
+    "path": "dist",
+    "entry": "content.html"
+  },
+  "configuration": {
+    "properties": [
+      { "name": "section_title",    "type": "text",  "label": "Section Title",    "defaultValue": "Find Training for Your Role" },
+      { "name": "section_subtitle", "type": "text",  "label": "Section Subtitle", "defaultValue": "Jump straight to the content specifically built for your role." },
+      { "name": "background_color", "type": "color", "label": "Background Color", "defaultValue": "#FFFFFF" },
+      { "name": "tile_title_color", "type": "color", "label": "Tile Title Color", "defaultValue": "#153D5E" },
+      { "name": "cs_icon",          "type": "text",  "label": "CS Icon URL",      "defaultValue": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620821%2FCS_Icon_Full-Color+%281%29.1775620821507.png" },
+      { "name": "cc_icon",          "type": "text",  "label": "CC Icon URL",      "defaultValue": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620839%2FCC_Icon_Full-Color+%281%29.1775620839241.png" },
+      { "name": "px_icon",          "type": "text",  "label": "PX Icon URL",      "defaultValue": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620858%2FPX_Icon_Full-Color+%281%29.1775620857757.png" },
+      { "name": "sj_icon",          "type": "text",  "label": "SJ Icon URL",      "defaultValue": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620889%2FSkilljar_Icon_Full-Color+%282%29.1775620889626.png" },
+      { "name": "st_icon",          "type": "text",  "label": "ST Icon URL",      "defaultValue": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620908%2FStaircase_Icon_Full-Color+%281%29.1775620908583.png" },
+      { "name": "ce_icon",          "type": "text",  "label": "CE Icon URL",      "defaultValue": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620875%2FCE_Icon_Full-Color+%281%29.1775620875494.png" },
+
+      { "name": "tile1_title",  "type": "text", "label": "Tile 1 - Title",  "defaultValue": "CS Gainsight Administrator" },
+      { "name": "tile1_link",   "type": "text", "label": "Tile 1 - Link",   "defaultValue": "#" },
+      { "name": "tile1_icon",   "type": "select", "label": "Tile 1 - Icon", "defaultValue": "cs", "options": [
+        { "value": "cs", "label": "Customer Success" },
+        { "value": "cc", "label": "Customer Communities" },
+        { "value": "px", "label": "Product Experience" },
+        { "value": "sj", "label": "Skilljar" },
+        { "value": "st", "label": "Staircase AI" },
+        { "value": "ce", "label": "Customer Education" }
+      ]},
+
+      { "name": "tile2_title",  "type": "text", "label": "Tile 2 - Title",  "defaultValue": "CS End User (aka, CSM)" },
+      { "name": "tile2_link",   "type": "text", "label": "Tile 2 - Link",   "defaultValue": "#" },
+      { "name": "tile2_icon",   "type": "select", "label": "Tile 2 - Icon", "defaultValue": "cs", "options": [
+        { "value": "cs", "label": "Customer Success" },
+        { "value": "cc", "label": "Customer Communities" },
+        { "value": "px", "label": "Product Experience" },
+        { "value": "sj", "label": "Skilljar" },
+        { "value": "st", "label": "Staircase AI" },
+        { "value": "ce", "label": "Customer Education" }
+      ]},
+
+      { "name": "tile3_title",  "type": "text", "label": "Tile 3 - Title",  "defaultValue": "CS Adoption Champion or Team Manager" },
+      { "name": "tile3_link",   "type": "text", "label": "Tile 3 - Link",   "defaultValue": "#" },
+      { "name": "tile3_icon",   "type": "select", "label": "Tile 3 - Icon", "defaultValue": "cs", "options": [
+        { "value": "cs", "label": "Customer Success" },
+        { "value": "cc", "label": "Customer Communities" },
+        { "value": "px", "label": "Product Experience" },
+        { "value": "sj", "label": "Skilljar" },
+        { "value": "st", "label": "Staircase AI" },
+        { "value": "ce", "label": "Customer Education" }
+      ]},
+
+      { "name": "tile4_title",  "type": "text", "label": "Tile 4 - Title",  "defaultValue": "CC Community Manager" },
+      { "name": "tile4_link",   "type": "text", "label": "Tile 4 - Link",   "defaultValue": "#" },
+      { "name": "tile4_icon",   "type": "select", "label": "Tile 4 - Icon", "defaultValue": "cc", "options": [
+        { "value": "cs", "label": "Customer Success" },
+        { "value": "cc", "label": "Customer Communities" },
+        { "value": "px", "label": "Product Experience" },
+        { "value": "sj", "label": "Skilljar" },
+        { "value": "st", "label": "Staircase AI" },
+        { "value": "ce", "label": "Customer Education" }
+      ]},
+
+      { "name": "tile5_title",  "type": "text", "label": "Tile 5 - Title",  "defaultValue": "CC Content Moderator" },
+      { "name": "tile5_link",   "type": "text", "label": "Tile 5 - Link",   "defaultValue": "#" },
+      { "name": "tile5_icon",   "type": "select", "label": "Tile 5 - Icon", "defaultValue": "cc", "options": [
+        { "value": "cs", "label": "Customer Success" },
+        { "value": "cc", "label": "Customer Communities" },
+        { "value": "px", "label": "Product Experience" },
+        { "value": "sj", "label": "Skilljar" },
+        { "value": "st", "label": "Staircase AI" },
+        { "value": "ce", "label": "Customer Education" }
+      ]},
+
+      { "name": "tile6_title",  "type": "text", "label": "Tile 6 - Title",  "defaultValue": "PX In-app Content Creator" },
+      { "name": "tile6_link",   "type": "text", "label": "Tile 6 - Link",   "defaultValue": "#" },
+      { "name": "tile6_icon",   "type": "select", "label": "Tile 6 - Icon", "defaultValue": "px", "options": [
+        { "value": "cs", "label": "Customer Success" },
+        { "value": "cc", "label": "Customer Communities" },
+        { "value": "px", "label": "Product Experience" },
+        { "value": "sj", "label": "Skilljar" },
+        { "value": "st", "label": "Staircase AI" },
+        { "value": "ce", "label": "Customer Education" }
+      ]},
+
+      { "name": "tile7_title",  "type": "text", "label": "Tile 7 - Title",  "defaultValue": "PX Product Manager: Analytics" },
+      { "name": "tile7_link",   "type": "text", "label": "Tile 7 - Link",   "defaultValue": "#" },
+      { "name": "tile7_icon",   "type": "select", "label": "Tile 7 - Icon", "defaultValue": "px", "options": [
+        { "value": "cs", "label": "Customer Success" },
+        { "value": "cc", "label": "Customer Communities" },
+        { "value": "px", "label": "Product Experience" },
+        { "value": "sj", "label": "Skilljar" },
+        { "value": "st", "label": "Staircase AI" },
+        { "value": "ce", "label": "Customer Education" }
+      ]},
+
+      { "name": "tile8_title",  "type": "text", "label": "Tile 8 - Title",  "defaultValue": "SJ LMS Administrator" },
+      { "name": "tile8_link",   "type": "text", "label": "Tile 8 - Link",   "defaultValue": "#" },
+      { "name": "tile8_icon",   "type": "select", "label": "Tile 8 - Icon", "defaultValue": "sj", "options": [
+        { "value": "cs", "label": "Customer Success" },
+        { "value": "cc", "label": "Customer Communities" },
+        { "value": "px", "label": "Product Experience" },
+        { "value": "sj", "label": "Skilljar" },
+        { "value": "st", "label": "Staircase AI" },
+        { "value": "ce", "label": "Customer Education" }
+      ]},
+
+      { "name": "tile9_title",  "type": "text", "label": "Tile 9 - Title",  "defaultValue": "SJ Education Program Owner" },
+      { "name": "tile9_link",   "type": "text", "label": "Tile 9 - Link",   "defaultValue": "#" },
+      { "name": "tile9_icon",   "type": "select", "label": "Tile 9 - Icon", "defaultValue": "sj", "options": [
+        { "value": "cs", "label": "Customer Success" },
+        { "value": "cc", "label": "Customer Communities" },
+        { "value": "px", "label": "Product Experience" },
+        { "value": "sj", "label": "Skilljar" },
+        { "value": "st", "label": "Staircase AI" },
+        { "value": "ce", "label": "Customer Education" }
+      ]},
+
+      { "name": "tile10_title", "type": "text", "label": "Tile 10 - Title", "defaultValue": "SJ Course Builder" },
+      { "name": "tile10_link",  "type": "text", "label": "Tile 10 - Link",  "defaultValue": "#" },
+      { "name": "tile10_icon",  "type": "select", "label": "Tile 10 - Icon","defaultValue": "sj", "options": [
+        { "value": "cs", "label": "Customer Success" },
+        { "value": "cc", "label": "Customer Communities" },
+        { "value": "px", "label": "Product Experience" },
+        { "value": "sj", "label": "Skilljar" },
+        { "value": "st", "label": "Staircase AI" },
+        { "value": "ce", "label": "Customer Education" }
+      ]},
+
+      { "name": "tile11_title", "type": "text", "label": "Tile 11 - Title", "defaultValue": "ST Placeholder 1" },
+      { "name": "tile11_link",  "type": "text", "label": "Tile 11 - Link",  "defaultValue": "#" },
+      { "name": "tile11_icon",  "type": "select", "label": "Tile 11 - Icon","defaultValue": "st", "options": [
+        { "value": "cs", "label": "Customer Success" },
+        { "value": "cc", "label": "Customer Communities" },
+        { "value": "px", "label": "Product Experience" },
+        { "value": "sj", "label": "Skilljar" },
+        { "value": "st", "label": "Staircase AI" },
+        { "value": "ce", "label": "Customer Education" }
+      ]},
+
+      { "name": "tile12_title", "type": "text", "label": "Tile 12 - Title", "defaultValue": "ST Placeholder 2" },
+      { "name": "tile12_link",  "type": "text", "label": "Tile 12 - Link",  "defaultValue": "#" },
+      { "name": "tile12_icon",  "type": "select", "label": "Tile 12 - Icon","defaultValue": "st", "options": [
+        { "value": "cs", "label": "Customer Success" },
+        { "value": "cc", "label": "Customer Communities" },
+        { "value": "px", "label": "Product Experience" },
+        { "value": "sj", "label": "Skilljar" },
+        { "value": "st", "label": "Staircase AI" },
+        { "value": "ce", "label": "Customer Education" }
+      ]},
+
+      { "name": "tile13_title", "type": "text", "label": "Tile 13 - Title", "defaultValue": "ST Placeholder 3" },
+      { "name": "tile13_link",  "type": "text", "label": "Tile 13 - Link",  "defaultValue": "#" },
+      { "name": "tile13_icon",  "type": "select", "label": "Tile 13 - Icon","defaultValue": "st", "options": [
+        { "value": "cs", "label": "Customer Success" },
+        { "value": "cc", "label": "Customer Communities" },
+        { "value": "px", "label": "Product Experience" },
+        { "value": "sj", "label": "Skilljar" },
+        { "value": "st", "label": "Staircase AI" },
+        { "value": "ce", "label": "Customer Education" }
+      ]},
+
+      { "name": "tile14_title", "type": "text", "label": "Tile 14 - Title", "defaultValue": "CE LMS Administrator" },
+      { "name": "tile14_link",  "type": "text", "label": "Tile 14 - Link",  "defaultValue": "#" },
+      { "name": "tile14_icon",  "type": "select", "label": "Tile 14 - Icon","defaultValue": "ce", "options": [
+        { "value": "cs", "label": "Customer Success" },
+        { "value": "cc", "label": "Customer Communities" },
+        { "value": "px", "label": "Product Experience" },
+        { "value": "sj", "label": "Skilljar" },
+        { "value": "st", "label": "Staircase AI" },
+        { "value": "ce", "label": "Customer Education" }
+      ]},
+
+      { "name": "tile15_title", "type": "text", "label": "Tile 15 - Title", "defaultValue": "CE Course Builder" },
+      { "name": "tile15_link",  "type": "text", "label": "Tile 15 - Link",  "defaultValue": "#" },
+      { "name": "tile15_icon",  "type": "select", "label": "Tile 15 - Icon","defaultValue": "ce", "options": [
+        { "value": "cs", "label": "Customer Success" },
+        { "value": "cc", "label": "Customer Communities" },
+        { "value": "px", "label": "Product Experience" },
+        { "value": "sj", "label": "Skilljar" },
+        { "value": "st", "label": "Staircase AI" },
+        { "value": "ce", "label": "Customer Education" }
+      ]}
+    ]
+  },
+  "defaultConfig": {
+    "section_title": "Find Training for Your Role",
+    "section_subtitle": "Jump straight to the content specifically built for your role.",
+    "background_color": "#FFFFFF",
+    "tile_title_color": "#153D5E",
+    "cs_icon": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620821%2FCS_Icon_Full-Color+%281%29.1775620821507.png",
+    "cc_icon": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620839%2FCC_Icon_Full-Color+%281%29.1775620839241.png",
+    "px_icon": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620858%2FPX_Icon_Full-Color+%281%29.1775620857757.png",
+    "sj_icon": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620889%2FSkilljar_Icon_Full-Color+%282%29.1775620889626.png",
+    "st_icon": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620908%2FStaircase_Icon_Full-Color+%281%29.1775620908583.png",
+    "ce_icon": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620875%2FCE_Icon_Full-Color+%281%29.1775620875494.png",
+    "tile1_title":  "CS Gainsight Administrator",            "tile1_link":  "#", "tile1_icon":  "cs",
+    "tile2_title":  "CS End User (aka, CSM)",                "tile2_link":  "#", "tile2_icon":  "cs",
+    "tile3_title":  "CS Adoption Champion or Team Manager",  "tile3_link":  "#", "tile3_icon":  "cs",
+    "tile4_title":  "CC Community Manager",                  "tile4_link":  "#", "tile4_icon":  "cc",
+    "tile5_title":  "CC Content Moderator",                  "tile5_link":  "#", "tile5_icon":  "cc",
+    "tile6_title":  "PX In-app Content Creator",             "tile6_link":  "#", "tile6_icon":  "px",
+    "tile7_title":  "PX Product Manager: Analytics",         "tile7_link":  "#", "tile7_icon":  "px",
+    "tile8_title":  "SJ LMS Administrator",                  "tile8_link":  "#", "tile8_icon":  "sj",
+    "tile9_title":  "SJ Education Program Owner",            "tile9_link":  "#", "tile9_icon":  "sj",
+    "tile10_title": "SJ Course Builder",                     "tile10_link": "#", "tile10_icon": "sj",
+    "tile11_title": "ST Placeholder 1",                      "tile11_link": "#", "tile11_icon": "st",
+    "tile12_title": "ST Placeholder 2",                      "tile12_link": "#", "tile12_icon": "st",
+    "tile13_title": "ST Placeholder 3",                      "tile13_link": "#", "tile13_icon": "st",
+    "tile14_title": "CE LMS Administrator",                  "tile14_link": "#", "tile14_icon": "ce",
+    "tile15_title": "CE Course Builder",                     "tile15_link": "#", "tile15_icon": "ce"
+  }
+}
