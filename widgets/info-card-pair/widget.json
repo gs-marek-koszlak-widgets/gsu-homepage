@@ -1,0 +1,84 @@
+{
+  "version": "1.0.0",
+  "title": "Info Card Pair",
+  "description": "A pair of large outlined cards with icon, title, description, and CTA. Used for 'More Ways to Learn' (ILT, Certifications).",
+  "category": "custom",
+  "source": {
+    "path": "dist",
+    "entry": "content.html"
+  },
+  "properties": [
+    {
+      "name": "section_title",
+      "label": "Section title",
+      "type": "text",
+      "default": "More Ways to Learn"
+    },
+    {
+      "name": "section_subtitle",
+      "label": "Section subtitle",
+      "type": "text",
+      "default": "Explore live sessions and credentials."
+    },
+    {
+      "name": "card_a_title",
+      "label": "Card A — title",
+      "type": "text",
+      "default": "Instructor Led Training"
+    },
+    {
+      "name": "card_a_description",
+      "label": "Card A — description",
+      "type": "text",
+      "default": "Join live sessions with Gainsight experts and build skills with hands-on practice."
+    },
+    {
+      "name": "card_a_icon_url",
+      "label": "Card A — icon URL",
+      "type": "text",
+      "default": ""
+    },
+    {
+      "name": "card_a_cta_label",
+      "label": "Card A — button label",
+      "type": "text",
+      "default": "Browse sessions"
+    },
+    {
+      "name": "card_a_cta_url",
+      "label": "Card A — button link",
+      "type": "text",
+      "default": "#"
+    },
+    {
+      "name": "card_b_title",
+      "label": "Card B — title",
+      "type": "text",
+      "default": "Certifications"
+    },
+    {
+      "name": "card_b_description",
+      "label": "Card B — description",
+      "type": "text",
+      "default": "Prove your expertise with official Gainsight certifications and digital badges."
+    },
+    {
+      "name": "card_b_icon_url",
+      "label": "Card B — icon URL",
+      "type": "text",
+      "default": ""
+    },
+    {
+      "name": "card_b_cta_label",
+      "label": "Card B — button label",
+      "type": "text",
+      "default": "Get certified"
+    },
+    {
+      "name": "card_b_cta_url",
+      "label": "Card B — button link",
+      "type": "text",
+      "default": "#"
+    }
+  ]
+}

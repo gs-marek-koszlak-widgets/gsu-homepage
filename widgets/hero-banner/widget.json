@@ -1,0 +1,50 @@
+{
+  "version": "1.0.0",
+  "title": "Hero Banner",
+  "description": "Dark gradient hero banner with eyebrow, large title (gradient text accent), subtitle, and decorative artwork.",
+  "category": "custom",
+  "source": {
+    "path": "dist",
+    "entry": "content.html"
+  },
+  "properties": [
+    {
+      "name": "eyebrow",
+      "label": "Eyebrow text",
+      "type": "text",
+      "default": "Gainsight University"
+    },
+    {
+      "name": "title",
+      "label": "Title",
+      "type": "text",
+      "default": "Learn. Grow. Succeed.",
+      "rules": { "required": true, "maxLength": 160 }
+    },
+    {
+      "name": "title_accent",
+      "label": "Title accent (gradient highlighted word)",
+      "type": "text",
+      "default": "Succeed."
+    },
+    {
+      "name": "subtitle",
+      "label": "Subtitle",
+      "type": "text",
+      "default": "Your gateway to training, certifications, and product mastery across the Gainsight platform."
+    },
+    {
+      "name": "decoration_url",
+      "label": "Decorative image URL (optional)",
+      "type": "text",
+      "default": ""
+    },
+    {
+      "name": "min_height",
+      "label": "Minimum height (px)",
+      "type": "number",
+      "default": 320,
+      "rules": { "min": 160, "max": 720 }
+    }
+  ]
+}

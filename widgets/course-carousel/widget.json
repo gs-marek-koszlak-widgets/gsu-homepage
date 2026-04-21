@@ -1,0 +1,42 @@
+{
+  "version": "1.0.0",
+  "title": "Course Carousel",
+  "description": "Horizontally scrollable carousel of course cards with previous/next controls. Use for 'What's New', 'Featured Courses', etc.",
+  "category": "custom",
+  "source": {
+    "path": "dist",
+    "entry": "content.html"
+  },
+  "properties": [
+    {
+      "name": "section_title",
+      "label": "Section title",
+      "type": "text",
+      "default": "What's New"
+    },
+    {
+      "name": "section_subtitle",
+      "label": "Section subtitle",
+      "type": "text",
+      "default": "The latest courses, labs, and certifications."
+    },
+    {
+      "name": "view_all_url",
+      "label": "'View all' link URL (optional)",
+      "type": "text",
+      "default": ""
+    },
+    {
+      "name": "view_all_label",
+      "label": "'View all' link label",
+      "type": "text",
+      "default": "View all"
+    },
+    {
+      "name": "items_json",
+      "label": "Courses (JSON array)",
+      "type": "text",
+      "default": "[{\"title\":\"Getting Started with Customer Success\",\"description\":\"Learn the foundations of CS workflows.\",\"image_url\":\"\",\"badge\":\"New\",\"duration\":\"45 min\",\"link_url\":\"#\"},{\"title\":\"Community Manager Essentials\",\"description\":\"Build healthy, engaged communities.\",\"image_url\":\"\",\"badge\":\"Updated\",\"duration\":\"30 min\",\"link_url\":\"#\"},{\"title\":\"Skilljar LMS Admin Fundamentals\",\"description\":\"Set up your first academy.\",\"image_url\":\"\",\"badge\":\"\",\"duration\":\"60 min\",\"link_url\":\"#\"},{\"title\":\"Staircase AI Quickstart\",\"description\":\"Unlock customer intelligence in 15 minutes.\",\"image_url\":\"\",\"badge\":\"New\",\"duration\":\"15 min\",\"link_url\":\"#\"},{\"title\":\"PX In-App Guide Builder\",\"description\":\"Design effective onboarding flows.\",\"image_url\":\"\",\"badge\":\"\",\"duration\":\"25 min\",\"link_url\":\"#\"},{\"title\":\"CE Program Launch Playbook\",\"description\":\"Ship a customer academy end-to-end.\",\"image_url\":\"\",\"badge\":\"Featured\",\"duration\":\"90 min\",\"link_url\":\"#\"}]"
+    }
+  ]
+}
