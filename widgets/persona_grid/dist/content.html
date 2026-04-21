@@ -1,8 +1,10 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
 <style>
   .gsu-pg {
+    --gsu-pg-bg: #FFFFFF;
+    --gsu-pg-tile-title: #153D5E;
     font-family: 'Montserrat', sans-serif;
-    background: {{ background_color }};
+    background: var(--gsu-pg-bg);
     width: 100%; padding: 60px 20px;
     border-top: 2px solid #E0E8EF;
     position: relative; overflow: hidden;
@@ -38,9 +40,10 @@
     display: flex; align-items: center; justify-content: center; flex-shrink: 0;
   }
   .gsu-pg__icon { width: 28px; height: 28px; object-fit: contain; border: 0; display: block; }
+  .gsu-pg__icon[data-hidden="true"] { visibility: hidden; }
   .gsu-pg__tile-title {
     font-weight: 600; font-size: 14px; line-height: 1.4;
-    color: {{ tile_title_color }};
+    color: var(--gsu-pg-tile-title);
   }
   @media screen and (max-width: 1200px) {
     .gsu-pg__grid { grid-template-columns: repeat(2, 1fr); }
@@ -49,52 +52,29 @@
     .gsu-pg__grid { grid-template-columns: 1fr; }
   }
 </style>
-<section class="gsu-pg">
+<section class="gsu-pg" data-root>
   <div class="gsu-pg__wrap">
     <div class="gsu-pg__header">
-      <div class="gsu-pg__title">{{ section_title }}</div>
-      <div class="gsu-pg__subtitle">{{ section_subtitle }}</div>
+      <div class="gsu-pg__title" data-section-title></div>
+      <div class="gsu-pg__subtitle" data-section-subtitle></div>
     </div>
-    <div class="gsu-pg__grid" id="gsu-pg-grid">
-      <a class="gsu-pg__tile" href="{{ tile1_link }}"  data-title="{{ tile1_title }}"  data-icon="{{ tile1_icon }}"><div class="gsu-pg__icon-wrap"><img class="gsu-pg__icon" alt="" /></div><span class="gsu-pg__tile-title">{{ tile1_title }}</span></a>
-      <a class="gsu-pg__tile" href="{{ tile2_link }}"  data-title="{{ tile2_title }}"  data-icon="{{ tile2_icon }}"><div class="gsu-pg__icon-wrap"><img class="gsu-pg__icon" alt="" /></div><span class="gsu-pg__tile-title">{{ tile2_title }}</span></a>
-      <a class="gsu-pg__tile" href="{{ tile3_link }}"  data-title="{{ tile3_title }}"  data-icon="{{ tile3_icon }}"><div class="gsu-pg__icon-wrap"><img class="gsu-pg__icon" alt="" /></div><span class="gsu-pg__tile-title">{{ tile3_title }}</span></a>
-      <a class="gsu-pg__tile" href="{{ tile4_link }}"  data-title="{{ tile4_title }}"  data-icon="{{ tile4_icon }}"><div class="gsu-pg__icon-wrap"><img class="gsu-pg__icon" alt="" /></div><span class="gsu-pg__tile-title">{{ tile4_title }}</span></a>
-      <a class="gsu-pg__tile" href="{{ tile5_link }}"  data-title="{{ tile5_title }}"  data-icon="{{ tile5_icon }}"><div class="gsu-pg__icon-wrap"><img class="gsu-pg__icon" alt="" /></div><span class="gsu-pg__tile-title">{{ tile5_title }}</span></a>
-      <a class="gsu-pg__tile" href="{{ tile6_link }}"  data-title="{{ tile6_title }}"  data-icon="{{ tile6_icon }}"><div class="gsu-pg__icon-wrap"><img class="gsu-pg__icon" alt="" /></div><span class="gsu-pg__tile-title">{{ tile6_title }}</span></a>
-      <a class="gsu-pg__tile" href="{{ tile7_link }}"  data-title="{{ tile7_title }}"  data-icon="{{ tile7_icon }}"><div class="gsu-pg__icon-wrap"><img class="gsu-pg__icon" alt="" /></div><span class="gsu-pg__tile-title">{{ tile7_title }}</span></a>
-      <a class="gsu-pg__tile" href="{{ tile8_link }}"  data-title="{{ tile8_title }}"  data-icon="{{ tile8_icon }}"><div class="gsu-pg__icon-wrap"><img class="gsu-pg__icon" alt="" /></div><span class="gsu-pg__tile-title">{{ tile8_title }}</span></a>
-      <a class="gsu-pg__tile" href="{{ tile9_link }}"  data-title="{{ tile9_title }}"  data-icon="{{ tile9_icon }}"><div class="gsu-pg__icon-wrap"><img class="gsu-pg__icon" alt="" /></div><span class="gsu-pg__tile-title">{{ tile9_title }}</span></a>
-      <a class="gsu-pg__tile" href="{{ tile10_link }}" data-title="{{ tile10_title }}" data-icon="{{ tile10_icon }}"><div class="gsu-pg__icon-wrap"><img class="gsu-pg__icon" alt="" /></div><span class="gsu-pg__tile-title">{{ tile10_title }}</span></a>
-      <a class="gsu-pg__tile" href="{{ tile11_link }}" data-title="{{ tile11_title }}" data-icon="{{ tile11_icon }}"><div class="gsu-pg__icon-wrap"><img class="gsu-pg__icon" alt="" /></div><span class="gsu-pg__tile-title">{{ tile11_title }}</span></a>
-      <a class="gsu-pg__tile" href="{{ tile12_link }}" data-title="{{ tile12_title }}" data-icon="{{ tile12_icon }}"><div class="gsu-pg__icon-wrap"><img class="gsu-pg__icon" alt="" /></div><span class="gsu-pg__tile-title">{{ tile12_title }}</span></a>
-      <a class="gsu-pg__tile" href="{{ tile13_link }}" data-title="{{ tile13_title }}" data-icon="{{ tile13_icon }}"><div class="gsu-pg__icon-wrap"><img class="gsu-pg__icon" alt="" /></div><span class="gsu-pg__tile-title">{{ tile13_title }}</span></a>
-      <a class="gsu-pg__tile" href="{{ tile14_link }}" data-title="{{ tile14_title }}" data-icon="{{ tile14_icon }}"><div class="gsu-pg__icon-wrap"><img class="gsu-pg__icon" alt="" /></div><span class="gsu-pg__tile-title">{{ tile14_title }}</span></a>
-      <a class="gsu-pg__tile" href="{{ tile15_link }}" data-title="{{ tile15_title }}" data-icon="{{ tile15_icon }}"><div class="gsu-pg__icon-wrap"><img class="gsu-pg__icon" alt="" /></div><span class="gsu-pg__tile-title">{{ tile15_title }}</span></a>
+    <div class="gsu-pg__grid">
+      <a class="gsu-pg__tile" data-tile="1"  href="#"><div class="gsu-pg__icon-wrap"><img class="gsu-pg__icon" data-tile-icon="1"  alt="" /></div><span class="gsu-pg__tile-title" data-tile-title="1"></span></a>
+      <a class="gsu-pg__tile" data-tile="2"  href="#"><div class="gsu-pg__icon-wrap"><img class="gsu-pg__icon" data-tile-icon="2"  alt="" /></div><span class="gsu-pg__tile-title" data-tile-title="2"></span></a>
+      <a class="gsu-pg__tile" data-tile="3"  href="#"><div class="gsu-pg__icon-wrap"><img class="gsu-pg__icon" data-tile-icon="3"  alt="" /></div><span class="gsu-pg__tile-title" data-tile-title="3"></span></a>
+      <a class="gsu-pg__tile" data-tile="4"  href="#"><div class="gsu-pg__icon-wrap"><img class="gsu-pg__icon" data-tile-icon="4"  alt="" /></div><span class="gsu-pg__tile-title" data-tile-title="4"></span></a>
+      <a class="gsu-pg__tile" data-tile="5"  href="#"><div class="gsu-pg__icon-wrap"><img class="gsu-pg__icon" data-tile-icon="5"  alt="" /></div><span class="gsu-pg__tile-title" data-tile-title="5"></span></a>
+      <a class="gsu-pg__tile" data-tile="6"  href="#"><div class="gsu-pg__icon-wrap"><img class="gsu-pg__icon" data-tile-icon="6"  alt="" /></div><span class="gsu-pg__tile-title" data-tile-title="6"></span></a>
+      <a class="gsu-pg__tile" data-tile="7"  href="#"><div class="gsu-pg__icon-wrap"><img class="gsu-pg__icon" data-tile-icon="7"  alt="" /></div><span class="gsu-pg__tile-title" data-tile-title="7"></span></a>
+      <a class="gsu-pg__tile" data-tile="8"  href="#"><div class="gsu-pg__icon-wrap"><img class="gsu-pg__icon" data-tile-icon="8"  alt="" /></div><span class="gsu-pg__tile-title" data-tile-title="8"></span></a>
+      <a class="gsu-pg__tile" data-tile="9"  href="#"><div class="gsu-pg__icon-wrap"><img class="gsu-pg__icon" data-tile-icon="9"  alt="" /></div><span class="gsu-pg__tile-title" data-tile-title="9"></span></a>
+      <a class="gsu-pg__tile" data-tile="10" href="#"><div class="gsu-pg__icon-wrap"><img class="gsu-pg__icon" data-tile-icon="10" alt="" /></div><span class="gsu-pg__tile-title" data-tile-title="10"></span></a>
+      <a class="gsu-pg__tile" data-tile="11" href="#"><div class="gsu-pg__icon-wrap"><img class="gsu-pg__icon" data-tile-icon="11" alt="" /></div><span class="gsu-pg__tile-title" data-tile-title="11"></span></a>
+      <a class="gsu-pg__tile" data-tile="12" href="#"><div class="gsu-pg__icon-wrap"><img class="gsu-pg__icon" data-tile-icon="12" alt="" /></div><span class="gsu-pg__tile-title" data-tile-title="12"></span></a>
+      <a class="gsu-pg__tile" data-tile="13" href="#"><div class="gsu-pg__icon-wrap"><img class="gsu-pg__icon" data-tile-icon="13" alt="" /></div><span class="gsu-pg__tile-title" data-tile-title="13"></span></a>
+      <a class="gsu-pg__tile" data-tile="14" href="#"><div class="gsu-pg__icon-wrap"><img class="gsu-pg__icon" data-tile-icon="14" alt="" /></div><span class="gsu-pg__tile-title" data-tile-title="14"></span></a>
+      <a class="gsu-pg__tile" data-tile="15" href="#"><div class="gsu-pg__icon-wrap"><img class="gsu-pg__icon" data-tile-icon="15" alt="" /></div><span class="gsu-pg__tile-title" data-tile-title="15"></span></a>
     </div>
   </div>
 </section>
-<script>
-(function () {
-  var iconMap = {
-    cs: "{{ cs_icon }}",
-    cc: "{{ cc_icon }}",
-    px: "{{ px_icon }}",
-    sj: "{{ sj_icon }}",
-    st: "{{ st_icon }}",
-    ce: "{{ ce_icon }}"
-  };
-  var script = document.currentScript;
-  var root = (script && script.getRootNode) ? script.getRootNode() : document;
-  var grid = (root.getElementById ? root.getElementById('gsu-pg-grid') : document.getElementById('gsu-pg-grid'));
-  if (!grid) return;
-  var tiles = grid.querySelectorAll('.gsu-pg__tile');
-  tiles.forEach(function (tile) {
-    var title = (tile.getAttribute('data-title') || '').trim();
-    if (!title) { tile.setAttribute('data-hidden', 'true'); return; }
-    var iconKey = tile.getAttribute('data-icon');
-    var img = tile.querySelector('.gsu-pg__icon');
-    if (img && iconMap[iconKey]) img.src = iconMap[iconKey];
-  });
-})();
-</script>
+<script type="module" src="app.js"></script>

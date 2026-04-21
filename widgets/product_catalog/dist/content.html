@@ -1,8 +1,11 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
 <style>
   .gsu-pc {
+    --gsu-pc-bg-start: #F3F8FE;
+    --gsu-pc-bg-end: #E9F4FF;
+    --gsu-pc-card-title: #153D5E;
     font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(90deg, {{ background_start }} 0%, {{ background_end }} 100%);
+    background: linear-gradient(90deg, var(--gsu-pc-bg-start) 0%, var(--gsu-pc-bg-end) 100%);
     width: 100%; padding: 60px 20px;
   }
   .gsu-pc * { box-sizing: border-box; }
@@ -27,6 +30,7 @@
     text-align: left; color: inherit;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
+  .gsu-pc__card[data-hidden="true"] { display: none; }
   .gsu-pc__card:hover {
     transform: translateY(-4px);
     box-shadow: 0px 14px 28px rgba(26, 27, 61, 0.16);
@@ -35,9 +39,10 @@
     display: flex; align-items: center; gap: 10px; margin-bottom: 12px;
   }
   .gsu-pc__card-icon { width: 32px; height: 32px; object-fit: contain; border: 0; display: block; }
+  .gsu-pc__card-icon[data-hidden="true"] { display: none; }
   .gsu-pc__card-title {
     font-weight: 600; font-size: 18px;
-    color: {{ card_title_color }};
+    color: var(--gsu-pc-card-title);
   }
   .gsu-pc__card-desc {
     flex-grow: 1; font-weight: 500; font-size: 14px; line-height: 22px;
@@ -50,53 +55,54 @@
     .gsu-pc__grid { grid-template-columns: 1fr; max-width: 400px; }
   }
 </style>
-<section class="gsu-pc">
+<section class="gsu-pc" data-root>
   <div class="gsu-pc__wrap">
-    <div class="gsu-pc__title">{{ section_title }}</div>
-    <div class="gsu-pc__subtitle">{{ section_subtitle }}</div>
+    <div class="gsu-pc__title" data-section-title></div>
+    <div class="gsu-pc__subtitle" data-section-subtitle></div>
     <div class="gsu-pc__grid">
-      <a class="gsu-pc__card" href="{{ card1_link }}">
+      <a class="gsu-pc__card" data-card="1" href="#">
         <div class="gsu-pc__card-head">
-          <img class="gsu-pc__card-icon" src="{{ card1_icon }}" alt="" />
-          <span class="gsu-pc__card-title">{{ card1_title }}</span>
+          <img class="gsu-pc__card-icon" data-card-icon="1" alt="" />
+          <span class="gsu-pc__card-title" data-card-title="1"></span>
         </div>
-        <div class="gsu-pc__card-desc">{{ card1_desc }}</div>
+        <div class="gsu-pc__card-desc" data-card-desc="1"></div>
       </a>
-      <a class="gsu-pc__card" href="{{ card2_link }}">
+      <a class="gsu-pc__card" data-card="2" href="#">
         <div class="gsu-pc__card-head">
-          <img class="gsu-pc__card-icon" src="{{ card2_icon }}" alt="" />
-          <span class="gsu-pc__card-title">{{ card2_title }}</span>
+          <img class="gsu-pc__card-icon" data-card-icon="2" alt="" />
+          <span class="gsu-pc__card-title" data-card-title="2"></span>
         </div>
-        <div class="gsu-pc__card-desc">{{ card2_desc }}</div>
+        <div class="gsu-pc__card-desc" data-card-desc="2"></div>
       </a>
-      <a class="gsu-pc__card" href="{{ card3_link }}">
+      <a class="gsu-pc__card" data-card="3" href="#">
         <div class="gsu-pc__card-head">
-          <img class="gsu-pc__card-icon" src="{{ card3_icon }}" alt="" />
-          <span class="gsu-pc__card-title">{{ card3_title }}</span>
+          <img class="gsu-pc__card-icon" data-card-icon="3" alt="" />
+          <span class="gsu-pc__card-title" data-card-title="3"></span>
         </div>
-        <div class="gsu-pc__card-desc">{{ card3_desc }}</div>
+        <div class="gsu-pc__card-desc" data-card-desc="3"></div>
       </a>
-      <a class="gsu-pc__card" href="{{ card4_link }}">
+      <a class="gsu-pc__card" data-card="4" href="#">
         <div class="gsu-pc__card-head">
-          <img class="gsu-pc__card-icon" src="{{ card4_icon }}" alt="" />
-          <span class="gsu-pc__card-title">{{ card4_title }}</span>
+          <img class="gsu-pc__card-icon" data-card-icon="4" alt="" />
+          <span class="gsu-pc__card-title" data-card-title="4"></span>
         </div>
-        <div class="gsu-pc__card-desc">{{ card4_desc }}</div>
+        <div class="gsu-pc__card-desc" data-card-desc="4"></div>
       </a>
-      <a class="gsu-pc__card" href="{{ card5_link }}">
+      <a class="gsu-pc__card" data-card="5" href="#">
         <div class="gsu-pc__card-head">
-          <img class="gsu-pc__card-icon" src="{{ card5_icon }}" alt="" />
-          <span class="gsu-pc__card-title">{{ card5_title }}</span>
+          <img class="gsu-pc__card-icon" data-card-icon="5" alt="" />
+          <span class="gsu-pc__card-title" data-card-title="5"></span>
         </div>
-        <div class="gsu-pc__card-desc">{{ card5_desc }}</div>
+        <div class="gsu-pc__card-desc" data-card-desc="5"></div>
       </a>
-      <a class="gsu-pc__card" href="{{ card6_link }}">
+      <a class="gsu-pc__card" data-card="6" href="#">
         <div class="gsu-pc__card-head">
-          <img class="gsu-pc__card-icon" src="{{ card6_icon }}" alt="" />
-          <span class="gsu-pc__card-title">{{ card6_title }}</span>
+          <img class="gsu-pc__card-icon" data-card-icon="6" alt="" />
+          <span class="gsu-pc__card-title" data-card-title="6"></span>
         </div>
-        <div class="gsu-pc__card-desc">{{ card6_desc }}</div>
+        <div class="gsu-pc__card-desc" data-card-desc="6"></div>
       </a>
     </div>
   </div>
 </section>
+<script type="module" src="app.js"></script>

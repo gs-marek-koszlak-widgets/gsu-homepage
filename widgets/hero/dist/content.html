@@ -1,8 +1,10 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
 <style>
   .gsu-hero {
+    --gsu-hero-bg-start: #0B1F33;
+    --gsu-hero-bg-end: #153D5E;
     font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(180deg, {{ background_start }} 0%, {{ background_end }} 100%);
+    background: linear-gradient(180deg, var(--gsu-hero-bg-start) 0%, var(--gsu-hero-bg-end) 100%);
     padding: 80px 20px 70px 20px; text-align: center;
     position: relative; overflow: hidden; min-height: 340px;
   }
@@ -37,8 +39,9 @@
     .gsu-hero__title { font-size: 28px; }
   }
 </style>
-<section class="gsu-hero">
-  <img class="gsu-hero__decoration" src="{{ decoration_image_url }}" alt="" />
-  <h1 class="gsu-hero__title">{{ title_text }}</h1>
-  <p class="gsu-hero__subtitle">{{ subtitle_text }}</p>
+<section class="gsu-hero" data-root>
+  <img class="gsu-hero__decoration" data-deco alt="" />
+  <h1 class="gsu-hero__title" data-title></h1>
+  <p class="gsu-hero__subtitle" data-subtitle></p>
 </section>
+<script type="module" src="app.js"></script>

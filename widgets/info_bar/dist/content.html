@@ -1,8 +1,10 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
 <style>
   .gsu-info {
+    --gsu-info-bg: #22649F;
+    --gsu-info-text: #FFFFFF;
     font-family: 'Montserrat', sans-serif;
-    background: {{ background_color }}; width: 100%; min-height: 69px;
+    background: var(--gsu-info-bg); width: 100%; min-height: 69px;
     display: flex; align-items: center; justify-content: center; padding: 14px 0;
   }
   .gsu-info * { box-sizing: border-box; }
@@ -13,24 +15,25 @@
   }
   .gsu-info__icon { width: 24px; height: 24px; object-fit: contain; border: 0; display: block; }
   .gsu-info__text {
-    font-weight: 500; font-size: 15px; line-height: 1; color: {{ text_color }};
+    font-weight: 500; font-size: 15px; line-height: 1; color: var(--gsu-info-text);
   }
   .gsu-info__btn {
     display: inline-block; font-weight: 500; font-size: 14px; line-height: 1;
-    color: {{ text_color }}; text-decoration: none;
+    color: var(--gsu-info-text); text-decoration: none;
     border: 1.5px solid rgba(255, 255, 255, 0.7); border-radius: 71px;
     padding: 10px 22px; margin-left: 4px;
     transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
   }
-  .gsu-info__btn:hover { background: {{ text_color }}; color: {{ background_color }}; border-color: {{ text_color }}; }
+  .gsu-info__btn:hover { background: var(--gsu-info-text); color: var(--gsu-info-bg); border-color: var(--gsu-info-text); }
   @media screen and (max-width: 768px) {
     .gsu-info__inner { flex-direction: column; text-align: center; gap: 10px; }
   }
 </style>
-<div class="gsu-info">
+<div class="gsu-info" data-root>
   <div class="gsu-info__inner">
-    <img class="gsu-info__icon" src="{{ icon_url }}" alt="" />
-    <span class="gsu-info__text">{{ message_text }}</span>
-    <a class="gsu-info__btn" href="{{ button_url }}">{{ button_text }}</a>
+    <img class="gsu-info__icon" data-icon alt="" />
+    <span class="gsu-info__text" data-text></span>
+    <a class="gsu-info__btn" data-btn href="#"><span data-btn-text></span></a>
   </div>
 </div>
+<script type="module" src="app.js"></script>

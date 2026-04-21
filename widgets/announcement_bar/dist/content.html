@@ -1,6 +1,12 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
 <style>
-  .gsu-ann { font-family: 'Montserrat', sans-serif; background: {{ background_color }}; width: 100%; box-sizing: border-box; }
+  .gsu-ann {
+    --gsu-ann-bg: #F1E4E6;
+    --gsu-ann-accent: #EB5757;
+    font-family: 'Montserrat', sans-serif;
+    background: var(--gsu-ann-bg);
+    width: 100%; box-sizing: border-box;
+  }
   .gsu-ann * { box-sizing: border-box; }
   .gsu-ann__inner {
     display: flex; align-items: center; justify-content: space-between;
@@ -9,40 +15,41 @@
   .gsu-ann__left { display: flex; align-items: center; gap: 16px; }
   .gsu-ann__dot {
     width: 38px; height: 38px; min-width: 38px; border-radius: 50%;
-    background: {{ accent_color }};
+    background: var(--gsu-ann-accent);
   }
   .gsu-ann__text { display: flex; flex-direction: column; gap: 2px; }
   .gsu-ann__title {
     font-weight: 600; font-size: 17px; line-height: 150%;
-    color: {{ accent_color }};
+    color: var(--gsu-ann-accent);
   }
   .gsu-ann__subtitle {
     font-weight: 500; font-size: 15px; line-height: 150%; color: #0e0e0e;
   }
   .gsu-ann__btn {
     display: inline-block; font-weight: 500; font-size: 15px; line-height: 100%;
-    letter-spacing: -0.01em; color: {{ accent_color }}; text-decoration: none;
-    border: 1.5px solid {{ accent_color }}; border-radius: 71px;
+    letter-spacing: -0.01em; color: var(--gsu-ann-accent); text-decoration: none;
+    border: 1.5px solid var(--gsu-ann-accent); border-radius: 71px;
     padding: 14px 28px; white-space: nowrap;
     transition: background 0.2s ease, color 0.2s ease;
   }
-  .gsu-ann__btn:hover { background: {{ accent_color }}; color: #FFFFFF; }
+  .gsu-ann__btn:hover { background: var(--gsu-ann-accent); color: #FFFFFF; }
   @media screen and (max-width: 768px) {
     .gsu-ann__inner { flex-direction: column; text-align: center; gap: 12px; padding: 16px 20px; }
     .gsu-ann__left { justify-content: center; }
   }
 </style>
-<div class="gsu-ann">
+<div class="gsu-ann" data-root>
   <div class="gsu-ann__inner">
     <div class="gsu-ann__left">
       <div class="gsu-ann__dot" aria-hidden="true"></div>
       <div class="gsu-ann__text">
-        <span class="gsu-ann__title">{{ title_text }}</span>
-        <span class="gsu-ann__subtitle">{{ subtitle_text }}</span>
+        <span class="gsu-ann__title" data-title></span>
+        <span class="gsu-ann__subtitle" data-subtitle></span>
       </div>
     </div>
     <div>
-      <a class="gsu-ann__btn" href="{{ button_url }}">{{ button_text }} &nbsp;&rsaquo;</a>
+      <a class="gsu-ann__btn" data-btn href="#"><span data-btn-text></span> &nbsp;&rsaquo;</a>
     </div>
   </div>
 </div>
+<script type="module" src="app.js"></script>

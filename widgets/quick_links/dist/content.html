@@ -1,8 +1,12 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
 <style>
   .gsu-ql {
+    --gsu-ql-bg: #FFFFFF;
+    --gsu-ql-border: #38A2FF;
+    --gsu-ql-card-title: #153D5E;
+    --gsu-ql-link: #38A2FF;
     font-family: 'Montserrat', sans-serif;
-    background: {{ background_color }};
+    background: var(--gsu-ql-bg);
     width: 100%; padding: 40px 20px;
     border-top: 2px solid #E0E8EF;
   }
@@ -15,22 +19,23 @@
   }
   .gsu-ql__card {
     display: flex; flex-direction: column;
-    width: 426px; border: 2px solid {{ border_color }}; border-radius: 20px;
+    width: 426px; border: 2px solid var(--gsu-ql-border); border-radius: 20px;
     background: #FFFFFF; padding: 24px 28px; text-decoration: none; color: inherit;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
   .gsu-ql__card:hover { transform: translateY(-4px); box-shadow: 0px 12px 32px rgba(21, 61, 94, 0.12); }
   .gsu-ql__icon { width: 28px; height: 28px; object-fit: contain; border: 0; display: block; margin-bottom: 12px; }
+  .gsu-ql__icon[data-hidden="true"] { visibility: hidden; }
   .gsu-ql__card-title {
     font-weight: 600; font-size: 22px; line-height: 140%;
-    color: {{ card_title_color }}; margin-bottom: 10px;
+    color: var(--gsu-ql-card-title); margin-bottom: 10px;
   }
   .gsu-ql__card-desc {
     flex-grow: 1; font-weight: 500; font-size: 15px; line-height: 24px;
     color: #0e0e0e; margin-bottom: 16px;
   }
   .gsu-ql__footer { display: flex; align-items: center; justify-content: space-between; }
-  .gsu-ql__link { font-weight: 500; font-size: 14px; color: {{ link_color }}; }
+  .gsu-ql__link { font-weight: 500; font-size: 14px; color: var(--gsu-ql-link); }
   .gsu-ql__badges { display: flex; align-items: center; gap: 6px; }
   .gsu-ql__badge { width: 28px; height: 28px; object-fit: contain; border: 0; display: block; }
   .gsu-ql__badge[data-hidden="true"] { display: none; }
@@ -41,48 +46,37 @@
     .gsu-ql__card { padding: 20px 22px; }
   }
 </style>
-<section class="gsu-ql">
+<section class="gsu-ql" data-root>
   <div class="gsu-ql__header">
-    <div class="gsu-ql__title">{{ section_title }}</div>
+    <div class="gsu-ql__title" data-section-title></div>
   </div>
-  <div class="gsu-ql__row" id="gsu-ql-row">
-    <a class="gsu-ql__card" href="{{ card1_link_url }}">
-      <img class="gsu-ql__icon" src="{{ card1_icon }}" alt="" />
-      <div class="gsu-ql__card-title">{{ card1_title }}</div>
-      <div class="gsu-ql__card-desc">{{ card1_desc }}</div>
+  <div class="gsu-ql__row">
+    <a class="gsu-ql__card" data-card="1" href="#">
+      <img class="gsu-ql__icon" data-card-icon="1" alt="" />
+      <div class="gsu-ql__card-title" data-card-title="1"></div>
+      <div class="gsu-ql__card-desc" data-card-desc="1"></div>
       <div class="gsu-ql__footer">
-        <span class="gsu-ql__link">{{ card1_link_text }} &rarr;</span>
+        <span class="gsu-ql__link"><span data-card-link-text="1"></span> &rarr;</span>
         <div class="gsu-ql__badges">
-          <img class="gsu-ql__badge" src="{{ card1_badge1 }}" alt="" data-src="{{ card1_badge1 }}" />
-          <img class="gsu-ql__badge" src="{{ card1_badge2 }}" alt="" data-src="{{ card1_badge2 }}" />
-          <img class="gsu-ql__badge" src="{{ card1_badge3 }}" alt="" data-src="{{ card1_badge3 }}" />
+          <img class="gsu-ql__badge" data-card-badge="1-1" alt="" />
+          <img class="gsu-ql__badge" data-card-badge="1-2" alt="" />
+          <img class="gsu-ql__badge" data-card-badge="1-3" alt="" />
         </div>
       </div>
     </a>
-    <a class="gsu-ql__card" href="{{ card2_link_url }}">
-      <img class="gsu-ql__icon" src="{{ card2_icon }}" alt="" />
-      <div class="gsu-ql__card-title">{{ card2_title }}</div>
-      <div class="gsu-ql__card-desc">{{ card2_desc }}</div>
+    <a class="gsu-ql__card" data-card="2" href="#">
+      <img class="gsu-ql__icon" data-card-icon="2" alt="" />
+      <div class="gsu-ql__card-title" data-card-title="2"></div>
+      <div class="gsu-ql__card-desc" data-card-desc="2"></div>
       <div class="gsu-ql__footer">
-        <span class="gsu-ql__link">{{ card2_link_text }} &rarr;</span>
+        <span class="gsu-ql__link"><span data-card-link-text="2"></span> &rarr;</span>
         <div class="gsu-ql__badges">
-          <img class="gsu-ql__badge" src="{{ card2_badge1 }}" alt="" data-src="{{ card2_badge1 }}" />
-          <img class="gsu-ql__badge" src="{{ card2_badge2 }}" alt="" data-src="{{ card2_badge2 }}" />
-          <img class="gsu-ql__badge" src="{{ card2_badge3 }}" alt="" data-src="{{ card2_badge3 }}" />
+          <img class="gsu-ql__badge" data-card-badge="2-1" alt="" />
+          <img class="gsu-ql__badge" data-card-badge="2-2" alt="" />
+          <img class="gsu-ql__badge" data-card-badge="2-3" alt="" />
         </div>
       </div>
     </a>
   </div>
 </section>
-<script>
-(function () {
-  var script = document.currentScript;
-  var root = (script && script.getRootNode) ? script.getRootNode() : document;
-  var row = root.getElementById ? root.getElementById('gsu-ql-row') : document.getElementById('gsu-ql-row');
-  if (!row) return;
-  row.querySelectorAll('.gsu-ql__badge').forEach(function (b) {
-    var src = (b.getAttribute('data-src') || '').trim();
-    if (!src) b.setAttribute('data-hidden', 'true');
-  });
-})();
-</script>
+<script type="module" src="app.js"></script>

@@ -1,8 +1,12 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
 <style>
   .gsu-fb {
+    --gsu-fb-bg: #153D5E;
+    --gsu-fb-text: #E9F4FF;
+    --gsu-fb-btn: #38A2FF;
+    --gsu-fb-btn-text: #FFFFFF;
     font-family: 'Montserrat', sans-serif;
-    background: {{ background_color }};
+    background: var(--gsu-fb-bg);
     width: 100%; padding: 60px 20px; text-align: center;
     position: relative; overflow: hidden;
   }
@@ -12,6 +16,7 @@
     object-fit: contain; border: 0; z-index: 0;
     pointer-events: none;
   }
+  .gsu-fb__deco[data-hidden="true"] { display: none; }
   .gsu-fb__deco--right {
     top: 50%; right: -40px; transform: translateY(-50%);
   }
@@ -21,15 +26,15 @@
   .gsu-fb__wrap { max-width: 800px; margin: 0 auto; position: relative; z-index: 1; }
   .gsu-fb__title {
     font-weight: 600; font-size: 30px; line-height: 140%;
-    color: {{ text_color }}; margin-bottom: 8px;
+    color: var(--gsu-fb-text); margin-bottom: 8px;
   }
   .gsu-fb__subtitle {
     font-weight: 500; font-size: 19px; line-height: 29px;
-    color: {{ text_color }}; margin-bottom: 28px;
+    color: var(--gsu-fb-text); margin-bottom: 28px;
   }
   .gsu-fb__btn {
     display: inline-block; font-weight: 500; font-size: 15px; line-height: 100%;
-    color: {{ button_text_color }}; background: {{ button_color }};
+    color: var(--gsu-fb-btn-text); background: var(--gsu-fb-btn);
     text-decoration: none; padding: 16px 30px; border-radius: 71px;
     transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
   }
@@ -39,12 +44,13 @@
     filter: brightness(0.95);
   }
 </style>
-<section class="gsu-fb">
-  <img class="gsu-fb__deco gsu-fb__deco--right" src="{{ decoration_image_url }}" alt="" />
-  <img class="gsu-fb__deco gsu-fb__deco--left"  src="{{ decoration_image_url }}" alt="" />
+<section class="gsu-fb" data-root>
+  <img class="gsu-fb__deco gsu-fb__deco--right" data-deco="right" alt="" />
+  <img class="gsu-fb__deco gsu-fb__deco--left"  data-deco="left"  alt="" />
   <div class="gsu-fb__wrap">
-    <div class="gsu-fb__title">{{ title_text }}</div>
-    <div class="gsu-fb__subtitle">{{ subtitle_text }}</div>
-    <a class="gsu-fb__btn" href="{{ button_url }}">{{ button_text }} &nbsp;&rsaquo;</a>
+    <div class="gsu-fb__title" data-title></div>
+    <div class="gsu-fb__subtitle" data-subtitle></div>
+    <a class="gsu-fb__btn" data-btn href="#"><span data-btn-text></span> &nbsp;&rsaquo;</a>
   </div>
 </section>
+<script type="module" src="app.js"></script>

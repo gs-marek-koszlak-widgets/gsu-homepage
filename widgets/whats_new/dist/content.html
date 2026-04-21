@@ -1,8 +1,11 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
 <style>
   .gsu-wn {
+    --gsu-wn-bg-start: #F3F8FE;
+    --gsu-wn-bg-end: #E9F4FF;
+    --gsu-wn-accent: #38A2FF;
     font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(90deg, {{ background_start }} 0%, {{ background_end }} 100%);
+    background: linear-gradient(90deg, var(--gsu-wn-bg-start) 0%, var(--gsu-wn-bg-end) 100%);
     width: 100%; padding: 50px 20px 40px 20px;
   }
   .gsu-wn * { box-sizing: border-box; }
@@ -17,10 +20,10 @@
     background: #FFFFFF; border: 0; border-radius: 50%;
     box-shadow: 0px 4px 12px rgba(26, 27, 61, 0.15);
     align-items: center; justify-content: center;
-    font-family: inherit; font-size: 18px; color: {{ accent_color }};
+    font-family: inherit; font-size: 18px; color: var(--gsu-wn-accent);
     transition: background 0.2s ease, color 0.2s ease;
   }
-  .gsu-wn__arrow:hover { background: {{ accent_color }}; color: #FFFFFF; }
+  .gsu-wn__arrow:hover { background: var(--gsu-wn-accent); color: #FFFFFF; }
   .gsu-wn__arrow--left  { left: -4px; }
   .gsu-wn__arrow--right { right: -4px; }
   .gsu-wn__arrow[data-visible="true"] { display: flex; }
@@ -70,71 +73,30 @@
     margin-top: auto; font-weight: 500; font-size: 12px; color: #22649F;
   }
 </style>
-<section class="gsu-wn">
+<section class="gsu-wn" data-root>
   <div class="gsu-wn__wrap">
     <div class="gsu-wn__header">
-      <div class="gsu-wn__title">{{ section_title }}</div>
-      <div class="gsu-wn__subtitle">{{ section_subtitle }}</div>
+      <div class="gsu-wn__title" data-section-title></div>
+      <div class="gsu-wn__subtitle" data-section-subtitle></div>
     </div>
-    <div class="gsu-wn__carousel" id="gsu-wn-carousel">
-      <button class="gsu-wn__arrow gsu-wn__arrow--left"  id="gsu-wn-arrow-left"  aria-label="Scroll left">&lsaquo;</button>
-      <button class="gsu-wn__arrow gsu-wn__arrow--right" id="gsu-wn-arrow-right" aria-label="Scroll right">&rsaquo;</button>
-      <div class="gsu-wn__fade gsu-wn__fade--left"  id="gsu-wn-fade-left"></div>
-      <div class="gsu-wn__fade gsu-wn__fade--right" id="gsu-wn-fade-right"></div>
-      <div class="gsu-wn__scroll" id="gsu-wn-scroll">
+    <div class="gsu-wn__carousel">
+      <button class="gsu-wn__arrow gsu-wn__arrow--left"  data-arrow="left"  aria-label="Scroll left">&lsaquo;</button>
+      <button class="gsu-wn__arrow gsu-wn__arrow--right" data-arrow="right" aria-label="Scroll right">&rsaquo;</button>
+      <div class="gsu-wn__fade gsu-wn__fade--left"  data-fade="left"></div>
+      <div class="gsu-wn__fade gsu-wn__fade--right" data-fade="right"></div>
+      <div class="gsu-wn__scroll" data-scroller>
         <div class="gsu-wn__track">
-          <a class="gsu-wn__card" href="{{ card1_link }}" data-title="{{ card1_title }}"><img class="gsu-wn__card-img" src="{{ card1_image }}" alt="" /><div class="gsu-wn__card-body"><div class="gsu-wn__card-title">{{ card1_title }}</div><div class="gsu-wn__card-desc">{{ card1_desc }}</div><div class="gsu-wn__card-meta">{{ card1_duration }}</div></div></a>
-          <a class="gsu-wn__card" href="{{ card2_link }}" data-title="{{ card2_title }}"><img class="gsu-wn__card-img" src="{{ card2_image }}" alt="" /><div class="gsu-wn__card-body"><div class="gsu-wn__card-title">{{ card2_title }}</div><div class="gsu-wn__card-desc">{{ card2_desc }}</div><div class="gsu-wn__card-meta">{{ card2_duration }}</div></div></a>
-          <a class="gsu-wn__card" href="{{ card3_link }}" data-title="{{ card3_title }}"><img class="gsu-wn__card-img" src="{{ card3_image }}" alt="" /><div class="gsu-wn__card-body"><div class="gsu-wn__card-title">{{ card3_title }}</div><div class="gsu-wn__card-desc">{{ card3_desc }}</div><div class="gsu-wn__card-meta">{{ card3_duration }}</div></div></a>
-          <a class="gsu-wn__card" href="{{ card4_link }}" data-title="{{ card4_title }}"><img class="gsu-wn__card-img" src="{{ card4_image }}" alt="" /><div class="gsu-wn__card-body"><div class="gsu-wn__card-title">{{ card4_title }}</div><div class="gsu-wn__card-desc">{{ card4_desc }}</div><div class="gsu-wn__card-meta">{{ card4_duration }}</div></div></a>
-          <a class="gsu-wn__card" href="{{ card5_link }}" data-title="{{ card5_title }}"><img class="gsu-wn__card-img" src="{{ card5_image }}" alt="" /><div class="gsu-wn__card-body"><div class="gsu-wn__card-title">{{ card5_title }}</div><div class="gsu-wn__card-desc">{{ card5_desc }}</div><div class="gsu-wn__card-meta">{{ card5_duration }}</div></div></a>
-          <a class="gsu-wn__card" href="{{ card6_link }}" data-title="{{ card6_title }}"><img class="gsu-wn__card-img" src="{{ card6_image }}" alt="" /><div class="gsu-wn__card-body"><div class="gsu-wn__card-title">{{ card6_title }}</div><div class="gsu-wn__card-desc">{{ card6_desc }}</div><div class="gsu-wn__card-meta">{{ card6_duration }}</div></div></a>
-          <a class="gsu-wn__card" href="{{ card7_link }}" data-title="{{ card7_title }}"><img class="gsu-wn__card-img" src="{{ card7_image }}" alt="" /><div class="gsu-wn__card-body"><div class="gsu-wn__card-title">{{ card7_title }}</div><div class="gsu-wn__card-desc">{{ card7_desc }}</div><div class="gsu-wn__card-meta">{{ card7_duration }}</div></div></a>
-          <a class="gsu-wn__card" href="{{ card8_link }}" data-title="{{ card8_title }}"><img class="gsu-wn__card-img" src="{{ card8_image }}" alt="" /><div class="gsu-wn__card-body"><div class="gsu-wn__card-title">{{ card8_title }}</div><div class="gsu-wn__card-desc">{{ card8_desc }}</div><div class="gsu-wn__card-meta">{{ card8_duration }}</div></div></a>
+          <a class="gsu-wn__card" data-card="1" href="#"><img class="gsu-wn__card-img" data-card-img="1" alt="" /><div class="gsu-wn__card-body"><div class="gsu-wn__card-title" data-card-title="1"></div><div class="gsu-wn__card-desc" data-card-desc="1"></div><div class="gsu-wn__card-meta" data-card-meta="1"></div></div></a>
+          <a class="gsu-wn__card" data-card="2" href="#"><img class="gsu-wn__card-img" data-card-img="2" alt="" /><div class="gsu-wn__card-body"><div class="gsu-wn__card-title" data-card-title="2"></div><div class="gsu-wn__card-desc" data-card-desc="2"></div><div class="gsu-wn__card-meta" data-card-meta="2"></div></div></a>
+          <a class="gsu-wn__card" data-card="3" href="#"><img class="gsu-wn__card-img" data-card-img="3" alt="" /><div class="gsu-wn__card-body"><div class="gsu-wn__card-title" data-card-title="3"></div><div class="gsu-wn__card-desc" data-card-desc="3"></div><div class="gsu-wn__card-meta" data-card-meta="3"></div></div></a>
+          <a class="gsu-wn__card" data-card="4" href="#"><img class="gsu-wn__card-img" data-card-img="4" alt="" /><div class="gsu-wn__card-body"><div class="gsu-wn__card-title" data-card-title="4"></div><div class="gsu-wn__card-desc" data-card-desc="4"></div><div class="gsu-wn__card-meta" data-card-meta="4"></div></div></a>
+          <a class="gsu-wn__card" data-card="5" href="#"><img class="gsu-wn__card-img" data-card-img="5" alt="" /><div class="gsu-wn__card-body"><div class="gsu-wn__card-title" data-card-title="5"></div><div class="gsu-wn__card-desc" data-card-desc="5"></div><div class="gsu-wn__card-meta" data-card-meta="5"></div></div></a>
+          <a class="gsu-wn__card" data-card="6" href="#"><img class="gsu-wn__card-img" data-card-img="6" alt="" /><div class="gsu-wn__card-body"><div class="gsu-wn__card-title" data-card-title="6"></div><div class="gsu-wn__card-desc" data-card-desc="6"></div><div class="gsu-wn__card-meta" data-card-meta="6"></div></div></a>
+          <a class="gsu-wn__card" data-card="7" href="#"><img class="gsu-wn__card-img" data-card-img="7" alt="" /><div class="gsu-wn__card-body"><div class="gsu-wn__card-title" data-card-title="7"></div><div class="gsu-wn__card-desc" data-card-desc="7"></div><div class="gsu-wn__card-meta" data-card-meta="7"></div></div></a>
+          <a class="gsu-wn__card" data-card="8" href="#"><img class="gsu-wn__card-img" data-card-img="8" alt="" /><div class="gsu-wn__card-body"><div class="gsu-wn__card-title" data-card-title="8"></div><div class="gsu-wn__card-desc" data-card-desc="8"></div><div class="gsu-wn__card-meta" data-card-meta="8"></div></div></a>
         </div>
       </div>
     </div>
   </div>
 </section>
-<script>
-(function () {
-  var script = document.currentScript;
-  var root = (script && script.getRootNode) ? script.getRootNode() : document;
-  var get = function (id) { return root.getElementById ? root.getElementById(id) : document.getElementById(id); };
-  var scroller = get('gsu-wn-scroll');
-  var arrowL   = get('gsu-wn-arrow-left');
-  var arrowR   = get('gsu-wn-arrow-right');
-  var fadeL    = get('gsu-wn-fade-left');
-  var fadeR    = get('gsu-wn-fade-right');
-  if (!scroller || !arrowL || !arrowR) return;
-
-  // Hide blank cards
-  scroller.querySelectorAll('.gsu-wn__card').forEach(function (card) {
-    var title = (card.getAttribute('data-title') || '').trim();
-    if (!title) card.setAttribute('data-hidden', 'true');
-  });
-
-  arrowL.addEventListener('click', function () { scroller.scrollBy({ left: -600, behavior: 'smooth' }); });
-  arrowR.addEventListener('click', function () { scroller.scrollBy({ left:  600, behavior: 'smooth' }); });
-
-  function update() {
-    var sl = scroller.scrollLeft;
-    var max = scroller.scrollWidth - scroller.clientWidth;
-    if (max <= 5) {
-      arrowL.setAttribute('data-visible', 'false');
-      arrowR.setAttribute('data-visible', 'false');
-      if (fadeL) fadeL.setAttribute('data-visible', 'false');
-      if (fadeR) fadeR.setAttribute('data-visible', 'false');
-      return;
-    }
-    arrowL.setAttribute('data-visible', sl > 10 ? 'true' : 'false');
-    arrowR.setAttribute('data-visible', sl < max - 10 ? 'true' : 'false');
-    if (fadeL) fadeL.setAttribute('data-visible', sl > 10 ? 'true' : 'false');
-    if (fadeR) fadeR.setAttribute('data-visible', sl < max - 10 ? 'true' : 'false');
-  }
-  scroller.addEventListener('scroll', update);
-  window.addEventListener('resize', update);
-  setTimeout(update, 100);
-  setTimeout(update, 500);
-})();
-</script>
+<script type="module" src="app.js"></script>
