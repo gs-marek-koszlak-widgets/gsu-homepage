@@ -1,398 +1,207 @@
 {
   "widgets": [
     {
-      "version": "1.0.0",
-      "title": "Announcement Bar",
-      "description": "Configurable announcement bar with icon, title, description, and optional CTA. Use for advisories, welcome messages, or other top-of-page notices.",
-      "category": "custom",
+      "title": "Countries Angular",
+      "description": "A widget built with Angular and the Widget SDK.",
+      "category": "Demo",
+      "imageSrc": "widgets/countries-angular/thumbnail.png",
       "source": {
-        "path": "widgets/announcement-bar/dist",
-        "entry": "content.html"
+        "path": "widgets/countries-angular/dist",
+        "entry": "index.html"
       },
-      "properties": [
-        {
-          "name": "variant",
-          "label": "Variant",
-          "type": "select",
-          "default": "info",
-          "options": [
-            {
-              "label": "Info (blue)",
-              "value": "info"
-            },
-            {
-              "label": "Warning (red)",
-              "value": "warning"
-            },
-            {
-              "label": "Neutral (gray)",
-              "value": "neutral"
+      "configuration": {
+        "properties": [
+          {
+            "name": "title",
+            "type": "text",
+            "label": "Title",
+            "defaultValue": "Countries Angular",
+            "rules": {
+              "required": true
             }
-          ]
-        },
-        {
-          "name": "icon_url",
-          "label": "Icon URL (optional)",
-          "type": "text",
-          "default": ""
-        },
-        {
-          "name": "title",
-          "label": "Title",
-          "type": "text",
-          "default": "Welcome",
-          "rules": {
-            "required": true,
-            "maxLength": 120
+          },
+          {
+            "name": "description",
+            "type": "text",
+            "label": "Description",
+            "defaultValue": "A widget built with Angular and the Widget SDK."
           }
-        },
-        {
-          "name": "description",
-          "label": "Description",
-          "type": "text",
-          "default": ""
-        },
-        {
-          "name": "cta_label",
-          "label": "Button label (optional)",
-          "type": "text",
-          "default": ""
-        },
-        {
-          "name": "cta_url",
-          "label": "Button link (optional)",
-          "type": "text",
-          "default": ""
-        },
-        {
-          "name": "cta_new_tab",
-          "label": "Open link in new tab",
-          "type": "toggle",
-          "default": false
-        }
-      ],
-      "type": "announcement-bar"
+        ]
+      },
+      "defaultConfig": {
+        "title": "Countries Angular",
+        "description": "A widget built with Angular and the Widget SDK."
+      },
+      "type": "countries-angular"
     },
     {
-      "version": "1.0.0",
-      "title": "Course Carousel",
-      "description": "Horizontally scrollable carousel of course cards with previous/next controls. Use for 'What's New', 'Featured Courses', etc.",
-      "category": "custom",
+      "title": "Countries Html",
+      "description": "A widget built with HTML and the Widget SDK.",
+      "category": "Demo",
+      "imageSrc": "widgets/countries-html/thumbnail.png",
       "source": {
-        "path": "widgets/course-carousel/dist",
+        "path": "widgets/countries-html/dist",
         "entry": "content.html"
       },
-      "properties": [
-        {
-          "name": "section_title",
-          "label": "Section title",
-          "type": "text",
-          "default": "What's New"
-        },
-        {
-          "name": "section_subtitle",
-          "label": "Section subtitle",
-          "type": "text",
-          "default": "The latest courses, labs, and certifications."
-        },
-        {
-          "name": "view_all_url",
-          "label": "'View all' link URL (optional)",
-          "type": "text",
-          "default": ""
-        },
-        {
-          "name": "view_all_label",
-          "label": "'View all' link label",
-          "type": "text",
-          "default": "View all"
-        },
-        {
-          "name": "items_json",
-          "label": "Courses (JSON array)",
-          "type": "text",
-          "default": "[{\"title\":\"Getting Started with Customer Success\",\"description\":\"Learn the foundations of CS workflows.\",\"image_url\":\"\",\"badge\":\"New\",\"duration\":\"45 min\",\"link_url\":\"#\"},{\"title\":\"Community Manager Essentials\",\"description\":\"Build healthy, engaged communities.\",\"image_url\":\"\",\"badge\":\"Updated\",\"duration\":\"30 min\",\"link_url\":\"#\"},{\"title\":\"Skilljar LMS Admin Fundamentals\",\"description\":\"Set up your first academy.\",\"image_url\":\"\",\"badge\":\"\",\"duration\":\"60 min\",\"link_url\":\"#\"},{\"title\":\"Staircase AI Quickstart\",\"description\":\"Unlock customer intelligence in 15 minutes.\",\"image_url\":\"\",\"badge\":\"New\",\"duration\":\"15 min\",\"link_url\":\"#\"},{\"title\":\"PX In-App Guide Builder\",\"description\":\"Design effective onboarding flows.\",\"image_url\":\"\",\"badge\":\"\",\"duration\":\"25 min\",\"link_url\":\"#\"},{\"title\":\"CE Program Launch Playbook\",\"description\":\"Ship a customer academy end-to-end.\",\"image_url\":\"\",\"badge\":\"Featured\",\"duration\":\"90 min\",\"link_url\":\"#\"}]"
-        }
-      ],
-      "type": "course-carousel"
-    },
-    {
-      "version": "1.0.0",
-      "title": "Feedback CTA",
-      "description": "Dark-blue call-to-action strip inviting users to share feedback. Title, description, and a primary button.",
-      "category": "custom",
-      "source": {
-        "path": "widgets/feedback-cta/dist",
-        "entry": "content.html"
-      },
-      "properties": [
-        {
-          "name": "title",
-          "label": "Title",
-          "type": "text",
-          "default": "Have feedback about Gainsight University?",
-          "rules": {
-            "required": true,
-            "maxLength": 160
-          }
-        },
-        {
-          "name": "description",
-          "label": "Description",
-          "type": "text",
-          "default": "We're always looking to improve. Tell us what's working and what's not."
-        },
-        {
-          "name": "cta_label",
-          "label": "Button label",
-          "type": "text",
-          "default": "Let Us Know"
-        },
-        {
-          "name": "cta_url",
-          "label": "Button link",
-          "type": "text",
-          "default": "#",
-          "rules": {
-            "required": true
-          }
-        },
-        {
-          "name": "cta_new_tab",
-          "label": "Open link in new tab",
-          "type": "toggle",
-          "default": true
-        }
-      ],
-      "type": "feedback-cta"
-    },
-    {
-      "version": "1.0.0",
-      "title": "Hero Banner",
-      "description": "Dark gradient hero banner with eyebrow, large title (gradient text accent), subtitle, and decorative artwork.",
-      "category": "custom",
-      "source": {
-        "path": "widgets/hero-banner/dist",
-        "entry": "content.html"
-      },
-      "properties": [
-        {
-          "name": "eyebrow",
-          "label": "Eyebrow text",
-          "type": "text",
-          "default": "Gainsight University"
-        },
-        {
-          "name": "title",
-          "label": "Title",
-          "type": "text",
-          "default": "Learn. Grow. Succeed.",
-          "rules": {
-            "required": true,
-            "maxLength": 160
-          }
-        },
-        {
-          "name": "title_accent",
-          "label": "Title accent (gradient highlighted word)",
-          "type": "text",
-          "default": "Succeed."
-        },
-        {
-          "name": "subtitle",
-          "label": "Subtitle",
-          "type": "text",
-          "default": "Your gateway to training, certifications, and product mastery across the Gainsight platform."
-        },
-        {
-          "name": "decoration_url",
-          "label": "Decorative image URL (optional)",
-          "type": "text",
-          "default": ""
-        },
-        {
-          "name": "min_height",
-          "label": "Minimum height (px)",
-          "type": "number",
-          "default": 320,
-          "rules": {
-            "min": 160,
-            "max": 720
-          }
-        }
-      ],
-      "type": "hero-banner"
-    },
-    {
-      "version": "1.0.0",
-      "title": "Info Card Pair",
-      "description": "A pair of large outlined cards with icon, title, description, and CTA. Used for 'More Ways to Learn' (ILT, Certifications).",
-      "category": "custom",
-      "source": {
-        "path": "widgets/info-card-pair/dist",
-        "entry": "content.html"
-      },
-      "properties": [
-        {
-          "name": "section_title",
-          "label": "Section title",
-          "type": "text",
-          "default": "More Ways to Learn"
-        },
-        {
-          "name": "section_subtitle",
-          "label": "Section subtitle",
-          "type": "text",
-          "default": "Explore live sessions and credentials."
-        },
-        {
-          "name": "card_a_title",
-          "label": "Card A — title",
-          "type": "text",
-          "default": "Instructor Led Training"
-        },
-        {
-          "name": "card_a_description",
-          "label": "Card A — description",
-          "type": "text",
-          "default": "Join live sessions with Gainsight experts and build skills with hands-on practice."
-        },
-        {
-          "name": "card_a_icon_url",
-          "label": "Card A — icon URL",
-          "type": "text",
-          "default": ""
-        },
-        {
-          "name": "card_a_cta_label",
-          "label": "Card A — button label",
-          "type": "text",
-          "default": "Browse sessions"
-        },
-        {
-          "name": "card_a_cta_url",
-          "label": "Card A — button link",
-          "type": "text",
-          "default": "#"
-        },
-        {
-          "name": "card_b_title",
-          "label": "Card B — title",
-          "type": "text",
-          "default": "Certifications"
-        },
-        {
-          "name": "card_b_description",
-          "label": "Card B — description",
-          "type": "text",
-          "default": "Prove your expertise with official Gainsight certifications and digital badges."
-        },
-        {
-          "name": "card_b_icon_url",
-          "label": "Card B — icon URL",
-          "type": "text",
-          "default": ""
-        },
-        {
-          "name": "card_b_cta_label",
-          "label": "Card B — button label",
-          "type": "text",
-          "default": "Get certified"
-        },
-        {
-          "name": "card_b_cta_url",
-          "label": "Card B — button link",
-          "type": "text",
-          "default": "#"
-        }
-      ],
-      "type": "info-card-pair"
-    },
-    {
-      "version": "1.0.0",
-      "title": "Product Catalog Grid",
-      "description": "A responsive grid of product cards (icon, title, description, link). Default content covers Gainsight's 6 product areas; customize the JSON to override.",
-      "category": "custom",
-      "source": {
-        "path": "widgets/product-catalog-grid/dist",
-        "entry": "content.html"
-      },
-      "properties": [
-        {
-          "name": "section_title",
-          "label": "Section title",
-          "type": "text",
-          "default": "Explore by Product"
-        },
-        {
-          "name": "section_subtitle",
-          "label": "Section subtitle",
-          "type": "text",
-          "default": "Find learning paths for each product in the Gainsight platform."
-        },
-        {
-          "name": "items_json",
-          "label": "Products (JSON array)",
-          "type": "text",
-          "default": "[{\"title\":\"Customer Success\",\"description\":\"Drive retention and expansion with proven CS workflows.\",\"icon_url\":\"https://everpath-course-content.s3-accelerate.amazonaws.com/accounts/20031/original/CS-icon.png\",\"link_url\":\"#\",\"link_label\":\"Start learning\"},{\"title\":\"Customer Communities\",\"description\":\"Build engaged communities where customers help customers.\",\"icon_url\":\"https://everpath-course-content.s3-accelerate.amazonaws.com/accounts/20031/original/CC-icon.png\",\"link_url\":\"#\",\"link_label\":\"Start learning\"},{\"title\":\"Product Experience\",\"description\":\"Deliver in-app guidance, surveys, and analytics.\",\"icon_url\":\"https://everpath-course-content.s3-accelerate.amazonaws.com/accounts/20031/original/PX-icon.png\",\"link_url\":\"#\",\"link_label\":\"Start learning\"},{\"title\":\"Skilljar\",\"description\":\"Create customer training programs that scale.\",\"icon_url\":\"https://everpath-course-content.s3-accelerate.amazonaws.com/accounts/20031/original/SJ-icon.png\",\"link_url\":\"#\",\"link_label\":\"Start learning\"},{\"title\":\"Staircase AI\",\"description\":\"Predict churn and expansion with customer intelligence.\",\"icon_url\":\"https://everpath-course-content.s3-accelerate.amazonaws.com/accounts/20031/original/ST-icon.png\",\"link_url\":\"#\",\"link_label\":\"Start learning\"},{\"title\":\"Customer Education\",\"description\":\"Launch certifications and academies for your customers.\",\"icon_url\":\"https://everpath-course-content.s3-accelerate.amazonaws.com/accounts/20031/original/CE-icon.png\",\"link_url\":\"#\",\"link_label\":\"Start learning\"}]"
-        }
-      ],
-      "type": "product-catalog-grid"
-    },
-    {
-      "version": "1.0.0",
-      "title": "Role Tile Grid",
-      "description": "A compact grid of role/persona tiles, each linking to a role-specific learning path. Great for 'Explore by Role'.",
-      "category": "custom",
-      "source": {
-        "path": "widgets/role-tile-grid/dist",
-        "entry": "content.html"
-      },
-      "properties": [
-        {
-          "name": "section_title",
-          "label": "Section title",
-          "type": "text",
-          "default": "Explore by Role"
-        },
-        {
-          "name": "section_subtitle",
-          "label": "Section subtitle",
-          "type": "text",
-          "default": "Tailored paths for admins, end users, builders, and program owners."
-        },
-        {
-          "name": "columns",
-          "label": "Columns (desktop)",
-          "type": "select",
-          "default": "5",
-          "options": [
-            {
-              "label": "3",
-              "value": "3"
-            },
-            {
-              "label": "4",
-              "value": "4"
-            },
-            {
-              "label": "5",
-              "value": "5"
-            },
-            {
-              "label": "6",
-              "value": "6"
+      "configuration": {
+        "properties": [
+          {
+            "name": "title",
+            "type": "text",
+            "label": "Title",
+            "defaultValue": "Countries Html",
+            "rules": {
+              "required": true
             }
-          ]
-        },
+          },
+          {
+            "name": "description",
+            "type": "text",
+            "label": "Description",
+            "defaultValue": "A widget built with HTML and the Widget SDK."
+          }
+        ]
+      },
+      "defaultConfig": {
+        "title": "Countries Html",
+        "description": "A widget built with HTML and the Widget SDK."
+      },
+      "type": "countries-html"
+    },
+    {
+      "title": "Countries React",
+      "description": "A widget built with React and the Widget SDK.",
+      "category": "Demo",
+      "imageSrc": "widgets/countries-react/thumbnail.png",
+      "source": {
+        "path": "widgets/countries-react/dist",
+        "entry": "index.html"
+      },
+      "configuration": {
+        "properties": [
+          {
+            "name": "title",
+            "type": "text",
+            "label": "Title",
+            "defaultValue": "Countries React",
+            "rules": {
+              "required": true
+            }
+          },
+          {
+            "name": "description",
+            "type": "text",
+            "label": "Description",
+            "defaultValue": "A widget built with React and the Widget SDK."
+          }
+        ]
+      },
+      "defaultConfig": {
+        "title": "Countries React",
+        "description": "A widget built with React and the Widget SDK."
+      },
+      "type": "countries-react"
+    },
+    {
+      "title": "Countries Vanilla",
+      "description": "A widget built with Vanilla JS and the Widget SDK.",
+      "category": "Demo",
+      "imageSrc": "widgets/countries-vanilla/thumbnail.png",
+      "source": {
+        "path": "widgets/countries-vanilla/dist",
+        "entry": "index.html"
+      },
+      "configuration": {
+        "properties": [
+          {
+            "name": "title",
+            "type": "text",
+            "label": "Title",
+            "defaultValue": "Countries Vanilla",
+            "rules": {
+              "required": true
+            }
+          },
+          {
+            "name": "description",
+            "type": "text",
+            "label": "Description",
+            "defaultValue": "A widget built with Vanilla JS and the Widget SDK."
+          }
+        ]
+      },
+      "defaultConfig": {
+        "title": "Countries Vanilla",
+        "description": "A widget built with Vanilla JS and the Widget SDK."
+      },
+      "type": "countries-vanilla"
+    },
+    {
+      "title": "Countries Vue",
+      "description": "A widget built with Vue and the Widget SDK.",
+      "category": "Demo",
+      "imageSrc": "widgets/countries-vue/thumbnail.png",
+      "source": {
+        "path": "widgets/countries-vue/dist",
+        "entry": "index.html"
+      },
+      "configuration": {
+        "properties": [
+          {
+            "name": "title",
+            "type": "text",
+            "label": "Title",
+            "defaultValue": "Countries Vue",
+            "rules": {
+              "required": true
+            }
+          },
+          {
+            "name": "description",
+            "type": "text",
+            "label": "Description",
+            "defaultValue": "A widget built with Vue and the Widget SDK."
+          }
+        ]
+      },
+      "defaultConfig": {
+        "title": "Countries Vue",
+        "description": "A widget built with Vue and the Widget SDK."
+      },
+      "type": "countries-vue"
+    }
+  ],
+  "stylesheets": [
+    {
+      "rules": [
         {
-          "name": "items_json",
-          "label": "Roles (JSON array of {group,title,link_url,icon_url})",
-          "type": "text",
-          "default": "[{\"group\":\"CS\",\"title\":\"CS Admin\",\"link_url\":\"#\"},{\"group\":\"CS\",\"title\":\"CS End User\",\"link_url\":\"#\"},{\"group\":\"CS\",\"title\":\"CS Adoption Champion\",\"link_url\":\"#\"},{\"group\":\"CC\",\"title\":\"Community Manager\",\"link_url\":\"#\"},{\"group\":\"CC\",\"title\":\"Content Moderator\",\"link_url\":\"#\"},{\"group\":\"PX\",\"title\":\"In-App Content Creator\",\"link_url\":\"#\"},{\"group\":\"PX\",\"title\":\"Product Manager\",\"link_url\":\"#\"},{\"group\":\"SJ\",\"title\":\"LMS Admin\",\"link_url\":\"#\"},{\"group\":\"SJ\",\"title\":\"Education Program Owner\",\"link_url\":\"#\"},{\"group\":\"SJ\",\"title\":\"Course Builder\",\"link_url\":\"#\"},{\"group\":\"ST\",\"title\":\"Customer Intelligence Analyst\",\"link_url\":\"#\"},{\"group\":\"ST\",\"title\":\"Health Score Owner\",\"link_url\":\"#\"},{\"group\":\"ST\",\"title\":\"Revenue Ops\",\"link_url\":\"#\"},{\"group\":\"CE\",\"title\":\"LMS Admin\",\"link_url\":\"#\"},{\"group\":\"CE\",\"title\":\"Course Builder\",\"link_url\":\"#\"}]"
+          "field": "pageType",
+          "operator": "in",
+          "value": [
+            "global"
+          ]
         }
       ],
-      "type": "role-tile-grid"
+      "name": "theme",
+      "description": "Shared design tokens and component styles",
+      "path": "./stylesheets/theme/style.css"
+    }
+  ],
+  "scripts": [
+    {
+      "rules": [
+        {
+          "field": "pageType",
+          "operator": "in",
+          "value": [
+            "global"
+          ]
+        }
+      ],
+      "placement": "head",
+      "name": "analytics",
+      "description": "Tracks widget impressions and interactions",
+      "path": "./scripts/analytics/script.js"
     }
   ]
 }
