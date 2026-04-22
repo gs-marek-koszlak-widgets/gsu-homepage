@@ -1,4 +1,5 @@
 {
   "name": "gsu_fonts",
-  "description": "Loads Montserrat in the parent document so Gainsight University widgets can reference it reliably from inside their Shadow DOM. Does not apply any rules to community content."
+  "description": "Loads Montserrat in the parent document so Gainsight University widgets can reference it reliably from inside their Shadow DOM. Does not apply any rules to community content.",
+  "rules": []
 }
