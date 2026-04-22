@@ -1,0 +1,4 @@
+/* Loads Montserrat in the parent document so widgets that declare
+   font-family: 'Montserrat' inside their Shadow DOM can use it.
+   No selectors are defined here, so community content is untouched. */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
