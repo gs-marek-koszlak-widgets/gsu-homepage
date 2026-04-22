@@ -28,21 +28,60 @@
   }
   .gsu-td__bar:hover { filter: brightness(1.1); }
   .gsu-td__chev {
-    width: 16px; height: 16px; transition: transform 0.25s ease;
+    width: 16px; height: 16px;
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
   }
   .gsu-td[data-open="true"] .gsu-td__chev { transform: rotate(180deg); }
 
   .gsu-td__panel {
     overflow: hidden;
+    position: relative;
     max-height: 0;
+    opacity: 0;
     background: var(--gsu-td-panel-bg);
     color: var(--gsu-td-panel-text);
     border-bottom: 1px solid #E0E8EF;
-    transition: max-height 0.35s ease, padding 0.25s ease;
+    transition: max-height 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+                opacity 0.3s ease;
+  }
+  .gsu-td__panel::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg,
+      var(--gsu-td-col-cs)         0%,
+      var(--gsu-td-col-px)        20%,
+      var(--gsu-td-col-cc)        40%,
+      var(--gsu-td-col-ce)        60%,
+      var(--gsu-td-col-sa)        80%,
+      var(--gsu-td-col-staircase) 100%);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
   }
   .gsu-td[data-open="true"] .gsu-td__panel {
     max-height: 900px;
+    opacity: 1;
   }
+  .gsu-td[data-open="true"] .gsu-td__panel::before {
+    transform: scaleX(1);
+    transition-delay: 0.05s;
+  }
+  .gsu-td__col {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.35s ease, transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .gsu-td[data-open="true"] .gsu-td__col {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .gsu-td[data-open="true"] .gsu-td__col--cs        { transition-delay: 0.10s; }
+  .gsu-td[data-open="true"] .gsu-td__col--px        { transition-delay: 0.16s; }
+  .gsu-td[data-open="true"] .gsu-td__col--cc        { transition-delay: 0.22s; }
+  .gsu-td[data-open="true"] .gsu-td__col--ce        { transition-delay: 0.28s; }
+  .gsu-td[data-open="true"] .gsu-td__col--sa        { transition-delay: 0.34s; }
+  .gsu-td[data-open="true"] .gsu-td__col--staircase { transition-delay: 0.40s; }
   .gsu-td__cols {
     display: grid; grid-template-columns: repeat(6, 1fr);
     gap: 24px 28px; max-width: 1400px; margin: 0 auto;
