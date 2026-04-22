@@ -10,59 +10,276 @@
   },
   "configuration": {
     "properties": [
-      { "name": "section_title",    "type": "text",  "label": "Section Title",    "defaultValue": "What's New" },
-      { "name": "section_subtitle", "type": "text",  "label": "Section Subtitle", "defaultValue": "The latest courses and learning paths added to Gainsight University." },
-      { "name": "background_start", "type": "color", "label": "Background Start", "defaultValue": "#FFFFFF" },
-      { "name": "background_end",   "type": "color", "label": "Background End",   "defaultValue": "#D4E7FA" },
-      { "name": "accent_color",     "type": "color", "label": "Arrow Accent",     "defaultValue": "#38A2FF" },
-
-      { "name": "card1_title",    "type": "text", "label": "Card 1 - Title",       "defaultValue": "Course 1: Introduction" },
-      { "name": "card1_desc",     "type": "text", "label": "Card 1 - Description", "defaultValue": "Get a tour of the essentials. Understand goals, key concepts, and how the learning path works so you can start with confidence." },
-      { "name": "card1_image",    "type": "text", "label": "Card 1 - Image URL",   "defaultValue": "https://cc.sj-cdn.net/instructor/1p771tm57lxit-cutler-skilljar/courses/2mepzpvoz45a5/promo-image.1755555675.png" },
-      { "name": "card1_link",     "type": "text", "label": "Card 1 - Link URL",    "defaultValue": "#" },
-      { "name": "card1_duration", "type": "text", "label": "Card 1 - Duration",    "defaultValue": "15 min" },
-
-      { "name": "card2_title",    "type": "text", "label": "Card 2 - Title",       "defaultValue": "Course 2: Setup" },
-      { "name": "card2_desc",     "type": "text", "label": "Card 2 - Description", "defaultValue": "Prepare your account and environment. Configure core settings, connect integrations, and follow best practices to avoid common pitfalls." },
-      { "name": "card2_image",    "type": "text", "label": "Card 2 - Image URL",   "defaultValue": "https://cc.sj-cdn.net/instructor/1p771tm57lxit-cutler-skilljar/courses/1uj5mud0w1kl/promo-image.1755555975.png" },
-      { "name": "card2_link",     "type": "text", "label": "Card 2 - Link URL",    "defaultValue": "#" },
-      { "name": "card2_duration", "type": "text", "label": "Card 2 - Duration",    "defaultValue": "10 min" },
-
-      { "name": "card3_title",    "type": "text", "label": "Card 3 - Title",       "defaultValue": "Course 3: Creation" },
-      { "name": "card3_desc",     "type": "text", "label": "Card 3 - Description", "defaultValue": "Build your first project step by step. Structure content, apply templates, and use time-saving tips to deliver a polished result." },
-      { "name": "card3_image",    "type": "text", "label": "Card 3 - Image URL",   "defaultValue": "https://cc.sj-cdn.net/instructor/1p771tm57lxit-cutler-skilljar/courses/wrkprljlekpq/promo-image.1755555941.png" },
-      { "name": "card3_link",     "type": "text", "label": "Card 3 - Link URL",    "defaultValue": "#" },
-      { "name": "card3_duration", "type": "text", "label": "Card 3 - Duration",    "defaultValue": "12 min" },
-
-      { "name": "card4_title",    "type": "text", "label": "Card 4 - Title",       "defaultValue": "Course 4: Promotion" },
-      { "name": "card4_desc",     "type": "text", "label": "Card 4 - Description", "defaultValue": "Launch with impact. Learn channels, messaging, and timing to reach your audience and drive engagement from day one." },
-      { "name": "card4_image",    "type": "text", "label": "Card 4 - Image URL",   "defaultValue": "https://cc.sj-cdn.net/instructor/1p771tm57lxit-cutler-skilljar/courses/1gpbgw3mwgxwf/promo-image.1755556001.png" },
-      { "name": "card4_link",     "type": "text", "label": "Card 4 - Link URL",    "defaultValue": "#" },
-      { "name": "card4_duration", "type": "text", "label": "Card 4 - Duration",    "defaultValue": "15 min" },
-
-      { "name": "card5_title",    "type": "text", "label": "Card 5 - Title",       "defaultValue": "Course 5: Analytics" },
-      { "name": "card5_desc",     "type": "text", "label": "Card 5 - Description", "defaultValue": "Track what matters. Read dashboards, interpret metrics, and turn insights into actions that improve outcomes." },
-      { "name": "card5_image",    "type": "text", "label": "Card 5 - Image URL",   "defaultValue": "https://cc.sj-cdn.net/instructor/1p771tm57lxit-cutler-skilljar/courses/dohsnuxko3fl/promo-image.1755556033.png" },
-      { "name": "card5_link",     "type": "text", "label": "Card 5 - Link URL",    "defaultValue": "#" },
-      { "name": "card5_duration", "type": "text", "label": "Card 5 - Duration",    "defaultValue": "15 min" },
-
-      { "name": "card6_title",    "type": "text", "label": "Card 6 - Title",       "defaultValue": "" },
-      { "name": "card6_desc",     "type": "text", "label": "Card 6 - Description", "defaultValue": "" },
-      { "name": "card6_image",    "type": "text", "label": "Card 6 - Image URL",   "defaultValue": "" },
-      { "name": "card6_link",     "type": "text", "label": "Card 6 - Link URL",    "defaultValue": "#" },
-      { "name": "card6_duration", "type": "text", "label": "Card 6 - Duration",    "defaultValue": "" },
-
-      { "name": "card7_title",    "type": "text", "label": "Card 7 - Title",       "defaultValue": "" },
-      { "name": "card7_desc",     "type": "text", "label": "Card 7 - Description", "defaultValue": "" },
-      { "name": "card7_image",    "type": "text", "label": "Card 7 - Image URL",   "defaultValue": "" },
-      { "name": "card7_link",     "type": "text", "label": "Card 7 - Link URL",    "defaultValue": "#" },
-      { "name": "card7_duration", "type": "text", "label": "Card 7 - Duration",    "defaultValue": "" },
-
-      { "name": "card8_title",    "type": "text", "label": "Card 8 - Title",       "defaultValue": "" },
-      { "name": "card8_desc",     "type": "text", "label": "Card 8 - Description", "defaultValue": "" },
-      { "name": "card8_image",    "type": "text", "label": "Card 8 - Image URL",   "defaultValue": "" },
-      { "name": "card8_link",     "type": "text", "label": "Card 8 - Link URL",    "defaultValue": "#" },
-      { "name": "card8_duration", "type": "text", "label": "Card 8 - Duration",    "defaultValue": "" }
+      {
+        "name": "section_title",
+        "type": "text",
+        "label": "Section Title",
+        "defaultValue": "What's New"
+      },
+      {
+        "name": "section_subtitle",
+        "type": "text",
+        "label": "Section Subtitle",
+        "defaultValue": "The latest courses and learning paths added to Gainsight University."
+      },
+      {
+        "name": "background_start",
+        "type": "color",
+        "label": "Background Start",
+        "defaultValue": "#FFFFFF"
+      },
+      {
+        "name": "background_end",
+        "type": "color",
+        "label": "Background End",
+        "defaultValue": "#D4E7FA"
+      },
+      {
+        "name": "accent_color",
+        "type": "color",
+        "label": "Arrow Accent",
+        "defaultValue": "#38A2FF"
+      },
+      {
+        "name": "card1_title",
+        "type": "text",
+        "label": "Card 1 - Title",
+        "defaultValue": "Course 1: Introduction"
+      },
+      {
+        "name": "card1_desc",
+        "type": "text",
+        "label": "Card 1 - Description",
+        "defaultValue": "Get a tour of the essentials. Understand goals, key concepts, and how the learning path works so you can start with confidence."
+      },
+      {
+        "name": "card1_image",
+        "type": "text",
+        "label": "Card 1 - Image URL",
+        "defaultValue": "https://cc.sj-cdn.net/instructor/1p771tm57lxit-cutler-skilljar/courses/2mepzpvoz45a5/promo-image.1755555675.png"
+      },
+      {
+        "name": "card1_link",
+        "type": "text",
+        "label": "Card 1 - Link URL",
+        "defaultValue": "#"
+      },
+      {
+        "name": "card1_duration",
+        "type": "text",
+        "label": "Card 1 - Duration",
+        "defaultValue": "15 min"
+      },
+      {
+        "name": "card2_title",
+        "type": "text",
+        "label": "Card 2 - Title",
+        "defaultValue": "Course 2: Setup"
+      },
+      {
+        "name": "card2_desc",
+        "type": "text",
+        "label": "Card 2 - Description",
+        "defaultValue": "Prepare your account and environment. Configure core settings, connect integrations, and follow best practices to avoid common pitfalls."
+      },
+      {
+        "name": "card2_image",
+        "type": "text",
+        "label": "Card 2 - Image URL",
+        "defaultValue": "https://cc.sj-cdn.net/instructor/1p771tm57lxit-cutler-skilljar/courses/1uj5mud0w1kl/promo-image.1755555975.png"
+      },
+      {
+        "name": "card2_link",
+        "type": "text",
+        "label": "Card 2 - Link URL",
+        "defaultValue": "#"
+      },
+      {
+        "name": "card2_duration",
+        "type": "text",
+        "label": "Card 2 - Duration",
+        "defaultValue": "10 min"
+      },
+      {
+        "name": "card3_title",
+        "type": "text",
+        "label": "Card 3 - Title",
+        "defaultValue": "Course 3: Creation"
+      },
+      {
+        "name": "card3_desc",
+        "type": "text",
+        "label": "Card 3 - Description",
+        "defaultValue": "Build your first project step by step. Structure content, apply templates, and use time-saving tips to deliver a polished result."
+      },
+      {
+        "name": "card3_image",
+        "type": "text",
+        "label": "Card 3 - Image URL",
+        "defaultValue": "https://cc.sj-cdn.net/instructor/1p771tm57lxit-cutler-skilljar/courses/wrkprljlekpq/promo-image.1755555941.png"
+      },
+      {
+        "name": "card3_link",
+        "type": "text",
+        "label": "Card 3 - Link URL",
+        "defaultValue": "#"
+      },
+      {
+        "name": "card3_duration",
+        "type": "text",
+        "label": "Card 3 - Duration",
+        "defaultValue": "12 min"
+      },
+      {
+        "name": "card4_title",
+        "type": "text",
+        "label": "Card 4 - Title",
+        "defaultValue": "Course 4: Promotion"
+      },
+      {
+        "name": "card4_desc",
+        "type": "text",
+        "label": "Card 4 - Description",
+        "defaultValue": "Launch with impact. Learn channels, messaging, and timing to reach your audience and drive engagement from day one."
+      },
+      {
+        "name": "card4_image",
+        "type": "text",
+        "label": "Card 4 - Image URL",
+        "defaultValue": "https://cc.sj-cdn.net/instructor/1p771tm57lxit-cutler-skilljar/courses/1gpbgw3mwgxwf/promo-image.1755556001.png"
+      },
+      {
+        "name": "card4_link",
+        "type": "text",
+        "label": "Card 4 - Link URL",
+        "defaultValue": "#"
+      },
+      {
+        "name": "card4_duration",
+        "type": "text",
+        "label": "Card 4 - Duration",
+        "defaultValue": "15 min"
+      },
+      {
+        "name": "card5_title",
+        "type": "text",
+        "label": "Card 5 - Title",
+        "defaultValue": "Course 5: Analytics"
+      },
+      {
+        "name": "card5_desc",
+        "type": "text",
+        "label": "Card 5 - Description",
+        "defaultValue": "Track what matters. Read dashboards, interpret metrics, and turn insights into actions that improve outcomes."
+      },
+      {
+        "name": "card5_image",
+        "type": "text",
+        "label": "Card 5 - Image URL",
+        "defaultValue": "https://cc.sj-cdn.net/instructor/1p771tm57lxit-cutler-skilljar/courses/dohsnuxko3fl/promo-image.1755556033.png"
+      },
+      {
+        "name": "card5_link",
+        "type": "text",
+        "label": "Card 5 - Link URL",
+        "defaultValue": "#"
+      },
+      {
+        "name": "card5_duration",
+        "type": "text",
+        "label": "Card 5 - Duration",
+        "defaultValue": "15 min"
+      },
+      {
+        "name": "card6_title",
+        "type": "text",
+        "label": "Card 6 - Title",
+        "defaultValue": ""
+      },
+      {
+        "name": "card6_desc",
+        "type": "text",
+        "label": "Card 6 - Description",
+        "defaultValue": ""
+      },
+      {
+        "name": "card6_image",
+        "type": "text",
+        "label": "Card 6 - Image URL",
+        "defaultValue": ""
+      },
+      {
+        "name": "card6_link",
+        "type": "text",
+        "label": "Card 6 - Link URL",
+        "defaultValue": "#"
+      },
+      {
+        "name": "card6_duration",
+        "type": "text",
+        "label": "Card 6 - Duration",
+        "defaultValue": ""
+      },
+      {
+        "name": "card7_title",
+        "type": "text",
+        "label": "Card 7 - Title",
+        "defaultValue": ""
+      },
+      {
+        "name": "card7_desc",
+        "type": "text",
+        "label": "Card 7 - Description",
+        "defaultValue": ""
+      },
+      {
+        "name": "card7_image",
+        "type": "text",
+        "label": "Card 7 - Image URL",
+        "defaultValue": ""
+      },
+      {
+        "name": "card7_link",
+        "type": "text",
+        "label": "Card 7 - Link URL",
+        "defaultValue": "#"
+      },
+      {
+        "name": "card7_duration",
+        "type": "text",
+        "label": "Card 7 - Duration",
+        "defaultValue": ""
+      },
+      {
+        "name": "card8_title",
+        "type": "text",
+        "label": "Card 8 - Title",
+        "defaultValue": ""
+      },
+      {
+        "name": "card8_desc",
+        "type": "text",
+        "label": "Card 8 - Description",
+        "defaultValue": ""
+      },
+      {
+        "name": "card8_image",
+        "type": "text",
+        "label": "Card 8 - Image URL",
+        "defaultValue": ""
+      },
+      {
+        "name": "card8_link",
+        "type": "text",
+        "label": "Card 8 - Link URL",
+        "defaultValue": "#"
+      },
+      {
+        "name": "card8_duration",
+        "type": "text",
+        "label": "Card 8 - Duration",
+        "defaultValue": ""
+      }
     ]
   },
   "defaultConfig": {
@@ -71,13 +288,48 @@
     "background_start": "#FFFFFF",
     "background_end": "#D4E7FA",
     "accent_color": "#38A2FF",
-    "card1_title": "Course 1: Introduction", "card1_desc": "Get a tour of the essentials. Understand goals, key concepts, and how the learning path works so you can start with confidence.", "card1_image": "https://cc.sj-cdn.net/instructor/1p771tm57lxit-cutler-skilljar/courses/2mepzpvoz45a5/promo-image.1755555675.png", "card1_link": "#", "card1_duration": "15 min",
-    "card2_title": "Course 2: Setup", "card2_desc": "Prepare your account and environment. Configure core settings, connect integrations, and follow best practices to avoid common pitfalls.", "card2_image": "https://cc.sj-cdn.net/instructor/1p771tm57lxit-cutler-skilljar/courses/1uj5mud0w1kl/promo-image.1755555975.png", "card2_link": "#", "card2_duration": "10 min",
-    "card3_title": "Course 3: Creation", "card3_desc": "Build your first project step by step. Structure content, apply templates, and use time-saving tips to deliver a polished result.", "card3_image": "https://cc.sj-cdn.net/instructor/1p771tm57lxit-cutler-skilljar/courses/wrkprljlekpq/promo-image.1755555941.png", "card3_link": "#", "card3_duration": "12 min",
-    "card4_title": "Course 4: Promotion", "card4_desc": "Launch with impact. Learn channels, messaging, and timing to reach your audience and drive engagement from day one.", "card4_image": "https://cc.sj-cdn.net/instructor/1p771tm57lxit-cutler-skilljar/courses/1gpbgw3mwgxwf/promo-image.1755556001.png", "card4_link": "#", "card4_duration": "15 min",
-    "card5_title": "Course 5: Analytics", "card5_desc": "Track what matters. Read dashboards, interpret metrics, and turn insights into actions that improve outcomes.", "card5_image": "https://cc.sj-cdn.net/instructor/1p771tm57lxit-cutler-skilljar/courses/dohsnuxko3fl/promo-image.1755556033.png", "card5_link": "#", "card5_duration": "15 min",
-    "card6_title": "", "card6_desc": "", "card6_image": "", "card6_link": "#", "card6_duration": "",
-    "card7_title": "", "card7_desc": "", "card7_image": "", "card7_link": "#", "card7_duration": "",
-    "card8_title": "", "card8_desc": "", "card8_image": "", "card8_link": "#", "card8_duration": ""
+    "card1_title": "Course 1: Introduction",
+    "card1_desc": "Get a tour of the essentials. Understand goals, key concepts, and how the learning path works so you can start with confidence.",
+    "card1_image": "https://cc.sj-cdn.net/instructor/1p771tm57lxit-cutler-skilljar/courses/2mepzpvoz45a5/promo-image.1755555675.png",
+    "card1_link": "#",
+    "card1_duration": "15 min",
+    "card2_title": "Course 2: Setup",
+    "card2_desc": "Prepare your account and environment. Configure core settings, connect integrations, and follow best practices to avoid common pitfalls.",
+    "card2_image": "https://cc.sj-cdn.net/instructor/1p771tm57lxit-cutler-skilljar/courses/1uj5mud0w1kl/promo-image.1755555975.png",
+    "card2_link": "#",
+    "card2_duration": "10 min",
+    "card3_title": "Course 3: Creation",
+    "card3_desc": "Build your first project step by step. Structure content, apply templates, and use time-saving tips to deliver a polished result.",
+    "card3_image": "https://cc.sj-cdn.net/instructor/1p771tm57lxit-cutler-skilljar/courses/wrkprljlekpq/promo-image.1755555941.png",
+    "card3_link": "#",
+    "card3_duration": "12 min",
+    "card4_title": "Course 4: Promotion",
+    "card4_desc": "Launch with impact. Learn channels, messaging, and timing to reach your audience and drive engagement from day one.",
+    "card4_image": "https://cc.sj-cdn.net/instructor/1p771tm57lxit-cutler-skilljar/courses/1gpbgw3mwgxwf/promo-image.1755556001.png",
+    "card4_link": "#",
+    "card4_duration": "15 min",
+    "card5_title": "Course 5: Analytics",
+    "card5_desc": "Track what matters. Read dashboards, interpret metrics, and turn insights into actions that improve outcomes.",
+    "card5_image": "https://cc.sj-cdn.net/instructor/1p771tm57lxit-cutler-skilljar/courses/dohsnuxko3fl/promo-image.1755556033.png",
+    "card5_link": "#",
+    "card5_duration": "15 min",
+    "card6_title": "",
+    "card6_desc": "",
+    "card6_image": "",
+    "card6_link": "#",
+    "card6_duration": "",
+    "card7_title": "",
+    "card7_desc": "",
+    "card7_image": "",
+    "card7_link": "#",
+    "card7_duration": "",
+    "card8_title": "",
+    "card8_desc": "",
+    "card8_image": "",
+    "card8_link": "#",
+    "card8_duration": ""
+  },
+  "settings": {
+    "shared": false
   }
 }

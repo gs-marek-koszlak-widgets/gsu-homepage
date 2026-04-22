@@ -27,7 +27,9 @@
         "type": "text",
         "label": "Message",
         "defaultValue": "Gainsight University welcomes Skilljar users! Same content, new home.",
-        "rules": { "required": true }
+        "rules": {
+          "required": true
+        }
       },
       {
         "name": "icon_url",
@@ -56,5 +58,8 @@
     "icon_url": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775666432%2FAnnouncement+Icon.1775666432180.png",
     "button_text": "Click here",
     "button_url": "#"
+  },
+  "settings": {
+    "shared": false
   }
 }

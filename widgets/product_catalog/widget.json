@@ -10,41 +10,180 @@
   },
   "configuration": {
     "properties": [
-      { "name": "section_title",     "type": "text",  "label": "Section Title",     "defaultValue": "Explore Courses by Product" },
-      { "name": "section_subtitle",  "type": "text",  "label": "Section Subtitle",  "defaultValue": "Dive into self-paced training organized by the Gainsight product you use every day." },
-      { "name": "background_start",  "type": "color", "label": "Background Start",  "defaultValue": "#FFFFFF" },
-      { "name": "background_end",    "type": "color", "label": "Background End",    "defaultValue": "#D4E7FA" },
-      { "name": "card_title_color",  "type": "color", "label": "Card Title Color",  "defaultValue": "#153D5E" },
-
-      { "name": "card1_title", "type": "text", "label": "Card 1 - Title",       "defaultValue": "Customer Success" },
-      { "name": "card1_desc",  "type": "text", "label": "Card 1 - Description", "defaultValue": "From onboarding to advanced administration, these courses cover everything you need to succeed with Gainsight CS." },
-      { "name": "card1_icon",  "type": "text", "label": "Card 1 - Icon URL",    "defaultValue": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620821%2FCS_Icon_Full-Color+%281%29.1775620821507.png" },
-      { "name": "card1_link",  "type": "text", "label": "Card 1 - Link URL",    "defaultValue": "#" },
-
-      { "name": "card2_title", "type": "text", "label": "Card 2 - Title",       "defaultValue": "Customer Communities" },
-      { "name": "card2_desc",  "type": "text", "label": "Card 2 - Description", "defaultValue": "Explore courses designed to help you launch, manage, and grow a thriving community." },
-      { "name": "card2_icon",  "type": "text", "label": "Card 2 - Icon URL",    "defaultValue": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620839%2FCC_Icon_Full-Color+%281%29.1775620839241.png" },
-      { "name": "card2_link",  "type": "text", "label": "Card 2 - Link URL",    "defaultValue": "#" },
-
-      { "name": "card3_title", "type": "text", "label": "Card 3 - Title",       "defaultValue": "Product Experience" },
-      { "name": "card3_desc",  "type": "text", "label": "Card 3 - Description", "defaultValue": "From first setup to advanced analytics, these courses help you get the most out of the platform." },
-      { "name": "card3_icon",  "type": "text", "label": "Card 3 - Icon URL",    "defaultValue": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620858%2FPX_Icon_Full-Color+%281%29.1775620857757.png" },
-      { "name": "card3_link",  "type": "text", "label": "Card 3 - Link URL",    "defaultValue": "#" },
-
-      { "name": "card4_title", "type": "text", "label": "Card 4 - Title",       "defaultValue": "Skilljar" },
-      { "name": "card4_desc",  "type": "text", "label": "Card 4 - Description", "defaultValue": "Whether you're setting up your first course or optimizing an established program, you'll find the resources you need here." },
-      { "name": "card4_icon",  "type": "text", "label": "Card 4 - Icon URL",    "defaultValue": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620889%2FSkilljar_Icon_Full-Color+%282%29.1775620889626.png" },
-      { "name": "card4_link",  "type": "text", "label": "Card 4 - Link URL",    "defaultValue": "#" },
-
-      { "name": "card5_title", "type": "text", "label": "Card 5 - Title",       "defaultValue": "Staircase AI" },
-      { "name": "card5_desc",  "type": "text", "label": "Card 5 - Description", "defaultValue": "Get up to speed quickly with courses built around the core features and workflows in Staircase AI." },
-      { "name": "card5_icon",  "type": "text", "label": "Card 5 - Icon URL",    "defaultValue": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620908%2FStaircase_Icon_Full-Color+%281%29.1775620908583.png" },
-      { "name": "card5_link",  "type": "text", "label": "Card 5 - Link URL",    "defaultValue": "#" },
-
-      { "name": "card6_title", "type": "text", "label": "Card 6 - Title",       "defaultValue": "Customer Education" },
-      { "name": "card6_desc",  "type": "text", "label": "Card 6 - Description", "defaultValue": "Learn how to build, launch, and manage a best-in-class customer education program with Gainsight CE." },
-      { "name": "card6_icon",  "type": "text", "label": "Card 6 - Icon URL",    "defaultValue": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620875%2FCE_Icon_Full-Color+%281%29.1775620875494.png" },
-      { "name": "card6_link",  "type": "text", "label": "Card 6 - Link URL",    "defaultValue": "#" }
+      {
+        "name": "section_title",
+        "type": "text",
+        "label": "Section Title",
+        "defaultValue": "Explore Courses by Product"
+      },
+      {
+        "name": "section_subtitle",
+        "type": "text",
+        "label": "Section Subtitle",
+        "defaultValue": "Dive into self-paced training organized by the Gainsight product you use every day."
+      },
+      {
+        "name": "background_start",
+        "type": "color",
+        "label": "Background Start",
+        "defaultValue": "#FFFFFF"
+      },
+      {
+        "name": "background_end",
+        "type": "color",
+        "label": "Background End",
+        "defaultValue": "#D4E7FA"
+      },
+      {
+        "name": "card_title_color",
+        "type": "color",
+        "label": "Card Title Color",
+        "defaultValue": "#153D5E"
+      },
+      {
+        "name": "card1_title",
+        "type": "text",
+        "label": "Card 1 - Title",
+        "defaultValue": "Customer Success"
+      },
+      {
+        "name": "card1_desc",
+        "type": "text",
+        "label": "Card 1 - Description",
+        "defaultValue": "From onboarding to advanced administration, these courses cover everything you need to succeed with Gainsight CS."
+      },
+      {
+        "name": "card1_icon",
+        "type": "text",
+        "label": "Card 1 - Icon URL",
+        "defaultValue": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620821%2FCS_Icon_Full-Color+%281%29.1775620821507.png"
+      },
+      {
+        "name": "card1_link",
+        "type": "text",
+        "label": "Card 1 - Link URL",
+        "defaultValue": "#"
+      },
+      {
+        "name": "card2_title",
+        "type": "text",
+        "label": "Card 2 - Title",
+        "defaultValue": "Customer Communities"
+      },
+      {
+        "name": "card2_desc",
+        "type": "text",
+        "label": "Card 2 - Description",
+        "defaultValue": "Explore courses designed to help you launch, manage, and grow a thriving community."
+      },
+      {
+        "name": "card2_icon",
+        "type": "text",
+        "label": "Card 2 - Icon URL",
+        "defaultValue": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620839%2FCC_Icon_Full-Color+%281%29.1775620839241.png"
+      },
+      {
+        "name": "card2_link",
+        "type": "text",
+        "label": "Card 2 - Link URL",
+        "defaultValue": "#"
+      },
+      {
+        "name": "card3_title",
+        "type": "text",
+        "label": "Card 3 - Title",
+        "defaultValue": "Product Experience"
+      },
+      {
+        "name": "card3_desc",
+        "type": "text",
+        "label": "Card 3 - Description",
+        "defaultValue": "From first setup to advanced analytics, these courses help you get the most out of the platform."
+      },
+      {
+        "name": "card3_icon",
+        "type": "text",
+        "label": "Card 3 - Icon URL",
+        "defaultValue": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620858%2FPX_Icon_Full-Color+%281%29.1775620857757.png"
+      },
+      {
+        "name": "card3_link",
+        "type": "text",
+        "label": "Card 3 - Link URL",
+        "defaultValue": "#"
+      },
+      {
+        "name": "card4_title",
+        "type": "text",
+        "label": "Card 4 - Title",
+        "defaultValue": "Skilljar"
+      },
+      {
+        "name": "card4_desc",
+        "type": "text",
+        "label": "Card 4 - Description",
+        "defaultValue": "Whether you're setting up your first course or optimizing an established program, you'll find the resources you need here."
+      },
+      {
+        "name": "card4_icon",
+        "type": "text",
+        "label": "Card 4 - Icon URL",
+        "defaultValue": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620889%2FSkilljar_Icon_Full-Color+%282%29.1775620889626.png"
+      },
+      {
+        "name": "card4_link",
+        "type": "text",
+        "label": "Card 4 - Link URL",
+        "defaultValue": "#"
+      },
+      {
+        "name": "card5_title",
+        "type": "text",
+        "label": "Card 5 - Title",
+        "defaultValue": "Staircase AI"
+      },
+      {
+        "name": "card5_desc",
+        "type": "text",
+        "label": "Card 5 - Description",
+        "defaultValue": "Get up to speed quickly with courses built around the core features and workflows in Staircase AI."
+      },
+      {
+        "name": "card5_icon",
+        "type": "text",
+        "label": "Card 5 - Icon URL",
+        "defaultValue": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620908%2FStaircase_Icon_Full-Color+%281%29.1775620908583.png"
+      },
+      {
+        "name": "card5_link",
+        "type": "text",
+        "label": "Card 5 - Link URL",
+        "defaultValue": "#"
+      },
+      {
+        "name": "card6_title",
+        "type": "text",
+        "label": "Card 6 - Title",
+        "defaultValue": "Customer Education"
+      },
+      {
+        "name": "card6_desc",
+        "type": "text",
+        "label": "Card 6 - Description",
+        "defaultValue": "Learn how to build, launch, and manage a best-in-class customer education program with Gainsight CE."
+      },
+      {
+        "name": "card6_icon",
+        "type": "text",
+        "label": "Card 6 - Icon URL",
+        "defaultValue": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620875%2FCE_Icon_Full-Color+%281%29.1775620875494.png"
+      },
+      {
+        "name": "card6_link",
+        "type": "text",
+        "label": "Card 6 - Link URL",
+        "defaultValue": "#"
+      }
     ]
   },
   "defaultConfig": {
@@ -54,28 +193,31 @@
     "background_end": "#D4E7FA",
     "card_title_color": "#153D5E",
     "card1_title": "Customer Success",
-    "card1_desc":  "From onboarding to advanced administration, these courses cover everything you need to succeed with Gainsight CS.",
-    "card1_icon":  "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620821%2FCS_Icon_Full-Color+%281%29.1775620821507.png",
-    "card1_link":  "#",
+    "card1_desc": "From onboarding to advanced administration, these courses cover everything you need to succeed with Gainsight CS.",
+    "card1_icon": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620821%2FCS_Icon_Full-Color+%281%29.1775620821507.png",
+    "card1_link": "#",
     "card2_title": "Customer Communities",
-    "card2_desc":  "Explore courses designed to help you launch, manage, and grow a thriving community.",
-    "card2_icon":  "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620839%2FCC_Icon_Full-Color+%281%29.1775620839241.png",
-    "card2_link":  "#",
+    "card2_desc": "Explore courses designed to help you launch, manage, and grow a thriving community.",
+    "card2_icon": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620839%2FCC_Icon_Full-Color+%281%29.1775620839241.png",
+    "card2_link": "#",
     "card3_title": "Product Experience",
-    "card3_desc":  "From first setup to advanced analytics, these courses help you get the most out of the platform.",
-    "card3_icon":  "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620858%2FPX_Icon_Full-Color+%281%29.1775620857757.png",
-    "card3_link":  "#",
+    "card3_desc": "From first setup to advanced analytics, these courses help you get the most out of the platform.",
+    "card3_icon": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620858%2FPX_Icon_Full-Color+%281%29.1775620857757.png",
+    "card3_link": "#",
     "card4_title": "Skilljar",
-    "card4_desc":  "Whether you're setting up your first course or optimizing an established program, you'll find the resources you need here.",
-    "card4_icon":  "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620889%2FSkilljar_Icon_Full-Color+%282%29.1775620889626.png",
-    "card4_link":  "#",
+    "card4_desc": "Whether you're setting up your first course or optimizing an established program, you'll find the resources you need here.",
+    "card4_icon": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620889%2FSkilljar_Icon_Full-Color+%282%29.1775620889626.png",
+    "card4_link": "#",
     "card5_title": "Staircase AI",
-    "card5_desc":  "Get up to speed quickly with courses built around the core features and workflows in Staircase AI.",
-    "card5_icon":  "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620908%2FStaircase_Icon_Full-Color+%281%29.1775620908583.png",
-    "card5_link":  "#",
+    "card5_desc": "Get up to speed quickly with courses built around the core features and workflows in Staircase AI.",
+    "card5_icon": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620908%2FStaircase_Icon_Full-Color+%281%29.1775620908583.png",
+    "card5_link": "#",
     "card6_title": "Customer Education",
-    "card6_desc":  "Learn how to build, launch, and manage a best-in-class customer education program with Gainsight CE.",
-    "card6_icon":  "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620875%2FCE_Icon_Full-Color+%281%29.1775620875494.png",
-    "card6_link":  "#"
+    "card6_desc": "Learn how to build, launch, and manage a best-in-class customer education program with Gainsight CE.",
+    "card6_icon": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620875%2FCE_Icon_Full-Color+%281%29.1775620875494.png",
+    "card6_link": "#"
+  },
+  "settings": {
+    "shared": false
   }
 }

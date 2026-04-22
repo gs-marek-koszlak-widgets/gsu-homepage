@@ -61,6 +61,9 @@
         "button_text": "Self-Guided Training",
         "button_url": "#"
       },
+      "settings": {
+        "shared": false
+      },
       "type": "announcement_bar"
     },
     {
@@ -145,6 +148,9 @@
         "button_url": "#",
         "decoration_image_url": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1776482067%2FCircle.1776482066967.png"
       },
+      "settings": {
+        "shared": false
+      },
       "type": "feedback_cta"
     },
     {
@@ -200,6 +206,9 @@
         "background_start": "#153D5E",
         "background_end": "#0E2F49",
         "decoration_image_url": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775623016%2FCurved+Lines+GSU+Homepage.1775623016634.png"
+      },
+      "settings": {
+        "shared": false
       },
       "type": "hero"
     },
@@ -263,6 +272,9 @@
         "icon_url": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775666432%2FAnnouncement+Icon.1775666432180.png",
         "button_text": "Click here",
         "button_url": "#"
+      },
+      "settings": {
+        "shared": false
       },
       "type": "info_bar"
     },
@@ -1057,6 +1069,9 @@
         "tile15_link": "#",
         "tile15_icon": "ce"
       },
+      "settings": {
+        "shared": false
+      },
       "type": "persona_grid"
     },
     {
@@ -1278,6 +1293,9 @@
         "card6_icon": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620875%2FCE_Icon_Full-Color+%281%29.1775620875494.png",
         "card6_link": "#"
       },
+      "settings": {
+        "shared": false
+      },
       "type": "product_catalog"
     },
     {
@@ -1442,6 +1460,9 @@
         "card2_badge1": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620821%2FCS_Icon_Full-Color+%281%29.1775620821507.png",
         "card2_badge2": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620858%2FPX_Icon_Full-Color+%281%29.1775620857757.png",
         "card2_badge3": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fap3mt35wr4m0o2hyto113ikej%2Fpublic%2F1775620889%2FSkilljar_Icon_Full-Color+%282%29.1775620889626.png"
+      },
+      "settings": {
+        "shared": false
       },
       "type": "quick_links"
     },
@@ -1818,6 +1839,9 @@
         "label_staircase_gettingstarted": "Getting Started with Staircase AI",
         "url_staircase_gettingstarted": "#"
       },
+      "settings": {
+        "shared": false
+      },
       "type": "training_directory"
     },
     {
@@ -2150,6 +2174,9 @@
         "card8_image": "",
         "card8_link": "#",
         "card8_duration": ""
+      },
+      "settings": {
+        "shared": false
       },
       "type": "whats_new"
     }

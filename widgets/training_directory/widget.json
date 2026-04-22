@@ -10,65 +10,312 @@
   },
   "configuration": {
     "properties": [
-      { "name": "bar_label",        "type": "text",  "label": "Bar Label",         "defaultValue": "Training Directory" },
-      { "name": "bar_background",   "type": "color", "label": "Bar Background",    "defaultValue": "#0B1F33" },
-      { "name": "bar_text_color",   "type": "color", "label": "Bar Text Color",    "defaultValue": "#FFFFFF" },
-      { "name": "panel_background", "type": "color", "label": "Panel Background",  "defaultValue": "#FFFFFF" },
-      { "name": "panel_text_color", "type": "color", "label": "Panel Text Color",  "defaultValue": "#0E0E0E" },
-
-      { "name": "color_cs",        "type": "color", "label": "Customer Success Color",     "defaultValue": "#38A2FF" },
-      { "name": "color_px",        "type": "color", "label": "Product Experience Color",   "defaultValue": "#F2994A" },
-      { "name": "color_cc",        "type": "color", "label": "Customer Communities Color", "defaultValue": "#E04A76" },
-      { "name": "color_ce",        "type": "color", "label": "Customer Education Color",   "defaultValue": "#27AE60" },
-      { "name": "color_sa",        "type": "color", "label": "Skilljar Academy Color",     "defaultValue": "#153D5E" },
-      { "name": "color_staircase", "type": "color", "label": "Staircase AI Color",         "defaultValue": "#C04AC8" },
-
-      { "name": "title_cs",        "type": "text", "label": "Col - Customer Success Title",     "defaultValue": "Customer Success" },
-      { "name": "title_px",        "type": "text", "label": "Col - Product Experience Title",   "defaultValue": "Product Experience" },
-      { "name": "title_cc",        "type": "text", "label": "Col - Customer Communities Title", "defaultValue": "Customer Communities" },
-      { "name": "title_ce",        "type": "text", "label": "Col - Customer Education Title",   "defaultValue": "Customer Education" },
-      { "name": "title_sa",        "type": "text", "label": "Col - Skilljar Academy Title",     "defaultValue": "Skilljar Academy" },
-      { "name": "title_staircase", "type": "text", "label": "Col - Staircase AI Title",         "defaultValue": "Staircase AI" },
-
-      { "name": "label_cs_admin",     "type": "text", "label": "CS - Admin Label",     "defaultValue": "Admin" },
-      { "name": "url_cs_admin",       "type": "text", "label": "CS - Admin URL",       "defaultValue": "#" },
-      { "name": "label_cs_enduser",   "type": "text", "label": "CS - End User Label",  "defaultValue": "End User" },
-      { "name": "url_cs_enduser",     "type": "text", "label": "CS - End User URL",    "defaultValue": "#" },
-      { "name": "label_cs_japanese",  "type": "text", "label": "CS - Japanese Training Label", "defaultValue": "Japanese Training" },
-      { "name": "url_cs_japanese",    "type": "text", "label": "CS - Japanese Training URL",   "defaultValue": "#" },
-      { "name": "label_cs_quicktips", "type": "text", "label": "CS - Quick Tip Videos Label",  "defaultValue": "Quick Tip Videos" },
-      { "name": "url_cs_quicktips",   "type": "text", "label": "CS - Quick Tip Videos URL",    "defaultValue": "#" },
-      { "name": "label_cs_ilt",       "type": "text", "label": "CS - Instructor-Led Training Label", "defaultValue": "Instructor-Led Training" },
-      { "name": "url_cs_ilt",         "type": "text", "label": "CS - Instructor-Led Training URL",   "defaultValue": "#" },
-
-      { "name": "label_px_gettingstarted", "type": "text", "label": "PX - Getting Started Label", "defaultValue": "Getting Started: PX Certification Prep" },
-      { "name": "url_px_gettingstarted",   "type": "text", "label": "PX - Getting Started URL",   "defaultValue": "#" },
-      { "name": "label_px_cspx",           "type": "text", "label": "PX - CS & PX Better Together Label", "defaultValue": "CS & PX Better Together" },
-      { "name": "url_px_cspx",             "type": "text", "label": "PX - CS & PX Better Together URL",   "defaultValue": "#" },
-
-      { "name": "label_cc_setup",      "type": "text", "label": "CC - Community Setup Label", "defaultValue": "CC: Community Setup and Administration" },
-      { "name": "url_cc_setup",        "type": "text", "label": "CC - Community Setup URL",   "defaultValue": "#" },
-      { "name": "label_cc_management", "type": "text", "label": "CC - Community Management Label", "defaultValue": "CC: Community Management and Moderation" },
-      { "name": "url_cc_management",   "type": "text", "label": "CC - Community Management URL",   "defaultValue": "#" },
-      { "name": "label_cc_japanese",   "type": "text", "label": "CC - Japanese Training Label",    "defaultValue": "Japanese Training" },
-      { "name": "url_cc_japanese",     "type": "text", "label": "CC - Japanese Training URL",      "defaultValue": "#" },
-
-      { "name": "label_ce_academy",       "type": "text", "label": "CE - Academy Setup Label", "defaultValue": "CE: Academy Setup and Customization" },
-      { "name": "url_ce_academy",         "type": "text", "label": "CE - Academy Setup URL",   "defaultValue": "#" },
-      { "name": "label_ce_courses",       "type": "text", "label": "CE - Course Building Label", "defaultValue": "CE: Course Building" },
-      { "name": "url_ce_courses",         "type": "text", "label": "CE - Course Building URL",   "defaultValue": "#" },
-      { "name": "label_ce_lms",           "type": "text", "label": "CE - Learner Management Label", "defaultValue": "CE: Learner Management and Engagement" },
-      { "name": "url_ce_lms",             "type": "text", "label": "CE - Learner Management URL",   "defaultValue": "#" },
-      { "name": "label_ce_certification", "type": "text", "label": "CE - Certification Label",      "defaultValue": "CE: Certification and Analytics" },
-      { "name": "url_ce_certification",   "type": "text", "label": "CE - Certification URL",        "defaultValue": "#" },
-
-      { "name": "label_sa_skilljar", "type": "text", "label": "SA - Skilljar Academy Label", "defaultValue": "Skilljar Academy" },
-      { "name": "url_sa_skilljar",   "type": "text", "label": "SA - Skilljar Academy URL",   "defaultValue": "#" },
-
-      { "name": "label_staircase_ai",             "type": "text", "label": "Staircase - AI Label",               "defaultValue": "Staircase AI" },
-      { "name": "url_staircase_ai",               "type": "text", "label": "Staircase - AI URL",                 "defaultValue": "#" },
-      { "name": "label_staircase_gettingstarted", "type": "text", "label": "Staircase - Getting Started Label",  "defaultValue": "Getting Started with Staircase AI" },
-      { "name": "url_staircase_gettingstarted",   "type": "text", "label": "Staircase - Getting Started URL",    "defaultValue": "#" }
+      {
+        "name": "bar_label",
+        "type": "text",
+        "label": "Bar Label",
+        "defaultValue": "Training Directory"
+      },
+      {
+        "name": "bar_background",
+        "type": "color",
+        "label": "Bar Background",
+        "defaultValue": "#0B1F33"
+      },
+      {
+        "name": "bar_text_color",
+        "type": "color",
+        "label": "Bar Text Color",
+        "defaultValue": "#FFFFFF"
+      },
+      {
+        "name": "panel_background",
+        "type": "color",
+        "label": "Panel Background",
+        "defaultValue": "#FFFFFF"
+      },
+      {
+        "name": "panel_text_color",
+        "type": "color",
+        "label": "Panel Text Color",
+        "defaultValue": "#0E0E0E"
+      },
+      {
+        "name": "color_cs",
+        "type": "color",
+        "label": "Customer Success Color",
+        "defaultValue": "#38A2FF"
+      },
+      {
+        "name": "color_px",
+        "type": "color",
+        "label": "Product Experience Color",
+        "defaultValue": "#F2994A"
+      },
+      {
+        "name": "color_cc",
+        "type": "color",
+        "label": "Customer Communities Color",
+        "defaultValue": "#E04A76"
+      },
+      {
+        "name": "color_ce",
+        "type": "color",
+        "label": "Customer Education Color",
+        "defaultValue": "#27AE60"
+      },
+      {
+        "name": "color_sa",
+        "type": "color",
+        "label": "Skilljar Academy Color",
+        "defaultValue": "#153D5E"
+      },
+      {
+        "name": "color_staircase",
+        "type": "color",
+        "label": "Staircase AI Color",
+        "defaultValue": "#C04AC8"
+      },
+      {
+        "name": "title_cs",
+        "type": "text",
+        "label": "Col - Customer Success Title",
+        "defaultValue": "Customer Success"
+      },
+      {
+        "name": "title_px",
+        "type": "text",
+        "label": "Col - Product Experience Title",
+        "defaultValue": "Product Experience"
+      },
+      {
+        "name": "title_cc",
+        "type": "text",
+        "label": "Col - Customer Communities Title",
+        "defaultValue": "Customer Communities"
+      },
+      {
+        "name": "title_ce",
+        "type": "text",
+        "label": "Col - Customer Education Title",
+        "defaultValue": "Customer Education"
+      },
+      {
+        "name": "title_sa",
+        "type": "text",
+        "label": "Col - Skilljar Academy Title",
+        "defaultValue": "Skilljar Academy"
+      },
+      {
+        "name": "title_staircase",
+        "type": "text",
+        "label": "Col - Staircase AI Title",
+        "defaultValue": "Staircase AI"
+      },
+      {
+        "name": "label_cs_admin",
+        "type": "text",
+        "label": "CS - Admin Label",
+        "defaultValue": "Admin"
+      },
+      {
+        "name": "url_cs_admin",
+        "type": "text",
+        "label": "CS - Admin URL",
+        "defaultValue": "#"
+      },
+      {
+        "name": "label_cs_enduser",
+        "type": "text",
+        "label": "CS - End User Label",
+        "defaultValue": "End User"
+      },
+      {
+        "name": "url_cs_enduser",
+        "type": "text",
+        "label": "CS - End User URL",
+        "defaultValue": "#"
+      },
+      {
+        "name": "label_cs_japanese",
+        "type": "text",
+        "label": "CS - Japanese Training Label",
+        "defaultValue": "Japanese Training"
+      },
+      {
+        "name": "url_cs_japanese",
+        "type": "text",
+        "label": "CS - Japanese Training URL",
+        "defaultValue": "#"
+      },
+      {
+        "name": "label_cs_quicktips",
+        "type": "text",
+        "label": "CS - Quick Tip Videos Label",
+        "defaultValue": "Quick Tip Videos"
+      },
+      {
+        "name": "url_cs_quicktips",
+        "type": "text",
+        "label": "CS - Quick Tip Videos URL",
+        "defaultValue": "#"
+      },
+      {
+        "name": "label_cs_ilt",
+        "type": "text",
+        "label": "CS - Instructor-Led Training Label",
+        "defaultValue": "Instructor-Led Training"
+      },
+      {
+        "name": "url_cs_ilt",
+        "type": "text",
+        "label": "CS - Instructor-Led Training URL",
+        "defaultValue": "#"
+      },
+      {
+        "name": "label_px_gettingstarted",
+        "type": "text",
+        "label": "PX - Getting Started Label",
+        "defaultValue": "Getting Started: PX Certification Prep"
+      },
+      {
+        "name": "url_px_gettingstarted",
+        "type": "text",
+        "label": "PX - Getting Started URL",
+        "defaultValue": "#"
+      },
+      {
+        "name": "label_px_cspx",
+        "type": "text",
+        "label": "PX - CS & PX Better Together Label",
+        "defaultValue": "CS & PX Better Together"
+      },
+      {
+        "name": "url_px_cspx",
+        "type": "text",
+        "label": "PX - CS & PX Better Together URL",
+        "defaultValue": "#"
+      },
+      {
+        "name": "label_cc_setup",
+        "type": "text",
+        "label": "CC - Community Setup Label",
+        "defaultValue": "CC: Community Setup and Administration"
+      },
+      {
+        "name": "url_cc_setup",
+        "type": "text",
+        "label": "CC - Community Setup URL",
+        "defaultValue": "#"
+      },
+      {
+        "name": "label_cc_management",
+        "type": "text",
+        "label": "CC - Community Management Label",
+        "defaultValue": "CC: Community Management and Moderation"
+      },
+      {
+        "name": "url_cc_management",
+        "type": "text",
+        "label": "CC - Community Management URL",
+        "defaultValue": "#"
+      },
+      {
+        "name": "label_cc_japanese",
+        "type": "text",
+        "label": "CC - Japanese Training Label",
+        "defaultValue": "Japanese Training"
+      },
+      {
+        "name": "url_cc_japanese",
+        "type": "text",
+        "label": "CC - Japanese Training URL",
+        "defaultValue": "#"
+      },
+      {
+        "name": "label_ce_academy",
+        "type": "text",
+        "label": "CE - Academy Setup Label",
+        "defaultValue": "CE: Academy Setup and Customization"
+      },
+      {
+        "name": "url_ce_academy",
+        "type": "text",
+        "label": "CE - Academy Setup URL",
+        "defaultValue": "#"
+      },
+      {
+        "name": "label_ce_courses",
+        "type": "text",
+        "label": "CE - Course Building Label",
+        "defaultValue": "CE: Course Building"
+      },
+      {
+        "name": "url_ce_courses",
+        "type": "text",
+        "label": "CE - Course Building URL",
+        "defaultValue": "#"
+      },
+      {
+        "name": "label_ce_lms",
+        "type": "text",
+        "label": "CE - Learner Management Label",
+        "defaultValue": "CE: Learner Management and Engagement"
+      },
+      {
+        "name": "url_ce_lms",
+        "type": "text",
+        "label": "CE - Learner Management URL",
+        "defaultValue": "#"
+      },
+      {
+        "name": "label_ce_certification",
+        "type": "text",
+        "label": "CE - Certification Label",
+        "defaultValue": "CE: Certification and Analytics"
+      },
+      {
+        "name": "url_ce_certification",
+        "type": "text",
+        "label": "CE - Certification URL",
+        "defaultValue": "#"
+      },
+      {
+        "name": "label_sa_skilljar",
+        "type": "text",
+        "label": "SA - Skilljar Academy Label",
+        "defaultValue": "Skilljar Academy"
+      },
+      {
+        "name": "url_sa_skilljar",
+        "type": "text",
+        "label": "SA - Skilljar Academy URL",
+        "defaultValue": "#"
+      },
+      {
+        "name": "label_staircase_ai",
+        "type": "text",
+        "label": "Staircase - AI Label",
+        "defaultValue": "Staircase AI"
+      },
+      {
+        "name": "url_staircase_ai",
+        "type": "text",
+        "label": "Staircase - AI URL",
+        "defaultValue": "#"
+      },
+      {
+        "name": "label_staircase_gettingstarted",
+        "type": "text",
+        "label": "Staircase - Getting Started Label",
+        "defaultValue": "Getting Started with Staircase AI"
+      },
+      {
+        "name": "url_staircase_gettingstarted",
+        "type": "text",
+        "label": "Staircase - Getting Started URL",
+        "defaultValue": "#"
+      }
     ]
   },
   "defaultConfig": {
@@ -89,22 +336,42 @@
     "title_ce": "Customer Education",
     "title_sa": "Skilljar Academy",
     "title_staircase": "Staircase AI",
-    "label_cs_admin": "Admin", "url_cs_admin": "#",
-    "label_cs_enduser": "End User", "url_cs_enduser": "#",
-    "label_cs_japanese": "Japanese Training", "url_cs_japanese": "#",
-    "label_cs_quicktips": "Quick Tip Videos", "url_cs_quicktips": "#",
-    "label_cs_ilt": "Instructor-Led Training", "url_cs_ilt": "#",
-    "label_px_gettingstarted": "Getting Started: PX Certification Prep", "url_px_gettingstarted": "#",
-    "label_px_cspx": "CS & PX Better Together", "url_px_cspx": "#",
-    "label_cc_setup": "CC: Community Setup and Administration", "url_cc_setup": "#",
-    "label_cc_management": "CC: Community Management and Moderation", "url_cc_management": "#",
-    "label_cc_japanese": "Japanese Training", "url_cc_japanese": "#",
-    "label_ce_academy": "CE: Academy Setup and Customization", "url_ce_academy": "#",
-    "label_ce_courses": "CE: Course Building", "url_ce_courses": "#",
-    "label_ce_lms": "CE: Learner Management and Engagement", "url_ce_lms": "#",
-    "label_ce_certification": "CE: Certification and Analytics", "url_ce_certification": "#",
-    "label_sa_skilljar": "Skilljar Academy", "url_sa_skilljar": "#",
-    "label_staircase_ai": "Staircase AI", "url_staircase_ai": "#",
-    "label_staircase_gettingstarted": "Getting Started with Staircase AI", "url_staircase_gettingstarted": "#"
+    "label_cs_admin": "Admin",
+    "url_cs_admin": "#",
+    "label_cs_enduser": "End User",
+    "url_cs_enduser": "#",
+    "label_cs_japanese": "Japanese Training",
+    "url_cs_japanese": "#",
+    "label_cs_quicktips": "Quick Tip Videos",
+    "url_cs_quicktips": "#",
+    "label_cs_ilt": "Instructor-Led Training",
+    "url_cs_ilt": "#",
+    "label_px_gettingstarted": "Getting Started: PX Certification Prep",
+    "url_px_gettingstarted": "#",
+    "label_px_cspx": "CS & PX Better Together",
+    "url_px_cspx": "#",
+    "label_cc_setup": "CC: Community Setup and Administration",
+    "url_cc_setup": "#",
+    "label_cc_management": "CC: Community Management and Moderation",
+    "url_cc_management": "#",
+    "label_cc_japanese": "Japanese Training",
+    "url_cc_japanese": "#",
+    "label_ce_academy": "CE: Academy Setup and Customization",
+    "url_ce_academy": "#",
+    "label_ce_courses": "CE: Course Building",
+    "url_ce_courses": "#",
+    "label_ce_lms": "CE: Learner Management and Engagement",
+    "url_ce_lms": "#",
+    "label_ce_certification": "CE: Certification and Analytics",
+    "url_ce_certification": "#",
+    "label_sa_skilljar": "Skilljar Academy",
+    "url_sa_skilljar": "#",
+    "label_staircase_ai": "Staircase AI",
+    "url_staircase_ai": "#",
+    "label_staircase_gettingstarted": "Getting Started with Staircase AI",
+    "url_staircase_gettingstarted": "#"
+  },
+  "settings": {
+    "shared": false
   }
 }

@@ -27,7 +27,9 @@
         "type": "text",
         "label": "Title",
         "defaultValue": "Security Advisory Restoration",
-        "rules": { "required": true }
+        "rules": {
+          "required": true
+        }
       },
       {
         "name": "subtitle_text",
@@ -56,5 +58,8 @@
     "subtitle_text": "Step-by-step guidance to restore your Gainsight integrations.",
     "button_text": "Self-Guided Training",
     "button_url": "#"
+  },
+  "settings": {
+    "shared": false
   }
 }
