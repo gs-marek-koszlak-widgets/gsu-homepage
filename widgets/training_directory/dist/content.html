@@ -34,15 +34,19 @@
   .gsu-td[data-open="true"] .gsu-td__chev { transform: rotate(180deg); }
 
   .gsu-td__panel {
-    overflow: hidden;
+    display: grid;
+    grid-template-rows: 0fr;
     position: relative;
-    max-height: 0;
     opacity: 0;
     background: var(--gsu-td-panel-bg);
     color: var(--gsu-td-panel-text);
     border-bottom: 1px solid #E0E8EF;
-    transition: max-height 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    transition: grid-template-rows 0.5s cubic-bezier(0.22, 1, 0.36, 1),
                 opacity 0.3s ease;
+  }
+  .gsu-td__panel-inner {
+    min-height: 0;
+    overflow: hidden;
   }
   .gsu-td__panel::before {
     content: "";
@@ -58,9 +62,10 @@
     transform: scaleX(0);
     transform-origin: center;
     transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+    z-index: 1;
   }
   .gsu-td[data-open="true"] .gsu-td__panel {
-    max-height: 900px;
+    grid-template-rows: 1fr;
     opacity: 1;
   }
   .gsu-td[data-open="true"] .gsu-td__panel::before {
@@ -114,11 +119,9 @@
 
   @media screen and (max-width: 1200px) {
     .gsu-td__cols { grid-template-columns: repeat(3, 1fr); }
-    .gsu-td[data-open="true"] .gsu-td__panel { max-height: 1400px; }
   }
   @media screen and (max-width: 720px) {
     .gsu-td__cols { grid-template-columns: repeat(2, 1fr); padding: 20px; gap: 20px; }
-    .gsu-td[data-open="true"] .gsu-td__panel { max-height: 2000px; }
   }
   @media screen and (max-width: 480px) {
     .gsu-td__cols { grid-template-columns: 1fr; }
@@ -132,6 +135,7 @@
     </svg>
   </button>
   <div class="gsu-td__panel" data-panel id="gsu-td-panel" aria-hidden="true">
+    <div class="gsu-td__panel-inner">
     <div class="gsu-td__cols">
       <div class="gsu-td__col gsu-td__col--cs">
         <div class="gsu-td__col-title" data-col-title="cs">Customer Success</div>
@@ -168,6 +172,7 @@
         <a class="gsu-td__link" data-link="staircase_ai"             href="#">Staircase AI</a>
         <a class="gsu-td__link" data-link="staircase_gettingstarted" href="#">Getting Started with Staircase AI</a>
       </div>
+    </div>
     </div>
   </div>
 </div>
