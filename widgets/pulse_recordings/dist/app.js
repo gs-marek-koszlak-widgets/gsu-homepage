@@ -74,13 +74,28 @@ export async function init(sdk) {
     setState('ready');
   }
 
+  function getConnectorSdk() {
+    if (sdk && sdk.connectors && typeof sdk.connectors.execute === 'function') return sdk;
+    if (typeof window !== 'undefined' && typeof window.WidgetServiceSDK === 'function') {
+      try { return new window.WidgetServiceSDK(); } catch (_) { return null; }
+    }
+    return null;
+  }
+
   async function loadVideos(props) {
     const playlistId = (props.playlist_id || '').trim();
     const maxVideos = Math.max(1, Math.min(50, parseInt(props.max_videos, 10) || 8));
     setState('loading');
 
+    const connectorSdk = getConnectorSdk();
+    if (!connectorSdk) {
+      console.error('[pulse_recordings] WidgetServiceSDK with connectors.execute not available');
+      setState('error');
+      return;
+    }
+
     try {
-      const res = await sdk.connectors.execute({
+      const res = await connectorSdk.connectors.execute({
         permalink: 'youtube-pulse-playlist',
         method: 'GET',
         queryParams: {

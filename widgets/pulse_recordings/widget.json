@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "1.1.1",
   "title": "Pulse Recordings",
   "description": "Encourages users to watch recordings from previous Pulse conferences. Pulls videos directly from a YouTube playlist via the YouTube Data API v3.",
   "category": "Gainsight University",
