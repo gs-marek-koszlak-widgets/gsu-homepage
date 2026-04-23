@@ -104,14 +104,40 @@ export async function init(sdk) {
         }
       });
 
-      // Connector may return a parsed object or a string depending on content type.
+      // Connector returns the raw YouTube playlistItems response.
       let parsed = res;
       if (typeof res === 'string') {
         try { parsed = JSON.parse(res); } catch (_) { parsed = { items: [] }; }
       }
-      const items = Array.isArray(parsed && parsed.items) ? parsed.items : [];
-      const trimmed = items.slice(0, maxVideos);
-      renderVideos(trimmed, playlistId);
+      const rawItems = Array.isArray(parsed && parsed.items) ? parsed.items : [];
+
+      const simplified = [];
+      for (const it of rawItems) {
+        const sn = it && it.snippet;
+        const status = (it && it.status && it.status.privacyStatus) || 'public';
+        const videoId = sn && sn.resourceId && sn.resourceId.videoId;
+        if (!sn || !videoId) continue;
+        if (status !== 'public') continue;
+        if (sn.title === 'Private video' || sn.title === 'Deleted video') continue;
+
+        const thumbs = sn.thumbnails || {};
+        const thumb =
+          (thumbs.maxres && thumbs.maxres.url) ||
+          (thumbs.high && thumbs.high.url) ||
+          (thumbs.medium && thumbs.medium.url) ||
+          (thumbs.default && thumbs.default.url) ||
+          '';
+
+        simplified.push({
+          videoId: videoId,
+          title: sn.title || '',
+          thumbnail: thumb,
+          publishedAt: sn.publishedAt || '',
+          channelTitle: sn.videoOwnerChannelTitle || sn.channelTitle || ''
+        });
+      }
+
+      renderVideos(simplified.slice(0, maxVideos), playlistId);
     } catch (err) {
       console.error('[pulse_recordings] Failed to load playlist:', err);
       setState('error');

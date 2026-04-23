@@ -29,9 +29,7 @@
           "value": "{{ get_secret('youtube_api_key') }}",
           "in": "query"
         }
-      },
-      "response_content_type": "application/json",
-      "response_body": "{% set data = response.body | from_json %}{% set items = [] %}{% if data.items %}{% for it in data.items %}{% set sn = it.snippet %}{% set status = (it.status.privacyStatus | default('public')) %}{% if sn and sn.resourceId and sn.resourceId.videoId and status == 'public' and sn.title != 'Private video' and sn.title != 'Deleted video' %}{% set thumb = (sn.thumbnails.maxres.url if sn.thumbnails.maxres else (sn.thumbnails.high.url if sn.thumbnails.high else (sn.thumbnails.medium.url if sn.thumbnails.medium else (sn.thumbnails.default.url if sn.thumbnails.default else '')))) %}{% set _ = items.append({'videoId': sn.resourceId.videoId, 'title': sn.title, 'description': sn.description, 'thumbnail': thumb, 'publishedAt': sn.publishedAt, 'channelTitle': sn.videoOwnerChannelTitle | default(sn.channelTitle)}) %}{% endif %}{% endfor %}{% endif %}{{ {'items': items} | tojson }}"
+      }
     }
   ]
 }
