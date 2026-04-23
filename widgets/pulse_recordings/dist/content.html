@@ -1,0 +1,231 @@
+<style>
+  .gsu-pr {
+    --gsu-pr-bg-start: #0B1F33;
+    --gsu-pr-bg-end: #153D5E;
+    --gsu-pr-accent: #38A2FF;
+    --gsu-pr-text: #FFFFFF;
+    --gsu-pr-card-bg: #FFFFFF;
+    --gsu-pr-card-text: #0E0E0E;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, var(--gsu-pr-bg-start) 0%, var(--gsu-pr-bg-end) 100%);
+    width: 100%; padding: 64px 20px 72px 20px;
+    position: relative; overflow: hidden;
+  }
+  .gsu-pr * { box-sizing: border-box; font-family: inherit !important; }
+  .gsu-pr__glow {
+    position: absolute; width: 520px; height: 520px; border-radius: 50%;
+    background: radial-gradient(circle, var(--gsu-pr-accent) 0%, rgba(56,162,255,0) 65%);
+    opacity: 0.25; pointer-events: none; z-index: 0;
+  }
+  .gsu-pr__glow--tl { top: -220px; left: -180px; }
+  .gsu-pr__glow--br { bottom: -260px; right: -200px; opacity: 0.2; }
+  .gsu-pr__wrap { max-width: 1180px; margin: 0 auto; position: relative; z-index: 1; }
+
+  .gsu-pr__head { text-align: center; margin-bottom: 40px; }
+  .gsu-pr__eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-weight: 600; font-size: 12px; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--gsu-pr-accent);
+    padding: 8px 14px; border-radius: 999px;
+    background: rgba(56, 162, 255, 0.12);
+    border: 1px solid rgba(56, 162, 255, 0.3);
+    margin-bottom: 18px;
+  }
+  .gsu-pr__eyebrow::before {
+    content: ''; width: 8px; height: 8px; border-radius: 50%;
+    background: var(--gsu-pr-accent);
+    box-shadow: 0 0 0 4px rgba(56, 162, 255, 0.25);
+  }
+  .gsu-pr__title {
+    font-weight: 700; font-size: 38px; line-height: 1.2;
+    color: var(--gsu-pr-text); margin-bottom: 12px;
+    letter-spacing: -0.01em;
+  }
+  .gsu-pr__subtitle {
+    font-weight: 500; font-size: 17px; line-height: 1.6;
+    color: var(--gsu-pr-text); opacity: 0.82;
+    max-width: 680px; margin: 0 auto;
+  }
+
+  .gsu-pr__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 22px;
+    margin-bottom: 36px;
+  }
+  .gsu-pr__card {
+    display: flex; flex-direction: column;
+    background: var(--gsu-pr-card-bg); color: var(--gsu-pr-card-text);
+    text-decoration: none; border-radius: 16px; overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    position: relative;
+  }
+  .gsu-pr__card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.28);
+  }
+  .gsu-pr__card:hover .gsu-pr__play { transform: translate(-50%, -50%) scale(1.08); opacity: 1; }
+  .gsu-pr__card:hover .gsu-pr__thumb-img { transform: scale(1.04); }
+
+  .gsu-pr__thumb {
+    position: relative; width: 100%; aspect-ratio: 16 / 9;
+    background: #0B1F33; overflow: hidden;
+  }
+  .gsu-pr__thumb-img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform 0.4s ease;
+  }
+  .gsu-pr__thumb-scrim {
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(11,31,51,0) 55%, rgba(11,31,51,0.55) 100%);
+    pointer-events: none;
+  }
+  .gsu-pr__play {
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    width: 58px; height: 58px; border-radius: 50%;
+    background: var(--gsu-pr-accent);
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+    opacity: 0.95;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+  }
+  .gsu-pr__play::after {
+    content: ''; width: 0; height: 0;
+    border-left: 16px solid #FFFFFF;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    margin-left: 4px;
+  }
+
+  .gsu-pr__body {
+    padding: 16px 18px 18px 18px; display: flex; flex-direction: column;
+    flex: 1; gap: 10px;
+  }
+  .gsu-pr__card-title {
+    font-weight: 600; font-size: 15px; line-height: 1.35;
+    color: var(--gsu-pr-card-text);
+    overflow: hidden; display: -webkit-box;
+    -webkit-line-clamp: 3; -webkit-box-orient: vertical;
+    max-height: 4.05em;
+  }
+  .gsu-pr__card-meta {
+    margin-top: auto; display: flex; align-items: center; gap: 8px;
+    font-weight: 500; font-size: 12px; color: #5B6B7A;
+  }
+  .gsu-pr__card-meta-dot { width: 3px; height: 3px; border-radius: 50%; background: #9AA8B4; }
+
+  .gsu-pr__cta-row { display: flex; justify-content: center; }
+  .gsu-pr__cta {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-weight: 600; font-size: 15px; line-height: 1;
+    color: #FFFFFF; background: var(--gsu-pr-accent);
+    text-decoration: none; padding: 16px 28px; border-radius: 999px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+    box-shadow: 0 6px 18px rgba(56, 162, 255, 0.35);
+  }
+  .gsu-pr__cta:hover { transform: translateY(-2px); filter: brightness(1.05); box-shadow: 0 10px 24px rgba(56,162,255,0.5); }
+  .gsu-pr__cta-arrow { font-size: 18px; line-height: 1; }
+
+  .gsu-pr__skeleton {
+    background: var(--gsu-pr-card-bg); border-radius: 16px; overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  }
+  .gsu-pr__skeleton-thumb {
+    width: 100%; aspect-ratio: 16 / 9;
+    background: linear-gradient(90deg, #e5ecf2 0%, #f2f6fa 50%, #e5ecf2 100%);
+    background-size: 200% 100%;
+    animation: gsu-pr-shimmer 1.3s infinite linear;
+  }
+  .gsu-pr__skeleton-body { padding: 16px 18px 22px 18px; }
+  .gsu-pr__skeleton-line {
+    height: 12px; border-radius: 6px; margin-bottom: 10px;
+    background: linear-gradient(90deg, #e5ecf2 0%, #f2f6fa 50%, #e5ecf2 100%);
+    background-size: 200% 100%;
+    animation: gsu-pr-shimmer 1.3s infinite linear;
+  }
+  .gsu-pr__skeleton-line--short { width: 55%; }
+  @keyframes gsu-pr-shimmer {
+    0% { background-position: 100% 0; }
+    100% { background-position: -100% 0; }
+  }
+
+  .gsu-pr__empty, .gsu-pr__error {
+    grid-column: 1 / -1;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px dashed rgba(255, 255, 255, 0.25);
+    border-radius: 16px;
+    padding: 36px 20px; text-align: center;
+    color: var(--gsu-pr-text);
+  }
+  .gsu-pr__empty-title { font-weight: 600; font-size: 18px; margin-bottom: 6px; }
+  .gsu-pr__empty-body { font-weight: 500; font-size: 14px; opacity: 0.8; }
+
+  .gsu-pr[data-state="loading"] .gsu-pr__grid-live,
+  .gsu-pr[data-state="loading"] .gsu-pr__empty,
+  .gsu-pr[data-state="loading"] .gsu-pr__error { display: none; }
+  .gsu-pr[data-state="ready"] .gsu-pr__grid-loading,
+  .gsu-pr[data-state="ready"] .gsu-pr__empty,
+  .gsu-pr[data-state="ready"] .gsu-pr__error { display: none; }
+  .gsu-pr[data-state="empty"] .gsu-pr__grid-live,
+  .gsu-pr[data-state="empty"] .gsu-pr__grid-loading,
+  .gsu-pr[data-state="empty"] .gsu-pr__error { display: none; }
+  .gsu-pr[data-state="error"] .gsu-pr__grid-live,
+  .gsu-pr[data-state="error"] .gsu-pr__grid-loading,
+  .gsu-pr[data-state="error"] .gsu-pr__empty { display: none; }
+
+  @media screen and (max-width: 760px) {
+    .gsu-pr { padding: 48px 18px 56px 18px; }
+    .gsu-pr__title { font-size: 28px; }
+    .gsu-pr__subtitle { font-size: 15px; }
+    .gsu-pr__grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
+    .gsu-pr__play { width: 48px; height: 48px; }
+    .gsu-pr__play::after { border-left-width: 13px; border-top-width: 8px; border-bottom-width: 8px; }
+  }
+  @media screen and (max-width: 460px) {
+    .gsu-pr__grid { grid-template-columns: 1fr; }
+    .gsu-pr__cta { width: 100%; justify-content: center; }
+  }
+</style>
+
+<section class="gsu-pr" data-root data-state="loading">
+  <div class="gsu-pr__glow gsu-pr__glow--tl"></div>
+  <div class="gsu-pr__glow gsu-pr__glow--br"></div>
+
+  <div class="gsu-pr__wrap">
+    <div class="gsu-pr__head">
+      <div class="gsu-pr__eyebrow">Pulse On-Demand</div>
+      <div class="gsu-pr__title" data-section-title></div>
+      <div class="gsu-pr__subtitle" data-section-subtitle></div>
+    </div>
+
+    <div class="gsu-pr__grid gsu-pr__grid-loading" aria-hidden="true">
+      <div class="gsu-pr__skeleton"><div class="gsu-pr__skeleton-thumb"></div><div class="gsu-pr__skeleton-body"><div class="gsu-pr__skeleton-line"></div><div class="gsu-pr__skeleton-line gsu-pr__skeleton-line--short"></div></div></div>
+      <div class="gsu-pr__skeleton"><div class="gsu-pr__skeleton-thumb"></div><div class="gsu-pr__skeleton-body"><div class="gsu-pr__skeleton-line"></div><div class="gsu-pr__skeleton-line gsu-pr__skeleton-line--short"></div></div></div>
+      <div class="gsu-pr__skeleton"><div class="gsu-pr__skeleton-thumb"></div><div class="gsu-pr__skeleton-body"><div class="gsu-pr__skeleton-line"></div><div class="gsu-pr__skeleton-line gsu-pr__skeleton-line--short"></div></div></div>
+      <div class="gsu-pr__skeleton"><div class="gsu-pr__skeleton-thumb"></div><div class="gsu-pr__skeleton-body"><div class="gsu-pr__skeleton-line"></div><div class="gsu-pr__skeleton-line gsu-pr__skeleton-line--short"></div></div></div>
+    </div>
+
+    <div class="gsu-pr__grid gsu-pr__grid-live" data-grid></div>
+
+    <div class="gsu-pr__empty" data-empty>
+      <div class="gsu-pr__empty-title">No recordings available yet</div>
+      <div class="gsu-pr__empty-body">Check back soon — we're adding new Pulse sessions all the time.</div>
+    </div>
+
+    <div class="gsu-pr__error" data-error>
+      <div class="gsu-pr__empty-title">We couldn't load the recordings</div>
+      <div class="gsu-pr__empty-body">Please refresh the page, or head straight to the playlist on YouTube.</div>
+    </div>
+
+    <div class="gsu-pr__cta-row">
+      <a class="gsu-pr__cta" data-cta href="#">
+        <span data-cta-label></span>
+        <span class="gsu-pr__cta-arrow">&rsaquo;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<script type="module" src="app.js"></script>

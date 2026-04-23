@@ -6,21 +6,9 @@
       "method": "GET",
       "permalink": "youtube-pulse-playlist",
       "query_parameters": [
-        {
-          "key": "part",
-          "value": "snippet,contentDetails,status",
-          "overridable": false
-        },
-        {
-          "key": "maxResults",
-          "value": "50",
-          "overridable": true
-        },
-        {
-          "key": "playlistId",
-          "value": "PLB2Z_xLbXPiB91UH5KTm5wHoR9CsLDsaL",
-          "overridable": true
-        }
+        { "key": "part", "value": "snippet,contentDetails,status", "overridable": false },
+        { "key": "maxResults", "value": "50", "overridable": true },
+        { "key": "playlistId", "value": "PLB2Z_xLbXPiB91UH5KTm5wHoR9CsLDsaL", "overridable": true }
       ],
       "authentication": {
         "type": "apikey",

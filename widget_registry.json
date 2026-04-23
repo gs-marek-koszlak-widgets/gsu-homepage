@@ -1300,6 +1300,122 @@
     },
     {
       "version": "1.0.0",
+      "title": "Pulse Recordings",
+      "description": "Encourages users to watch recordings from previous Pulse conferences. Pulls videos directly from a YouTube playlist via the YouTube Data API v3.",
+      "category": "Gainsight University",
+      "imageName": "banner",
+      "source": {
+        "path": "widgets/pulse_recordings/dist",
+        "entry": "content.html"
+      },
+      "configuration": {
+        "properties": [
+          {
+            "name": "section_title",
+            "type": "text",
+            "label": "Section Title",
+            "defaultValue": "Relive every Pulse moment",
+            "rules": {
+              "required": true
+            }
+          },
+          {
+            "name": "section_subtitle",
+            "type": "text",
+            "label": "Section Subtitle",
+            "defaultValue": "Catch up on keynotes, customer stories, and breakout sessions from past Pulse conferences — streaming free, anytime."
+          },
+          {
+            "name": "playlist_id",
+            "type": "text",
+            "label": "YouTube Playlist ID",
+            "description": "The 'list' parameter from the YouTube playlist URL.",
+            "defaultValue": "PLB2Z_xLbXPiB91UH5KTm5wHoR9CsLDsaL",
+            "rules": {
+              "required": true
+            }
+          },
+          {
+            "name": "max_videos",
+            "type": "number",
+            "label": "Max Videos to Show",
+            "defaultValue": 8,
+            "rules": {
+              "minimum": 1,
+              "maximum": 50
+            }
+          },
+          {
+            "name": "cta_label",
+            "type": "text",
+            "label": "CTA Button Label",
+            "defaultValue": "View the full playlist on YouTube"
+          },
+          {
+            "name": "cta_url",
+            "type": "text",
+            "label": "CTA Button URL",
+            "defaultValue": "https://www.youtube.com/playlist?list=PLB2Z_xLbXPiB91UH5KTm5wHoR9CsLDsaL"
+          },
+          {
+            "name": "background_start",
+            "type": "color",
+            "label": "Background Gradient Start",
+            "defaultValue": "#0B1F33"
+          },
+          {
+            "name": "background_end",
+            "type": "color",
+            "label": "Background Gradient End",
+            "defaultValue": "#153D5E"
+          },
+          {
+            "name": "accent_color",
+            "type": "color",
+            "label": "Accent Color",
+            "defaultValue": "#38A2FF"
+          },
+          {
+            "name": "text_color",
+            "type": "color",
+            "label": "Text Color",
+            "defaultValue": "#FFFFFF"
+          },
+          {
+            "name": "card_background",
+            "type": "color",
+            "label": "Card Background",
+            "defaultValue": "#FFFFFF"
+          },
+          {
+            "name": "card_text_color",
+            "type": "color",
+            "label": "Card Text Color",
+            "defaultValue": "#0E0E0E"
+          }
+        ]
+      },
+      "defaultConfig": {
+        "section_title": "Relive every Pulse moment",
+        "section_subtitle": "Catch up on keynotes, customer stories, and breakout sessions from past Pulse conferences — streaming free, anytime.",
+        "playlist_id": "PLB2Z_xLbXPiB91UH5KTm5wHoR9CsLDsaL",
+        "max_videos": 8,
+        "cta_label": "View the full playlist on YouTube",
+        "cta_url": "https://www.youtube.com/playlist?list=PLB2Z_xLbXPiB91UH5KTm5wHoR9CsLDsaL",
+        "background_start": "#0B1F33",
+        "background_end": "#153D5E",
+        "accent_color": "#38A2FF",
+        "text_color": "#FFFFFF",
+        "card_background": "#FFFFFF",
+        "card_text_color": "#0E0E0E"
+      },
+      "settings": {
+        "shared": false
+      },
+      "type": "pulse_recordings"
+    },
+    {
+      "version": "1.0.0",
       "title": "Quick Links",
       "description": "Section with two large bordered cards, each with icon, title, description, and link. Intended for 'More Ways to Learn'.",
       "category": "Gainsight University",
