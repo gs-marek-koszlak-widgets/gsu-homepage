@@ -1299,7 +1299,7 @@
       "type": "product_catalog"
     },
     {
-      "version": "1.0.0",
+      "version": "1.1.0",
       "title": "Pulse Recordings",
       "description": "Encourages users to watch recordings from previous Pulse conferences. Pulls videos directly from a YouTube playlist via the YouTube Data API v3.",
       "category": "Gainsight University",

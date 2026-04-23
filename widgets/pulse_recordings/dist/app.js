@@ -8,8 +8,6 @@ export async function init(sdk) {
   const ctaBtn = sdk.$('[data-cta]');
   const ctaLabel = sdk.$('[data-cta-label]');
 
-  const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-
   function escapeHtml(str) {
     return String(str == null ? '' : str)
       .replace(/&/g, '&amp;')
@@ -17,13 +15,6 @@ export async function init(sdk) {
       .replace(/>/g, '&gt;')
       .replace(/"/g, '&quot;')
       .replace(/'/g, '&#39;');
-  }
-
-  function formatDate(iso) {
-    if (!iso) return '';
-    const d = new Date(iso);
-    if (isNaN(d.getTime())) return '';
-    return `${MONTHS[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
   }
 
   function setState(state) {
@@ -69,26 +60,12 @@ export async function init(sdk) {
     grid.innerHTML = videos.map((v) => {
       const href = `https://www.youtube.com/watch?v=${encodeURIComponent(v.videoId)}${listParam}`;
       const thumb = v.thumbnail || `https://i.ytimg.com/vi/${encodeURIComponent(v.videoId)}/hqdefault.jpg`;
-      const date = formatDate(v.publishedAt);
-      const channel = v.channelTitle || '';
-      let meta = '';
-      if (date && channel) {
-        meta = `<span>${escapeHtml(channel)}</span><span class="gsu-pr__card-meta-dot"></span><span>${escapeHtml(date)}</span>`;
-      } else if (date) {
-        meta = `<span>${escapeHtml(date)}</span>`;
-      } else if (channel) {
-        meta = `<span>${escapeHtml(channel)}</span>`;
-      }
       return `
         <a class="gsu-pr__card" href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(v.title || 'Watch on YouTube')}">
           <div class="gsu-pr__thumb">
-            <img class="gsu-pr__thumb-img" src="${escapeHtml(thumb)}" alt="" loading="lazy" />
+            <img class="gsu-pr__thumb-img" src="${escapeHtml(thumb)}" alt="${escapeHtml(v.title || '')}" loading="lazy" />
             <div class="gsu-pr__thumb-scrim"></div>
             <div class="gsu-pr__play" aria-hidden="true"></div>
-          </div>
-          <div class="gsu-pr__body">
-            <div class="gsu-pr__card-title">${escapeHtml(v.title || '')}</div>
-            <div class="gsu-pr__card-meta">${meta}</div>
           </div>
         </a>
       `;

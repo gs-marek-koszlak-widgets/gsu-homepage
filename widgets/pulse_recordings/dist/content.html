@@ -99,23 +99,6 @@
     margin-left: 4px;
   }
 
-  .gsu-pr__body {
-    padding: 16px 18px 18px 18px; display: flex; flex-direction: column;
-    flex: 1; gap: 10px;
-  }
-  .gsu-pr__card-title {
-    font-weight: 600; font-size: 15px; line-height: 1.35;
-    color: var(--gsu-pr-card-text);
-    overflow: hidden; display: -webkit-box;
-    -webkit-line-clamp: 3; -webkit-box-orient: vertical;
-    max-height: 4.05em;
-  }
-  .gsu-pr__card-meta {
-    margin-top: auto; display: flex; align-items: center; gap: 8px;
-    font-weight: 500; font-size: 12px; color: #5B6B7A;
-  }
-  .gsu-pr__card-meta-dot { width: 3px; height: 3px; border-radius: 50%; background: #9AA8B4; }
-
   .gsu-pr__cta-row { display: flex; justify-content: center; }
   .gsu-pr__cta {
     display: inline-flex; align-items: center; gap: 10px;
@@ -138,14 +121,6 @@
     background-size: 200% 100%;
     animation: gsu-pr-shimmer 1.3s infinite linear;
   }
-  .gsu-pr__skeleton-body { padding: 16px 18px 22px 18px; }
-  .gsu-pr__skeleton-line {
-    height: 12px; border-radius: 6px; margin-bottom: 10px;
-    background: linear-gradient(90deg, #e5ecf2 0%, #f2f6fa 50%, #e5ecf2 100%);
-    background-size: 200% 100%;
-    animation: gsu-pr-shimmer 1.3s infinite linear;
-  }
-  .gsu-pr__skeleton-line--short { width: 55%; }
   @keyframes gsu-pr-shimmer {
     0% { background-position: 100% 0; }
     100% { background-position: -100% 0; }
@@ -201,10 +176,10 @@
     </div>
 
     <div class="gsu-pr__grid gsu-pr__grid-loading" aria-hidden="true">
-      <div class="gsu-pr__skeleton"><div class="gsu-pr__skeleton-thumb"></div><div class="gsu-pr__skeleton-body"><div class="gsu-pr__skeleton-line"></div><div class="gsu-pr__skeleton-line gsu-pr__skeleton-line--short"></div></div></div>
-      <div class="gsu-pr__skeleton"><div class="gsu-pr__skeleton-thumb"></div><div class="gsu-pr__skeleton-body"><div class="gsu-pr__skeleton-line"></div><div class="gsu-pr__skeleton-line gsu-pr__skeleton-line--short"></div></div></div>
-      <div class="gsu-pr__skeleton"><div class="gsu-pr__skeleton-thumb"></div><div class="gsu-pr__skeleton-body"><div class="gsu-pr__skeleton-line"></div><div class="gsu-pr__skeleton-line gsu-pr__skeleton-line--short"></div></div></div>
-      <div class="gsu-pr__skeleton"><div class="gsu-pr__skeleton-thumb"></div><div class="gsu-pr__skeleton-body"><div class="gsu-pr__skeleton-line"></div><div class="gsu-pr__skeleton-line gsu-pr__skeleton-line--short"></div></div></div>
+      <div class="gsu-pr__skeleton"><div class="gsu-pr__skeleton-thumb"></div></div>
+      <div class="gsu-pr__skeleton"><div class="gsu-pr__skeleton-thumb"></div></div>
+      <div class="gsu-pr__skeleton"><div class="gsu-pr__skeleton-thumb"></div></div>
+      <div class="gsu-pr__skeleton"><div class="gsu-pr__skeleton-thumb"></div></div>
     </div>
 
     <div class="gsu-pr__grid gsu-pr__grid-live" data-grid></div>
